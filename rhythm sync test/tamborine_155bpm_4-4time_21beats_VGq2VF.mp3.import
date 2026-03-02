@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bqdw6gg5win3l"
+path="res://.godot/imported/tamborine_155bpm_4-4time_21beats_VGq2VF.mp3-d1f4f331c55da3bac6cfaba8c61f3193.mp3str"
+
+[deps]
+
+source_file="res://rhythm sync test/tamborine_155bpm_4-4time_21beats_VGq2VF.mp3"
+dest_files=["res://.godot/imported/tamborine_155bpm_4-4time_21beats_VGq2VF.mp3-d1f4f331c55da3bac6cfaba8c61f3193.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

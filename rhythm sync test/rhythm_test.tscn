@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cucgroywu8rlh"]
+
+[ext_resource type="PackedScene" uid="uid://dtfws8j04gg02" path="res://rhythm sync test/rhythm_sync_manager.tscn" id="1_e2jy2"]
+[ext_resource type="Script" uid="uid://c8kgfrgrqc4i4" path="res://rhythm sync test/rhythm_test.gd" id="1_t70rc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_18hvo"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_rpk72"]
+
+[node name="RhythmTest" type="Node3D" unique_id=871510500]
+script = ExtResource("1_t70rc")
+
+[node name="RhythmSyncManager" parent="." unique_id=1346349995 instance=ExtResource("1_e2jy2")]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." unique_id=27462120]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=161422714]
+shape = SubResource("BoxShape3D_18hvo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D" unique_id=436993342]
+mesh = SubResource("BoxMesh_rpk72")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="." unique_id=2055685422]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1743087, 0)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=866140379]
+transform = Transform3D(1, 0, 0, 0, 0.894607, 0.44685373, 0, -0.44685373, 0.894607, 0, 1.2355818, 1.9078948)
+
+[connection signal="on_beat" from="RhythmSyncManager" to="." method="_on_rhythm_sync_manager_on_beat"]

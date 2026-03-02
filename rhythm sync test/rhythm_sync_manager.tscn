@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://dtfws8j04gg02"]
+
+[ext_resource type="Script" uid="uid://c6tnm3gklfubj" path="res://rhythm sync test/rhythm_sync_manager.gd" id="1_2f1ia"]
+[ext_resource type="AudioStream" uid="uid://bqdw6gg5win3l" path="res://rhythm sync test/tamborine_155bpm_4-4time_21beats_VGq2VF.mp3" id="2_khn0w"]
+
+[node name="RhythmSyncManager" type="Node" unique_id=1346349995]
+script = ExtResource("1_2f1ia")
+bpm = 155.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=732633878]
+stream = ExtResource("2_khn0w")
