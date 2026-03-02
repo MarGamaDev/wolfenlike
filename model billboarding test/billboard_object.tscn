@@ -1,0 +1,91 @@
+[gd_scene format=3 uid="uid://chpuy33sqtsfd"]
+
+[ext_resource type="Texture2D" uid="uid://cqj7rkf7r6lkb" path="res://Spritesheets/cat.png" id="1_loabu"]
+[ext_resource type="Shader" uid="uid://ch38p16pf6ppg" path="res://Shaders/ortho_sprite.gdshader" id="3_g1a65"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_g1a65"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hf5sh"]
+atlas = SubResource("CompressedTexture2D_g1a65")
+region = Rect2(0, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lm5k2"]
+atlas = SubResource("CompressedTexture2D_g1a65")
+region = Rect2(256, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7axc6"]
+atlas = SubResource("CompressedTexture2D_g1a65")
+region = Rect2(512, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hbi2y"]
+atlas = SubResource("CompressedTexture2D_g1a65")
+region = Rect2(768, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ilhnw"]
+atlas = SubResource("CompressedTexture2D_g1a65")
+region = Rect2(1024, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c154b"]
+atlas = SubResource("CompressedTexture2D_g1a65")
+region = Rect2(1280, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s1tn4"]
+atlas = SubResource("CompressedTexture2D_g1a65")
+region = Rect2(1536, 0, 256, 256)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kqrh8"]
+atlas = SubResource("CompressedTexture2D_g1a65")
+region = Rect2(1792, 0, 256, 256)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lxt6w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hf5sh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lm5k2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7axc6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hbi2y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ilhnw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c154b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s1tn4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kqrh8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 35.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_g1a65"]
+render_priority = 0
+shader = ExtResource("3_g1a65")
+shader_parameter/default_sprite_sheet = ExtResource("1_loabu")
+shader_parameter/columns = 8
+
+[sub_resource type="QuadMesh" id="QuadMesh_hf5sh"]
+
+[node name="Billboard_object" type="Node3D" unique_id=511336344]
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1251446239]
+visible = false
+offset = Vector2(0, 50)
+billboard = 2
+sprite_frames = SubResource("SpriteFrames_lxt6w")
+frame_progress = 0.8142124
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1006124448]
+material_override = SubResource("ShaderMaterial_g1a65")
+mesh = SubResource("QuadMesh_hf5sh")

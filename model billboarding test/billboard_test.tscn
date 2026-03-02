@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cjghx5dmgwm1t"]
+
+[ext_resource type="PackedScene" uid="uid://chpuy33sqtsfd" path="res://model billboarding test/billboard_object.tscn" id="1_m88fy"]
+
+[node name="BillboardTest" type="Node3D" unique_id=1923604963]
+
+[node name="Billboard_object" parent="." unique_id=511336344 instance=ExtResource("1_m88fy")]

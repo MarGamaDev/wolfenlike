@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://belgcyvhw82ou"]
+
+[ext_resource type="PackedScene" uid="uid://h07g23ccu6uc" path="res://model billboarding test/CATFULLANIMATIONPACK.glb" id="1_348cd"]
+
+[node name="CATFULLANIMATIONPACK" unique_id=780992746 instance=ExtResource("1_348cd")]
+
+[node name="CAT" parent="Armature/Skeleton3D" parent_id_path=PackedInt32Array(1400773858) index="0" unique_id=1520849896]
+layers = 524288
