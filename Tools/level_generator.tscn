@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://lnxvlpmnk1f8"]
+
+[ext_resource type="TileSet" uid="uid://c20kbpve0f1xf" path="res://Tools/Levelgen Data/Level_Tileset.tres" id="1_r8uk1"]
+
+[node name="Level Generator" type="Node2D" unique_id=206228500]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1955586687]
+tile_set = ExtResource("1_r8uk1")
