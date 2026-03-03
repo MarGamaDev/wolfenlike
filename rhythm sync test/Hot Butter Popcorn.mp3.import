@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d3xda0q74s5ea"
+path="res://.godot/imported/Hot Butter Popcorn.mp3-8fd0b04de1ded715fbc1fcdfaeeb072b.mp3str"
+
+[deps]
+
+source_file="res://rhythm sync test/Hot Butter Popcorn.mp3"
+dest_files=["res://.godot/imported/Hot Butter Popcorn.mp3-8fd0b04de1ded715fbc1fcdfaeeb072b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
