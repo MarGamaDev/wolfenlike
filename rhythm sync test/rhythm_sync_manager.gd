@@ -2,7 +2,7 @@ extends Node
 
 @export var bpm : float
 
-@onready var player : AudioStreamPlayer = $AudioStreamPlayer
+@export var player : AudioStreamPlayer
 
 signal on_beat
 
