@@ -26,17 +26,21 @@ func _unhandled_input(event: InputEvent) -> void:
 		head.rotate_y(-event.relative.x * CAMERA_SENSITIVITY)
 		camera.rotate_x(-event.relative.y * CAMERA_SENSITIVITY)
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(CAMERA_ROTATION_MIN), deg_to_rad(CAMERA_ROTATION_MAX))
-
-func _process(delta: float) -> void:
 	
-	##TESTING TOOLS
+	if Input.is_action_just_pressed("player_attack"):
+		current_form.handle_attack_input()
+	
+	##testing tools
 	if Input.is_action_just_pressed("pause"):
 		get_tree().quit()
 	if Input.is_action_just_pressed("space"):
-		current_form = $PlayerForms/RestrictedMovementTest
-		current_form.initialize(self)
-		pass
+		#current_form = $PlayerForms/BishopForm
+		#current_form.initialize(self)
+		print(get_tree_string_pretty())
 
 func _physics_process(delta: float) -> void:
 	var input_dir := Input.get_vector("player_left","player_right","player_forward","player_backward")
 	current_form.handle_directional_input(input_dir, delta)
+
+func get_weapon_holder() -> Node3D:
+	return $Head/WeaponHolder

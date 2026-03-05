@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bqvx505kjkx4o"]
+
+[ext_resource type="Script" uid="uid://m5itl211y8bc" path="res://Player/weapons/king_pistol.gd" id="1_5wbpn"]
+
+[node name="KingPistol" type="Node3D" unique_id=1863733089]
+script = ExtResource("1_5wbpn")
+metadata/_custom_type_script = "uid://bxh1phb4v25nu"
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=2058327161]
+target_position = Vector3(0, 0, -20)
+collision_mask = 3

@@ -17,7 +17,7 @@ points = PackedVector3Array(-0.12520654, -0.532801, -0.4805069, 0.022783129, 0.4
 
 [node name="Player" type="CharacterBody3D" unique_id=590664996 node_paths=PackedStringArray("test_form")]
 script = ExtResource("1_n8tg8")
-test_form = NodePath("PlayerForms/QueenForm")
+test_form = NodePath("PlayerForms/KingForm")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1917658369]
 mesh = SubResource("CapsuleMesh_ya0m6")
@@ -29,6 +29,9 @@ shape = SubResource("ConvexPolygonShape3D_n8tg8")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.78176945, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=1697535480]
+
+[node name="WeaponHolder" type="Node3D" parent="Head" unique_id=269787285]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5613073)
 
 [node name="PlayerForms" type="Node" parent="." unique_id=1495282897]
 

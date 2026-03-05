@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bus840c2045wp"]
 
 [ext_resource type="PackedScene" uid="uid://1bildu1y17ot" path="res://Player/player.tscn" id="1_r0ush"]
+[ext_resource type="Texture2D" uid="uid://bvwpteps4vk1w" path="res://temp crosshair.png" id="2_40dfu"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fo6mw"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -13,6 +14,14 @@ sky_material = SubResource("ProceduralSkyMaterial_fo6mw")
 background_mode = 2
 sky = SubResource("Sky_fipd4")
 tonemap_mode = 2
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_r0ush"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r0ush"]
+albedo_color = Color(0, 1, 1, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_40dfu"]
+material = SubResource("StandardMaterial3D_r0ush")
 
 [node name="PlayerTest" type="Node3D" unique_id=976342081]
 
@@ -28,3 +37,37 @@ size = Vector3(18, 0.001, 20)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1875001289]
 transform = Transform3D(1, 0, 0, 0, -0.064671695, 0.99790657, 0, -0.99790657, -0.064671695, 0, 6.321272, 0)
+
+[node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1373109774 groups=["enemy"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 4)
+collision_layer = 3
+collision_mask = 3
+gravity_scale = 0.0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=124201243 groups=["enemy"]]
+shape = SubResource("CapsuleShape3D_r0ush")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D" unique_id=1882261697]
+mesh = SubResource("CapsuleMesh_40dfu")
+
+[node name="temp ui" type="Control" parent="." unique_id=330087350]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="temp ui" unique_id=52880522]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 553.0
+offset_top = 302.5
+offset_right = -553.0
+offset_bottom = -302.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_40dfu")
