@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bkmacpti5bk7k"]
+
+[ext_resource type="Script" uid="uid://86ujuenmie48" path="res://player test/restricted_movement_test.gd" id="1_1xsnc"]
+
+[node name="RestrictedMovementTest" type="Node" unique_id=591688938]
+script = ExtResource("1_1xsnc")
+metadata/_custom_type_script = "uid://86ujuenmie48"

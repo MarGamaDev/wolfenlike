@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://1bildu1y17ot"]
 
 [ext_resource type="Script" uid="uid://bjxpdljtdmu8m" path="res://player test/player.gd" id="1_n8tg8"]
+[ext_resource type="Script" uid="uid://bvkgjdkpuin75" path="res://player test/basic_player_form.gd" id="2_cu0qe"]
+[ext_resource type="Script" uid="uid://86ujuenmie48" path="res://player test/restricted_movement_test.gd" id="3_efbvp"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ya0m6"]
 
@@ -20,3 +22,13 @@ shape = SubResource("ConvexPolygonShape3D_n8tg8")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.78176945, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=1697535480]
+
+[node name="PlayerForms" type="Node" parent="." unique_id=1495282897]
+
+[node name="BasicPlayerForm" type="Node" parent="PlayerForms" unique_id=656791139]
+script = ExtResource("2_cu0qe")
+metadata/_custom_type_script = "uid://bvkgjdkpuin75"
+
+[node name="RestrictedMovementTest" type="Node" parent="PlayerForms" unique_id=1179601805]
+script = ExtResource("3_efbvp")
+metadata/_custom_type_script = "uid://86ujuenmie48"

@@ -1,5 +1,4 @@
-extends CharacterBody3D
-
+class_name Player extends CharacterBody3D
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
@@ -10,7 +9,12 @@ const CAMERA_ROTATION_MIN : float = -40.0
 @onready var head : Node3D = $Head
 @onready var camera : Camera3D = $Head/Camera3D
 
+@onready var current_form : PlayerForm
+
 func _ready():
+	##TODO create a basic loading system? currently just have the different forms as child of player since there will be limited amounts
+	current_form = $PlayerForms/BasicPlayerForm
+	current_form.initialize(self)
 	#hiding cursor
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
@@ -22,24 +26,15 @@ func _unhandled_input(event: InputEvent) -> void:
 		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(CAMERA_ROTATION_MIN), deg_to_rad(CAMERA_ROTATION_MAX))
 
 func _process(delta: float) -> void:
+	
+	##TESTING TOOLS
 	if Input.is_action_just_pressed("pause"):
 		get_tree().quit()
+	if Input.is_action_just_pressed("space"):
+		current_form = $PlayerForms/RestrictedMovementTest
+		current_form.initialize(self)
+		pass
 
 func _physics_process(delta: float) -> void:
-	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
-
 	var input_dir := Input.get_vector("player_left","player_right","player_forward","player_backward")
-	var direction := (head.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
-	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
-	
-	##TODO:get a grip on how momentum should feel and figure out how to implement that
-	else:
-		##what should happen when the player stops inputting?
-		velocity.x = 0.0
-		velocity.z = 0.0
-
-	move_and_slide()
+	current_form.handle_directional_input(input_dir, delta)
