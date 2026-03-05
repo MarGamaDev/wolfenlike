@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://vl0q1ngmov20"]
+
+[ext_resource type="Script" uid="uid://d424w7p0il16" path="res://Player/Forms/queen_form.gd" id="1_0k22j"]
+
+[node name="QueenForm" type="Node" unique_id=644494721]
+script = ExtResource("1_0k22j")
+metadata/_custom_type_script = "uid://d424w7p0il16"

@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://803363nixer2"]
+
+[ext_resource type="Script" uid="uid://b608yacmvwu6w" path="res://Player/Forms/knight_form.gd" id="1_5tcqd"]
+
+[node name="KnightForm" type="Node" unique_id=1399030339]
+script = ExtResource("1_5tcqd")
+metadata/_custom_type_script = "uid://b608yacmvwu6w"

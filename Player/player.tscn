@@ -1,16 +1,23 @@
 [gd_scene format=3 uid="uid://1bildu1y17ot"]
 
-[ext_resource type="Script" uid="uid://bjxpdljtdmu8m" path="res://player test/player.gd" id="1_n8tg8"]
-[ext_resource type="Script" uid="uid://bvkgjdkpuin75" path="res://player test/basic_player_form.gd" id="2_cu0qe"]
-[ext_resource type="Script" uid="uid://86ujuenmie48" path="res://player test/restricted_movement_test.gd" id="3_efbvp"]
+[ext_resource type="Script" uid="uid://bjxpdljtdmu8m" path="res://Player/player.gd" id="1_n8tg8"]
+[ext_resource type="Script" uid="uid://bvkgjdkpuin75" path="res://Player/player test/basic_player_form.gd" id="2_cu0qe"]
+[ext_resource type="Script" uid="uid://86ujuenmie48" path="res://Player/player test/restricted_movement_test.gd" id="3_efbvp"]
+[ext_resource type="Script" uid="uid://bsw2fkicvf4h5" path="res://Player/Forms/pawn_form.gd" id="4_gwnis"]
+[ext_resource type="Script" uid="uid://buxrv7niekood" path="res://Player/Forms/king_form.gd" id="5_k53q1"]
+[ext_resource type="Script" uid="uid://b0yqlu2ve1ot" path="res://Player/Forms/rook_form.gd" id="6_fhl08"]
+[ext_resource type="Script" uid="uid://b608yacmvwu6w" path="res://Player/Forms/knight_form.gd" id="7_vtle1"]
+[ext_resource type="Script" uid="uid://2h08rngc34fq" path="res://Player/Forms/bishop_form.gd" id="8_od3ui"]
+[ext_resource type="Script" uid="uid://d424w7p0il16" path="res://Player/Forms/queen_form.gd" id="9_00tjw"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_ya0m6"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_n8tg8"]
 points = PackedVector3Array(-0.12520654, -0.532801, -0.4805069, 0.022783129, 0.4760704, 0.49888408, 0.16971254, 0.5591441, 0.46417162, 0.23105091, -0.8035912, 0.32045516, 0.40741014, 0.651043, -0.24352328, -0.4827893, 0.59484255, 0.082213186, -0.3628679, -0.68231165, 0.2896967, 0.46904355, -0.65452886, -0.06627126, -0.12744367, 0.8427015, -0.33810276, -0.39343542, -0.6839421, -0.24471663, 0.43825462, 0.62330925, 0.20084947, 0.0841477, 0.977454, 0.11479468, -0.06820232, -0.9764576, -0.12927033, 0.20054972, -0.56312895, -0.4514544, -0.18552664, 0.59545326, -0.4534751, -0.27336287, 0.59226835, 0.40775412, -0.0069364863, -0.47682306, 0.49966025, 0.37582088, -0.5886136, 0.31695515, 0.111579016, 0.5630594, -0.48117727, -0.41725034, 0.5278656, -0.27049688, -0.48454633, -0.59697217, -0.06650971, -0.27974695, 0.90856135, 0.05333608, -0.25019687, -0.8807117, 0.20531891, 0.263647, -0.90277094, -0.1273943, 0.29336792, 0.8715263, -0.15719566, 0.3734115, -0.5263189, -0.32824618, 0.4996626, 0.47664148, -0.0068885577, 0.053105574, 0.8750009, 0.32470253, -0.15454252, -0.5908538, 0.4658794, -0.09727988, -0.7823577, -0.39818847, -0.3876489, -0.49817133, 0.31564978, -0.30067965, -0.58799505, -0.38890144)
 
-[node name="Player" type="CharacterBody3D" unique_id=590664996]
+[node name="Player" type="CharacterBody3D" unique_id=590664996 node_paths=PackedStringArray("test_form")]
 script = ExtResource("1_n8tg8")
+test_form = NodePath("PlayerForms/QueenForm")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1917658369]
 mesh = SubResource("CapsuleMesh_ya0m6")
@@ -32,3 +39,29 @@ metadata/_custom_type_script = "uid://bvkgjdkpuin75"
 [node name="RestrictedMovementTest" type="Node" parent="PlayerForms" unique_id=1179601805]
 script = ExtResource("3_efbvp")
 metadata/_custom_type_script = "uid://86ujuenmie48"
+
+[node name="PawnForm" type="Node" parent="PlayerForms" unique_id=46436744]
+script = ExtResource("4_gwnis")
+forward_movement_boost = 2.0
+metadata/_custom_type_script = "uid://bsw2fkicvf4h5"
+
+[node name="KingForm" type="Node" parent="PlayerForms" unique_id=106059084]
+script = ExtResource("5_k53q1")
+metadata/_custom_type_script = "uid://buxrv7niekood"
+
+[node name="RookForm" type="Node" parent="PlayerForms" unique_id=128742305]
+script = ExtResource("6_fhl08")
+metadata/_custom_type_script = "uid://b0yqlu2ve1ot"
+
+[node name="KnightForm" type="Node" parent="PlayerForms" unique_id=1495132156]
+script = ExtResource("7_vtle1")
+metadata/_custom_type_script = "uid://b608yacmvwu6w"
+
+[node name="BishopForm" type="Node" parent="PlayerForms" unique_id=2061227232]
+script = ExtResource("8_od3ui")
+metadata/_custom_type_script = "uid://2h08rngc34fq"
+
+[node name="QueenForm" type="Node" parent="PlayerForms" unique_id=895944938]
+script = ExtResource("9_00tjw")
+queen_movement_boost = 4.0
+metadata/_custom_type_script = "uid://d424w7p0il16"

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bxwd2vqr6sjs0"]
 
-[ext_resource type="Script" uid="uid://bvkgjdkpuin75" path="res://player test/basic_player_form.gd" id="1_vl7js"]
+[ext_resource type="Script" uid="uid://bvkgjdkpuin75" path="res://Player/player test/basic_player_form.gd" id="1_vl7js"]
 
 [node name="BasicPlayerForm" type="Node" unique_id=1992653227]
 script = ExtResource("1_vl7js")

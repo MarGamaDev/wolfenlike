@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://camtwir3fw5rk"]
+
+[ext_resource type="Script" uid="uid://b0yqlu2ve1ot" path="res://Player/Forms/rook_form.gd" id="1_20avx"]
+
+[node name="RookForm" type="Node" unique_id=109350884]
+script = ExtResource("1_20avx")
+metadata/_custom_type_script = "uid://b0yqlu2ve1ot"

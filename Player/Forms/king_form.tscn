@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dakourtsirbrc"]
+
+[ext_resource type="Script" uid="uid://buxrv7niekood" path="res://Player/Forms/king_form.gd" id="1_3607k"]
+
+[node name="KingForm" type="Node" unique_id=63216329]
+script = ExtResource("1_3607k")
+metadata/_custom_type_script = "uid://buxrv7niekood"

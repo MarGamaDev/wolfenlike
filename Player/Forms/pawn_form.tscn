@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cduimd64ukfqh"]
+
+[ext_resource type="Script" uid="uid://bsw2fkicvf4h5" path="res://Player/Forms/pawn_form.gd" id="1_3o1in"]
+
+[node name="PawnForm" type="Node" unique_id=1262472987]
+script = ExtResource("1_3o1in")
+metadata/_custom_type_script = "uid://bsw2fkicvf4h5"

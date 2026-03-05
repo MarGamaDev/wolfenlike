@@ -3,9 +3,6 @@ class_name BasicPlayerForm extends PlayerForm
 func handle_directional_input(input_vector : Vector2, delta : float) -> void:
 	var direction := (head.transform.basis * Vector3(input_vector.x, 0, input_vector.y)).normalized()
 	
-	if not player.is_on_floor():
-		player.velocity += player.get_gravity() * delta
-
 	if direction:
 		player.velocity.x = direction.x * player.SPEED
 		player.velocity.z = direction.z * player.SPEED
