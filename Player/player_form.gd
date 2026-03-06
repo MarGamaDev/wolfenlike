@@ -15,7 +15,7 @@ func handle_directional_input(input_vector : Vector2, delta : float) -> void:
 
 func on_directional_input_stopping() -> void:
 	player.velocity.x = 0.0
-	player.velocity.z = 0.0
+	player.velocity.z = 0.0 
 
 func handle_attack_input() -> void:
 	weapon.shoot()

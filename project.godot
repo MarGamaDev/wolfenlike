@@ -59,6 +59,9 @@ player_attack={
 [layer_names]
 
 3d_render/layer_20="Billboard_test_cat"
+3d_physics/layer_1="world"
+3d_physics/layer_2="enemy"
+3d_physics/layer_3="player"
 
 [physics]
 

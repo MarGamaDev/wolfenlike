@@ -1,7 +1,8 @@
 [gd_scene format=3 uid="uid://bus840c2045wp"]
 
 [ext_resource type="PackedScene" uid="uid://1bildu1y17ot" path="res://Player/player.tscn" id="1_r0ush"]
-[ext_resource type="Texture2D" uid="uid://bvwpteps4vk1w" path="res://temp crosshair.png" id="2_40dfu"]
+[ext_resource type="Texture2D" uid="uid://bvwpteps4vk1w" path="res://testing stuff/temp crosshair.png" id="2_40dfu"]
+[ext_resource type="Script" uid="uid://bs3lfg2ug8uom" path="res://testing stuff/enemy_test.gd" id="2_f35bt"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fo6mw"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -40,14 +41,16 @@ transform = Transform3D(1, 0, 0, 0, -0.064671695, 0.99790657, 0, -0.99790657, -0
 
 [node name="RigidBody3D" type="RigidBody3D" parent="." unique_id=1373109774 groups=["enemy"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, 4)
-collision_layer = 3
+collision_layer = 2
 collision_mask = 3
 gravity_scale = 0.0
+freeze = true
+script = ExtResource("2_f35bt")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D" unique_id=124201243 groups=["enemy"]]
 shape = SubResource("CapsuleShape3D_r0ush")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D" unique_id=1882261697]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D" unique_id=1882261697 groups=["enemy"]]
 mesh = SubResource("CapsuleMesh_40dfu")
 
 [node name="temp ui" type="Control" parent="." unique_id=330087350]

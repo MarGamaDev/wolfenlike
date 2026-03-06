@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cwui03esy6m4c"]
+
+[ext_resource type="Script" uid="uid://dru7qmvmt75qn" path="res://Player/weapons/pawn_swipe.gd" id="1_nhwrq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nhwrq"]
+albedo_color = Color(0.34228057, 0.34190336, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_nhwrq"]
+material = SubResource("StandardMaterial3D_nhwrq")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ah1va"]
+size = Vector3(0.7753906, 0.12719727, 0.5371094)
+
+[node name="PawnSwipe" type="Node3D" unique_id=2140921895]
+script = ExtResource("1_nhwrq")
+metadata/_custom_type_script = "uid://dru7qmvmt75qn"
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1755832079]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.18716204, 0)
+visible = false
+collision_layer = 2
+collision_mask = 3
+
+[node name="visualtest" type="MeshInstance3D" parent="Area3D" unique_id=467681272]
+transform = Transform3D(0.66786265, 0, 0, 0, 0.0823617, 0, 0, 0, 0.43185055, 0, 0, 0.27877736)
+mesh = SubResource("BoxMesh_nhwrq")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=341123151]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.2883942)
+shape = SubResource("BoxShape3D_ah1va")
+debug_color = Color(0, 0.6, 0.69803923, 1)
+
+[node name="Timer" type="Timer" parent="." unique_id=1784206086]
+one_shot = true
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

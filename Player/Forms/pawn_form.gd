@@ -2,9 +2,14 @@ class_name PawnForm extends PlayerForm
 
 @export var forward_movement_boost : float
 
+func initialize(set_player : Player) -> void:
+	super(set_player)
+	weapon = load("res://Player/weapons/pawn_swipe.tscn").instantiate()
+	player.get_weapon_holder().add_child(weapon)
+	weapon.initialize(player)
+
 func handle_directional_input(input_vector : Vector2, delta : float) -> void:
 	super(input_vector, delta)
-	
 	if input_vector.y > 0.0:
 		input_vector.y = 0
 		direction = (head.transform.basis * Vector3(input_vector.x, 0, input_vector.y)).normalized()

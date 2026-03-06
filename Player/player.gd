@@ -11,11 +11,12 @@ const CAMERA_ROTATION_MIN : float = -40.0
 
 @onready var current_form : PlayerForm
 
-@export var test_form : PlayerForm
+@export var test_form : int
+@export var test_form_list : Array[PlayerForm]
 
 func _ready():
 	##TODO create a basic loading system? currently just have the different forms as child of player since there will be limited amounts
-	current_form = test_form
+	current_form = test_form_list[test_form]
 	current_form.initialize(self)
 	#hiding cursor
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
