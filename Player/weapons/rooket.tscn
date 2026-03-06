@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://c1mr0acq41nb1"]
+
+[ext_resource type="Script" uid="uid://ffttooheisv0" path="res://Player/weapons/Rooket.gd" id="1_7tqdv"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_7tqdv"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_h08hv"]
+size = Vector3(0.16015625, 0.12719727, 0.4404297)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7tqdv"]
+size = Vector3(0.12670898, 0.12670898, 0.4580078)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_7tqdv"]
+radius = 2.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h08hv"]
+albedo_color = Color(0.5076494, 0.5072129, 7.70092e-07, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_eq152"]
+material = SubResource("StandardMaterial3D_h08hv")
+radius = 2.0
+height = 4.0
+
+[node name="Rooket" type="AnimatableBody3D" unique_id=1071947697]
+top_level = true
+collision_layer = 0
+collision_mask = 3
+sync_to_physics = false
+script = ExtResource("1_7tqdv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=28357156]
+transform = Transform3D(0.099999994, 0, 0, 0, 0.07999999, 0, 0, 0, 0.39999998, 0, 0, 0)
+mesh = SubResource("BoxMesh_7tqdv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1160863344]
+shape = SubResource("BoxShape3D_h08hv")
+
+[node name="ExplodeTrigger" type="Area3D" parent="." unique_id=1301425842]
+collision_layer = 0
+collision_mask = 3
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ExplodeTrigger" unique_id=575127244]
+shape = SubResource("BoxShape3D_7tqdv")
+debug_color = Color(0.91915584, 6.574661e-05, 0.7013881, 0.41960785)
+
+[node name="ExplosionArea" type="Area3D" parent="." unique_id=416589362]
+visible = false
+collision_layer = 0
+collision_mask = 2
+monitoring = false
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ExplosionArea" unique_id=886816413]
+shape = SubResource("SphereShape3D_7tqdv")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="ExplosionArea" unique_id=1859256563]
+mesh = SubResource("SphereMesh_eq152")
+
+[connection signal="body_entered" from="ExplodeTrigger" to="." method="_on_explode_trigger_body_entered"]
+[connection signal="body_entered" from="ExplosionArea" to="." method="_on_explosion_hit"]

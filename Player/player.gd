@@ -45,4 +45,4 @@ func _physics_process(delta: float) -> void:
 	current_form.on_process_update(delta)
 
 func get_weapon_holder() -> Node3D:
-	return $Head/WeaponHolder
+	return $Head/Camera3D/WeaponHolder

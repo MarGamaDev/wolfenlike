@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://reuk32l1ttr3"]
+
+[ext_resource type="Script" uid="uid://b8kcjhls20hsx" path="res://Player/weapons/rooket_launcher.gd" id="1_8lfdu"]
+
+[node name="RooketLauncher" type="Node3D" unique_id=1481063429]
+script = ExtResource("1_8lfdu")
+metadata/_custom_type_script = "uid://b8kcjhls20hsx"
+
+[node name="LaunchPoint" type="Node3D" parent="." unique_id=2041721614]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.39483392)
