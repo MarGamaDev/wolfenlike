@@ -4,7 +4,7 @@ class_name PawnSwipe extends PlayerWeapon
 @onready var  timer : Timer = $Timer
 
 @export var swipe_duration : float = 0.1
-@export var lunge_strength : float = 100
+@export var lunge_strength : float = 10
 
 func _ready() -> void:
 	timer.wait_time = swipe_duration

@@ -4,6 +4,8 @@ var player : Player
 var head : Node3D
 var weapon : PlayerWeapon
 var direction : Vector3 = Vector3.ZERO
+var stop_delta : float
+var stop_time : float = 0.1
 
 func initialize(set_player : Player) -> void:
 	player = set_player
@@ -14,8 +16,12 @@ func handle_directional_input(input_vector : Vector2, delta : float) -> void:
 	direction = (head.transform.basis * Vector3(input_vector.x, 0, input_vector.y)).normalized()
 
 func on_directional_input_stopping() -> void:
-	player.velocity.x = 0.0
-	player.velocity.z = 0.0 
+	player.velocity -= player.velocity * min(stop_delta/stop_time, 1.0)
+	#player.velocity.x = 0.0
+	#player.velocity.z = 0.0 
 
 func handle_attack_input() -> void:
 	weapon.shoot()
+
+func on_process_update(delta : float) -> void:
+	stop_delta = delta

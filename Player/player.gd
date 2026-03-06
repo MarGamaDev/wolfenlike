@@ -42,6 +42,7 @@ func _unhandled_input(event: InputEvent) -> void:
 func _physics_process(delta: float) -> void:
 	var input_dir := Input.get_vector("player_left","player_right","player_forward","player_backward")
 	current_form.handle_directional_input(input_dir, delta)
+	current_form.on_process_update(delta)
 
 func get_weapon_holder() -> Node3D:
 	return $Head/WeaponHolder
