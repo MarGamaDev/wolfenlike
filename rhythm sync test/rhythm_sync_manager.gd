@@ -31,7 +31,8 @@ func _process(delta: float) -> void:
 	if beat_start_flag:
 		var time: float = player.get_playback_position() + AudioServer.get_time_since_last_mix();
 		time -= AudioServer.get_output_latency();
-		if time >= time_since_last_beat + beat_length || time < time_since_last_beat:
+		##TODO temporary fix in timing so beats can't be super super quick
+		if time >= time_since_last_beat + beat_length || time < time_since_last_beat - 0.02:
 			#print("playback position ", player.get_playback_position(), " time since last mix ", AudioServer.get_time_since_last_mix())
 			#print("output latency ", AudioServer.get_output_latency())
 			#print("time ", time, " time since last beat ", time_since_last_beat)
