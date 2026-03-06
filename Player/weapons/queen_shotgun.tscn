@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dw27t8kyykdvd"]
+
+[ext_resource type="Script" uid="uid://2wqgw7ggldur" path="res://Player/weapons/queen_shotgun.gd" id="1_g65ff"]
+
+[node name="QueenShotgun" type="Node3D" unique_id=1343731258]
+script = ExtResource("1_g65ff")
+metadata/_custom_type_script = "uid://2wqgw7ggldur"
+
+[node name="ShotPoint" type="Node3D" parent="." unique_id=103948402]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.34062254)

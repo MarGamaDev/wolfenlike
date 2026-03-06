@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://orwg6bkbrr2b"]
+
+[ext_resource type="Script" uid="uid://cgl72toktieh7" path="res://Player/weapons/bishop_sniper.gd" id="1_18itn"]
+
+[node name="BishopSniper" type="Node3D" unique_id=1203941005]
+script = ExtResource("1_18itn")
+metadata/_custom_type_script = "uid://cgl72toktieh7"
+
+[node name="RayCast3D" type="RayCast3D" parent="." unique_id=1400010691]
+target_position = Vector3(0, 0, -20)
+collision_mask = 2
