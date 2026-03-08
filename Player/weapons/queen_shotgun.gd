@@ -57,6 +57,7 @@ func shoot():
 			if ray.get_collider().is_in_group("enemy"):
 				ray.get_collider().on_hit()
 	
+	##replace later with visuals
 	await get_tree().create_timer(0.5).timeout
 	for ray in raycasts:
 		ray.queue_free()

@@ -1,4 +1,4 @@
-class_name PlayerForm extends Node
+class_name PlayerForm extends Node3D
 
 var player : Player
 var head : Node3D
@@ -14,6 +14,13 @@ func initialize(set_player : Player) -> void:
 
 func handle_directional_input(input_vector : Vector2, delta : float) -> void:
 	direction = (head.transform.basis * Vector3(input_vector.x, 0, input_vector.y)).normalized()
+
+func handle_movement_ability() -> void:
+	direction = (head.transform.basis * Vector3(0, 0, -1)).normalized()
+	pass
+
+func end_move_ability() -> void:
+	pass
 
 func on_directional_input_stopping() -> void:
 	player.velocity -= player.velocity * min(stop_delta/stop_time, 1.0)

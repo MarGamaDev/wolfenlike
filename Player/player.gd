@@ -31,7 +31,12 @@ func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("player_attack"):
 		current_form.handle_attack_input()
 	
+	if Input.is_action_just_pressed("player_move_ability"):
+		current_form.handle_movement_ability()
+	
 	##testing tools
+	if Input.is_action_just_pressed("test_stop_dash"):
+		current_form.end_move_ability()
 	if Input.is_action_just_pressed("pause"):
 		get_tree().quit()
 	if Input.is_action_just_pressed("space"):
