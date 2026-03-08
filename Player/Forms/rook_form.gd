@@ -8,6 +8,7 @@ var dash_active : bool = false
 var dash_direction : Vector3
 
 @onready var charge_hitbox : Area3D = $ChargeArea
+@onready var charge_explosion : Area3D = $ChargeBlast
 
 func initialize(set_player : Player) -> void:
 	super(set_player)
@@ -35,7 +36,7 @@ func handle_movement_ability() -> void:
 	charge_hitbox.look_at(global_transform.origin + dash_direction, Vector3.UP)
 	if charge_hitbox.has_overlapping_bodies():
 		for body : Node3D in charge_hitbox.get_overlapping_bodies():
-			if body.is_in_group("enemy"):
+			if body.is_in_group("enemy") || body.is_in_group("world"):
 				create_dash_explosion()
 				dash_active = false
 				end_move_ability()
@@ -58,4 +59,7 @@ func _on_charge_area_body_entered(body: Node3D) -> void:
 	pass # Replace with function body.
 
 func create_dash_explosion() -> void:
-	print("boom!")
+	if charge_explosion.has_overlapping_bodies():
+		for body : Node3D in charge_explosion.get_overlapping_bodies():
+			if body.is_in_group("enemy"):
+				body.on_hit()

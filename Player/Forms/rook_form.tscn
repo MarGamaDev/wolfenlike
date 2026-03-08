@@ -5,6 +5,9 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_20avx"]
 size = Vector3(1, 0.27746582, 0.7969971)
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_eovoq"]
+size = Vector3(5, 0.38378906, 5)
+
 [node name="RookForm" type="Node3D" unique_id=440185850]
 script = ExtResource("1_20avx")
 
@@ -17,5 +20,14 @@ monitorable = false
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3612671, -0.51387566)
 shape = SubResource("BoxShape3D_20avx")
 debug_color = Color(0.9490196, 0, 0.17254902, 1)
+
+[node name="ChargeBlast" type="Area3D" parent="." unique_id=1342082246]
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ChargeBlast" unique_id=1773236617]
+shape = SubResource("BoxShape3D_eovoq")
+debug_color = Color(0.6117647, 0.5372549, 0, 1)
 
 [connection signal="body_entered" from="ChargeArea" to="." method="_on_charge_area_body_entered"]
