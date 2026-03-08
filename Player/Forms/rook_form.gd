@@ -4,6 +4,8 @@ class_name RookForm extends PlayerForm
 @export var diagonal_move_penalty : float = 0.5
 @export var charge_speed : float = 4
 
+@export var starting_soul : int = 10
+
 var dash_active : bool = false
 var dash_direction : Vector3
 
@@ -14,6 +16,7 @@ func initialize(set_player : Player) -> void:
 	super(set_player)
 	weapon = load("res://Player/weapons/rooket_launcher.tscn").instantiate()
 	player.get_weapon_holder().add_child(weapon)
+	player.current_remaining_soul = starting_soul
 
 func handle_directional_input(input_vector : Vector2, delta : float) -> void:
 	super(input_vector, delta)

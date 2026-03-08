@@ -68,7 +68,6 @@ shape = SubResource("CapsuleShape3D_r0ush")
 mesh = SubResource("CapsuleMesh_40dfu")
 
 [node name="temp ui" type="Control" parent="." unique_id=330087350]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -78,6 +77,7 @@ grow_vertical = 2
 mouse_filter = 2
 
 [node name="TextureRect" type="TextureRect" parent="temp ui" unique_id=52880522]
+modulate = Color(1, 1, 1, 0.23921569)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -89,3 +89,19 @@ offset_bottom = -302.5
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_40dfu")
+
+[node name="SoulTestLabel" type="Label" parent="temp ui" unique_id=359910880]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.065000005
+offset_left = -110.0
+offset_top = 55.0
+offset_right = 110.0
+offset_bottom = 46.879997
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 29
+text = "Soul: 0"
+horizontal_alignment = 1

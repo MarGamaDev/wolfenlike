@@ -14,6 +14,8 @@ const CAMERA_ROTATION_MIN : float = -40.0
 @export var test_form : int
 @export var test_form_list : Array[PlayerForm]
 
+var current_remaining_soul : int = 0
+
 func _ready():
 	##TODO create a basic loading system? currently just have the different forms as child of player since there will be limited amounts
 	current_form = test_form_list[test_form]
@@ -51,3 +53,7 @@ func _physics_process(delta: float) -> void:
 
 func get_weapon_holder() -> Node3D:
 	return $Head/Camera3D/WeaponHolder
+
+##TESTING STUFF
+#signal update_soul_text(text : String)
+#func update_soul_label(text : String):
