@@ -7,6 +7,8 @@ class_name RookForm extends PlayerForm
 var dash_active : bool = false
 var dash_direction : Vector3
 
+@onready var charge_hitbox : Area3D = $ChargeArea
+
 func initialize(set_player : Player) -> void:
 	super(set_player)
 	weapon = load("res://Player/weapons/rooket_launcher.tscn").instantiate()
@@ -30,6 +32,14 @@ func handle_movement_ability() -> void:
 	super()
 	dash_direction = direction
 	dash_active = true
+	charge_hitbox.look_at(global_transform.origin + dash_direction, Vector3.UP)
+	if charge_hitbox.has_overlapping_bodies():
+		for body : Node3D in charge_hitbox.get_overlapping_bodies():
+			if body.is_in_group("enemy"):
+				create_dash_explosion()
+				dash_active = false
+				end_move_ability()
+	
 
 func end_move_ability() -> void:
 	dash_active = false
@@ -40,3 +50,12 @@ func _physics_process(delta: float) -> void:
 		player.velocity.z = dash_direction.z * player.SPEED * charge_speed
 		player.move_and_slide()
 	pass
+
+func _on_charge_area_body_entered(body: Node3D) -> void:
+	if dash_active:
+		create_dash_explosion()
+		end_move_ability()
+	pass # Replace with function body.
+
+func create_dash_explosion() -> void:
+	print("boom!")
