@@ -29,10 +29,11 @@ material = SubResource("StandardMaterial3D_r0ush")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1603588350]
 environment = SubResource("Environment_ub18d")
 
-[node name="Player" parent="." unique_id=590664996 node_paths=PackedStringArray("test_soul_label") instance=ExtResource("1_r0ush")]
+[node name="Player" parent="." unique_id=590664996 node_paths=PackedStringArray("test_soul_label", "name_label_test") instance=ExtResource("1_r0ush")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8187981, 0)
-test_form = 2
+test_form = 5
 test_soul_label = NodePath("../temp ui/SoulTestLabel")
+name_label_test = NodePath("../temp ui/testformlabel")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=678165903 groups=["world"]]
 use_collision = true
@@ -107,3 +108,13 @@ theme_override_colors/font_color = Color(1, 1, 0, 1)
 theme_override_font_sizes/font_size = 29
 text = "Soul: 0"
 horizontal_alignment = 1
+
+[node name="testformlabel" type="Label" parent="temp ui" unique_id=923794536]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 39.0
+offset_right = 144.0
+offset_bottom = 62.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "current form"

@@ -10,6 +10,7 @@ var dash_active : bool = false
 var dash_direction : Vector3
 @export var dash_cooldown : float = 1
 @onready var dash_timer : Timer = $ChargeTimer
+@export var dash_soul_consumption : float = 1
 
 @onready var charge_hitbox : Area3D = $ChargeArea
 @onready var charge_explosion : Area3D = $ChargeBlast
@@ -32,6 +33,7 @@ func handle_directional_input(input_vector : Vector2, delta : float) -> void:
 			if (input_vector.x + input_vector.y == 1) || (input_vector.x + input_vector.y == -1):
 				player.velocity.x = direction.x * player.SPEED * cardinal_move_boost
 				player.velocity.z = direction.z * player.SPEED * cardinal_move_boost
+				player.consume_soul(movement_boost_consumption)
 			else:
 				player.velocity.x = direction.x * player.SPEED * diagonal_move_penalty
 				player.velocity.z = direction.z * player.SPEED  * diagonal_move_penalty
@@ -52,6 +54,7 @@ func handle_movement_ability() -> void:
 					create_dash_explosion()
 					dash_active = false
 					end_move_ability()
+		player.consume_soul(dash_soul_consumption)
 	
 
 func end_move_ability() -> void:

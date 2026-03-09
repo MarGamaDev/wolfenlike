@@ -6,7 +6,8 @@ var weapon : PlayerWeapon
 var direction : Vector3 = Vector3.ZERO
 var stop_delta : float
 var stop_time : float = 0.1
-@export var attack_soul_consumption : int = 1
+@export var attack_soul_consumption : float = 1
+@export var movement_boost_consumption : float = 0.001
 
 @export var attack_speed : float = 1 ## how many seconds between attacks
 var attack_timer : Timer
@@ -39,9 +40,9 @@ func on_directional_input_stopping() -> void:
 
 func handle_attack_input() -> void:
 	if attack_timer.is_stopped():
-		player.consume_soul(attack_soul_consumption)
 		weapon.shoot()
 		attack_timer.start()
+		player.consume_soul(attack_soul_consumption)
 
 func on_process_update(delta : float) -> void:
 	stop_delta = delta

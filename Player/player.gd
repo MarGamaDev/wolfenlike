@@ -16,7 +16,7 @@ var player_form_type : PlayerForm.PLAYER_FORM = PlayerForm.PLAYER_FORM.KING
 @export var test_form_list : Array[PlayerForm]
 @export var test_soul_label : Label
 
-var remaining_soul : int = 0
+var remaining_soul : float  = 0
 @onready var attack_timer : Timer = $PlayerForms/Timer
 
 func _ready():
@@ -56,9 +56,9 @@ func _physics_process(delta: float) -> void:
 func get_weapon_holder() -> Node3D:
 	return $Head/Camera3D/WeaponHolder
 
-func consume_soul(amount_used : int) -> void:
+func consume_soul(amount_used : float) -> void:
 	remaining_soul -= amount_used
-	test_soul_label.text = "remaining soul charge: " + str(remaining_soul)
+	test_soul_label.text = "remaining soul charge: " + str("%.2f" % remaining_soul)
 	if remaining_soul <= 0:
 		##this is where going down would go
 		switch_form(PlayerForm.PLAYER_FORM.KING)
@@ -69,12 +69,16 @@ func set_soul(new_value : int) -> void:
 	remaining_soul = new_value
 	test_soul_label.text = "remaining soul charge: " + str(remaining_soul)
 
+##testing stuff
+@export var name_label_test : Label
+
 func switch_form(new_form : PlayerForm.PLAYER_FORM) -> void:
 	##MAKE THIS ACTUALLY LOAD THEM AND NOT JUST BE CHILDREN OF PLAYERFORMS
 	current_form = test_form_list[new_form]
 	current_form.initialize(self)
 	player_form_type = current_form.player_form
-	print("switched form to: ", new_form)
+	##testing stuff
+	name_label_test.text = "current form: " + str(PlayerForm.PLAYER_FORM.find_key(new_form))
 
 ##TESTING STUFF
 #signal update_soul_text(text : String)

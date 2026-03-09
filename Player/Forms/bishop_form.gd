@@ -23,7 +23,7 @@ func handle_directional_input(input_vector : Vector2, delta : float) -> void:
 		else:
 			player.velocity.x = direction.x * player.SPEED * diagonal_move_boost
 			player.velocity.z = direction.z * player.SPEED * diagonal_move_boost
+			player.consume_soul(movement_boost_consumption)
 	else:
 		on_directional_input_stopping()
-
 	player.move_and_slide()

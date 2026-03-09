@@ -3,6 +3,7 @@ class_name QueenForm extends PlayerForm
 @export var queen_movement_boost : float = 2.0
 
 @export var starting_soul : int = 10
+@export var queen_passive_soul_drain_rate : float = 0.01
 
 func initialize(set_player : Player) -> void:
 	super(set_player)
@@ -24,3 +25,7 @@ func handle_directional_input(input_vector : Vector2, delta : float) -> void:
 		on_directional_input_stopping()
 
 	player.move_and_slide()
+
+func on_process_update(delta : float) -> void:
+	super(delta)
+	player.consume_soul(queen_passive_soul_drain_rate)
