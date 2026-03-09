@@ -1,13 +1,19 @@
 class_name PawnForm extends PlayerForm
 
-@export var forward_movement_boost : float
+var starting_soul : int = 3
+
+@export var forward_movement_boost : float = 2
 
 func initialize(set_player : Player) -> void:
 	super(set_player)
 	weapon = load("res://Player/weapons/pawn_swipe.tscn").instantiate()
 	player.get_weapon_holder().add_child(weapon)
 	weapon.initialize(player)
+	player_form = PLAYER_FORM.PAWN
+	attack_soul_consumption = 0
+	player.set_soul(starting_soul)
 
+##theres some movement fuckery going on
 func handle_directional_input(input_vector : Vector2, delta : float) -> void:
 	super(input_vector, delta)
 	if input_vector.y > 0.0:
@@ -21,7 +27,7 @@ func handle_directional_input(input_vector : Vector2, delta : float) -> void:
 		else:
 			player.velocity.x = direction.x * player.SPEED
 			player.velocity.z = direction.z * player.SPEED
+		player.move_and_slide()
 	else:
 		on_directional_input_stopping()
-
 	player.move_and_slide()

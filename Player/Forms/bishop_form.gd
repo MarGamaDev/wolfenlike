@@ -3,10 +3,14 @@ class_name BishopForm extends PlayerForm
 @export var diagonal_move_boost : float = 2.0
 @export var cardinal_move_penalty : float = 0.5
 
+@export var starting_soul : int = 10
+
 func initialize(set_player : Player) -> void:
 	super(set_player)
 	weapon = load("res://Player/weapons/bishop_sniper.tscn").instantiate()
 	player.get_weapon_holder().add_child(weapon)
+	player_form = PLAYER_FORM.BISHOP
+	player.set_soul(starting_soul)
 
 
 func handle_directional_input(input_vector : Vector2, delta : float) -> void:

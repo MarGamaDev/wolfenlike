@@ -17,7 +17,8 @@ points = PackedVector3Array(-0.12520654, -0.532801, -0.4805069, 0.022783129, 0.4
 collision_layer = 5
 collision_mask = 2
 script = ExtResource("1_n8tg8")
-test_form_list = [NodePath("PlayerForms/RookForm"), NodePath("PlayerForms/BishopForm"), NodePath("PlayerForms/KingForm"), NodePath("PlayerForms/KnightForm"), NodePath("PlayerForms/PawnForm"), NodePath("PlayerForms/QueenForm")]
+test_form = 3
+test_form_list = [NodePath("PlayerForms/KingForm"), NodePath("PlayerForms/PawnForm"), NodePath("PlayerForms/RookForm"), NodePath("PlayerForms/KnightForm"), NodePath("PlayerForms/BishopForm"), NodePath("PlayerForms/QueenForm")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1917658369]
 mesh = SubResource("CapsuleMesh_ya0m6")

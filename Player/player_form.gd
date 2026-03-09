@@ -6,10 +6,15 @@ var weapon : PlayerWeapon
 var direction : Vector3 = Vector3.ZERO
 var stop_delta : float
 var stop_time : float = 0.1
+var attack_soul_consumption : int = 1
+
+enum PLAYER_FORM {KING, PAWN, ROOK, KNIGHT, BISHOP, QUEEN}
+var player_form : PLAYER_FORM
 
 func initialize(set_player : Player) -> void:
 	player = set_player
 	head = player.head
+	attack_soul_consumption = 1
 	pass
 
 func handle_directional_input(input_vector : Vector2, delta : float) -> void:
@@ -28,6 +33,7 @@ func on_directional_input_stopping() -> void:
 	#player.velocity.z = 0.0 
 
 func handle_attack_input() -> void:
+	player.consume_soul(attack_soul_consumption)
 	weapon.shoot()
 
 func on_process_update(delta : float) -> void:
