@@ -3,6 +3,7 @@ class_name PawnForm extends PlayerForm
 var starting_soul : int = 3
 
 @export var forward_movement_boost : float = 2
+@export var pawn_swipe_damage : float = 5
 
 func initialize(set_player : Player) -> void:
 	super(set_player)
@@ -10,6 +11,8 @@ func initialize(set_player : Player) -> void:
 	player.get_weapon_holder().add_child(weapon)
 	weapon.initialize(player)
 	player_form = PLAYER_FORM.PAWN
+	weapon.damage = pawn_swipe_damage
+	weapon.is_active = true
 	attack_soul_consumption = 0
 	player.set_soul(starting_soul)
 

@@ -15,12 +15,14 @@ var attack_timer : Timer
 enum PLAYER_FORM {KING, PAWN, ROOK, KNIGHT, BISHOP, QUEEN}
 var player_form : PLAYER_FORM
 
+var is_active : bool = false
+
 func initialize(set_player : Player) -> void:
 	player = set_player
 	head = player.head
-	attack_soul_consumption = 1
 	attack_timer = player.attack_timer
 	attack_timer.wait_time = attack_speed
+	is_active = true
 	pass
 
 func handle_directional_input(input_vector : Vector2, delta : float) -> void:
@@ -46,3 +48,8 @@ func handle_attack_input() -> void:
 
 func on_process_update(delta : float) -> void:
 	stop_delta = delta
+
+func set_inactive() -> void:
+	if is_active:
+		is_active = false
+		weapon.queue_free()

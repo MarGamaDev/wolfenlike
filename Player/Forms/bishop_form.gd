@@ -4,11 +4,13 @@ class_name BishopForm extends PlayerForm
 @export var cardinal_move_penalty : float = 0.5
 
 @export var starting_soul : int = 10
+@export var bishop_sniper_damage : float = 5
 
 func initialize(set_player : Player) -> void:
 	super(set_player)
-	weapon = load("res://Player/weapons/bishop_sniper.tscn").instantiate()
+	weapon = preload("res://Player/weapons/bishop_sniper.tscn").instantiate()
 	player.get_weapon_holder().add_child(weapon)
+	weapon.damage = bishop_sniper_damage
 	player_form = PLAYER_FORM.BISHOP
 	player.set_soul(starting_soul)
 

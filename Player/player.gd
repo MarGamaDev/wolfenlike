@@ -9,7 +9,7 @@ const CAMERA_ROTATION_MIN : float = -40.0
 @onready var head : Node3D = $Head
 @onready var camera : Camera3D = $Head/Camera3D
 
-var current_form : PlayerForm
+@onready var current_form : PlayerForm 
 var current_player_form_type : PlayerForm.PLAYER_FORM = PlayerForm.PLAYER_FORM.KING
 @export var ammo_from_pawns : int = 5
 
@@ -26,7 +26,6 @@ var soul_stack : Array[PlayerForm.PLAYER_FORM] = []
 func _ready():
 	##TODO create a basic loading system? currently just have the different forms as child of player since there will be limited amounts
 	switch_form(test_form)
-	##testing stack stuff
 	#soul_stack.append(PlayerForm.PLAYER_FORM.KING)
 	#soul_stack.append(PlayerForm.PLAYER_FORM.BISHOP)
 	#hiding cursor
@@ -85,6 +84,8 @@ func set_soul(new_value : int) -> void:
 
 func switch_form(new_form : PlayerForm.PLAYER_FORM) -> void:
 	##MAKE THIS ACTUALLY LOAD THEM AND NOT JUST BE CHILDREN OF PLAYERFORMS
+	if current_form:
+		current_form.set_inactive()
 	current_form = test_form_list[new_form]
 	current_form.initialize(self)
 	current_player_form_type = current_form.player_form

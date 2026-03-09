@@ -1,6 +1,7 @@
 class_name KnightForm extends PlayerForm
 
 @export var starting_soul : int = 10
+@export var knight_slam_damage : float = 10
 
 ##do once grid system is in game
 func initialize(set_player : Player) -> void:

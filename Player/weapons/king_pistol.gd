@@ -5,4 +5,4 @@ class_name KingPistol extends PlayerWeapon
 func shoot() -> void:
 	if aim_ray.is_colliding():
 		if aim_ray.get_collider().is_in_group("enemy"):
-			aim_ray.get_collider().on_hit()
+			aim_ray.get_collider().on_hit(damage)

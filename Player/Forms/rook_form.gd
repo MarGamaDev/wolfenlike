@@ -15,6 +15,9 @@ var dash_direction : Vector3
 @onready var charge_hitbox : Area3D = $ChargeArea
 @onready var charge_explosion : Area3D = $ChargeBlast
 
+@export var rooket_damage : float = 5
+@export var dash_damage : float = 5
+
 func _ready() -> void:
 	dash_timer.wait_time = dash_cooldown
 
@@ -24,6 +27,7 @@ func initialize(set_player : Player) -> void:
 	player.get_weapon_holder().add_child(weapon)
 	player.set_soul(starting_soul)
 	player_form = PLAYER_FORM.ROOK
+	weapon.damage = rooket_damage
 	
 
 func handle_directional_input(input_vector : Vector2, delta : float) -> void:
@@ -77,4 +81,4 @@ func create_dash_explosion() -> void:
 	if charge_explosion.has_overlapping_bodies():
 		for body : Node3D in charge_explosion.get_overlapping_bodies():
 			if body.is_in_group("enemy"):
-				body.on_hit()
+				body.on_hit(dash_damage)

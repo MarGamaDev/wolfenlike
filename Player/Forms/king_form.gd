@@ -1,12 +1,14 @@
 class_name KingForm extends PlayerForm
 
 @export var starting_soul : int = 10
+@export var pistol_damage : float = 1
 
 func initialize(set_player : Player) -> void:
 	super(set_player)
 	weapon = load("res://Player/weapons/king_pistol.tscn").instantiate()
 	player.get_weapon_holder().add_child(weapon)
 	attack_soul_consumption = 0
+	weapon.damage = pistol_damage
 	player_form = PLAYER_FORM.KING
 	player.set_soul(starting_soul)
 

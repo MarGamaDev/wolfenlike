@@ -55,7 +55,7 @@ func shoot():
 		if ray.is_colliding():
 			print("hit")
 			if ray.get_collider().is_in_group("enemy"):
-				ray.get_collider().on_hit()
+				ray.get_collider().on_hit(damage)
 	
 	##replace later with visuals
 	await get_tree().create_timer(0.5).timeout

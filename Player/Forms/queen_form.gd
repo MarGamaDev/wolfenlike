@@ -4,12 +4,14 @@ class_name QueenForm extends PlayerForm
 
 @export var starting_soul : int = 10
 @export var queen_passive_soul_drain_rate : float = 0.01
+@export var shotgun_pellet_damage : float = 2
 
 func initialize(set_player : Player) -> void:
 	super(set_player)
 	weapon = load("res://Player/weapons/queen_shotgun.tscn").instantiate()
 	player.get_weapon_holder().add_child(weapon)
 	player_form = PLAYER_FORM.QUEEN
+	weapon.damage = shotgun_pellet_damage
 	player.set_soul(starting_soul)
 
 func handle_directional_input(input_vector : Vector2, delta : float) -> void:

@@ -8,6 +8,8 @@ class_name PawnSwipe extends PlayerWeapon
 
 func _ready() -> void:
 	timer.wait_time = swipe_duration
+	swipe_area.visible = false
+	swipe_area.monitoring = false
 
 func shoot():
 	var direction : Vector3 = (player.head.transform.basis * Vector3(0, 0, -1)).normalized()
@@ -24,5 +26,6 @@ func _on_timer_timeout() -> void:
 	pass
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
-	if body.is_in_group("enemy"):
-		body.on_hit()
+	if is_active:
+		if body.is_in_group("enemy"):
+			body.on_hit(damage)
