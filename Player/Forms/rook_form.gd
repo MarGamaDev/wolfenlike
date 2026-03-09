@@ -8,9 +8,14 @@ class_name RookForm extends PlayerForm
 
 var dash_active : bool = false
 var dash_direction : Vector3
+@export var dash_cooldown : float = 1
+@onready var dash_timer : Timer = $ChargeTimer
 
 @onready var charge_hitbox : Area3D = $ChargeArea
 @onready var charge_explosion : Area3D = $ChargeBlast
+
+func _ready() -> void:
+	dash_timer.wait_time = dash_cooldown
 
 func initialize(set_player : Player) -> void:
 	super(set_player)
@@ -36,15 +41,17 @@ func handle_directional_input(input_vector : Vector2, delta : float) -> void:
 
 func handle_movement_ability() -> void:
 	super()
-	dash_direction = direction
-	dash_active = true
-	charge_hitbox.look_at(global_transform.origin + dash_direction, Vector3.UP)
-	if charge_hitbox.has_overlapping_bodies():
-		for body : Node3D in charge_hitbox.get_overlapping_bodies():
-			if body.is_in_group("enemy") || body.is_in_group("world"):
-				create_dash_explosion()
-				dash_active = false
-				end_move_ability()
+	if dash_timer.is_stopped():
+		dash_direction = direction
+		dash_active = true
+		charge_hitbox.look_at(global_transform.origin + dash_direction, Vector3.UP)
+		dash_timer.start()
+		if charge_hitbox.has_overlapping_bodies():
+			for body : Node3D in charge_hitbox.get_overlapping_bodies():
+				if body.is_in_group("enemy") || body.is_in_group("world"):
+					create_dash_explosion()
+					dash_active = false
+					end_move_ability()
 	
 
 func end_move_ability() -> void:
