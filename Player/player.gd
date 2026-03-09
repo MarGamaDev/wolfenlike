@@ -19,9 +19,14 @@ var player_form_type : PlayerForm.PLAYER_FORM = PlayerForm.PLAYER_FORM.KING
 var remaining_soul : float  = 0
 @onready var attack_timer : Timer = $PlayerForms/Timer
 
+var soul_stack : Array[PlayerForm.PLAYER_FORM] = []
+
 func _ready():
 	##TODO create a basic loading system? currently just have the different forms as child of player since there will be limited amounts
 	switch_form(test_form)
+	##testing stack stuff
+	soul_stack.append(PlayerForm.PLAYER_FORM.KING)
+	soul_stack.append(PlayerForm.PLAYER_FORM.BISHOP)
 	#hiding cursor
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
@@ -61,7 +66,11 @@ func consume_soul(amount_used : float) -> void:
 	test_soul_label.text = "remaining soul charge: " + str("%.2f" % remaining_soul)
 	if remaining_soul <= 0:
 		##this is where going down would go
-		switch_form(PlayerForm.PLAYER_FORM.KING)
+		if soul_stack.is_empty():
+			print("lose game")
+		else:
+			var new_form : PlayerForm.PLAYER_FORM = soul_stack.pop_back()
+			switch_form(new_form)
 		pass
 	pass
 
