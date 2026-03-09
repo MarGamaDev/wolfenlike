@@ -6,7 +6,10 @@ var weapon : PlayerWeapon
 var direction : Vector3 = Vector3.ZERO
 var stop_delta : float
 var stop_time : float = 0.1
-var attack_soul_consumption : int = 1
+@export var attack_soul_consumption : int = 1
+
+@export var attack_speed : float = 1 ## how many seconds between attacks
+var attack_timer : Timer
 
 enum PLAYER_FORM {KING, PAWN, ROOK, KNIGHT, BISHOP, QUEEN}
 var player_form : PLAYER_FORM
@@ -15,6 +18,8 @@ func initialize(set_player : Player) -> void:
 	player = set_player
 	head = player.head
 	attack_soul_consumption = 1
+	attack_timer = player.attack_timer
+	attack_timer.wait_time = attack_speed
 	pass
 
 func handle_directional_input(input_vector : Vector2, delta : float) -> void:
@@ -33,8 +38,10 @@ func on_directional_input_stopping() -> void:
 	#player.velocity.z = 0.0 
 
 func handle_attack_input() -> void:
-	player.consume_soul(attack_soul_consumption)
-	weapon.shoot()
+	if attack_timer.is_stopped():
+		player.consume_soul(attack_soul_consumption)
+		weapon.shoot()
+		attack_timer.start()
 
 func on_process_update(delta : float) -> void:
 	stop_delta = delta

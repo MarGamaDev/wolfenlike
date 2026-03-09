@@ -17,6 +17,7 @@ var player_form_type : PlayerForm.PLAYER_FORM = PlayerForm.PLAYER_FORM.KING
 @export var test_soul_label : Label
 
 var remaining_soul : int = 0
+@onready var attack_timer : Timer = $PlayerForms/Timer
 
 func _ready():
 	##TODO create a basic loading system? currently just have the different forms as child of player since there will be limited amounts

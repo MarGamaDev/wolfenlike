@@ -47,3 +47,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5613073)
 [node name="PawnForm" parent="PlayerForms" unique_id=888682383 instance=ExtResource("6_x3vf3")]
 
 [node name="QueenForm" parent="PlayerForms" unique_id=1836908716 instance=ExtResource("7_apopc")]
+
+[node name="Timer" type="Timer" parent="PlayerForms" unique_id=846918281]
+one_shot = true

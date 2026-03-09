@@ -20,3 +20,8 @@ func handle_directional_input(input_vector : Vector2, delta : float) -> void:
 		on_directional_input_stopping()
 
 	player.move_and_slide()
+
+##has no cooldown
+func handle_attack_input() -> void:
+	player.consume_soul(attack_soul_consumption)
+	weapon.shoot()

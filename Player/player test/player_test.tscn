@@ -31,7 +31,7 @@ environment = SubResource("Environment_ub18d")
 
 [node name="Player" parent="." unique_id=590664996 node_paths=PackedStringArray("test_soul_label") instance=ExtResource("1_r0ush")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8187981, 0)
-test_form = 5
+test_form = 4
 test_soul_label = NodePath("../temp ui/SoulTestLabel")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=678165903 groups=["world"]]
