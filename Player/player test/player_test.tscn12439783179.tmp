@@ -30,11 +30,10 @@ material = SubResource("StandardMaterial3D_r0ush")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1603588350]
 environment = SubResource("Environment_ub18d")
 
-[node name="Player" parent="." unique_id=590664996 node_paths=PackedStringArray("test_soul_label", "test_stack_label", "name_label_test") groups=["player"] instance=ExtResource("1_r0ush")]
+[node name="Player" parent="." unique_id=590664996 node_paths=PackedStringArray("test_soul_label", "name_label_test") groups=["player"] instance=ExtResource("1_r0ush")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8187981, 0)
 test_form = 0
 test_soul_label = NodePath("../temp ui/SoulTestLabel")
-test_stack_label = NodePath("../temp ui/testformlabel2")
 name_label_test = NodePath("../temp ui/testformlabel")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=678165903 groups=["world"]]
@@ -121,28 +120,5 @@ theme_override_colors/font_color = Color(1, 1, 0, 1)
 theme_override_font_sizes/font_size = 36
 text = "current form"
 
-[node name="testformlabel2" type="Label" parent="temp ui" unique_id=557249347]
-layout_mode = 0
-offset_left = 32.0
-offset_top = 555.0
-offset_right = 1121.0
-offset_bottom = 605.0
-theme_override_colors/font_color = Color(1, 1, 0, 1)
-theme_override_font_sizes/font_size = 20
-text = "current stack: "
-
 [node name="SoulPickup" parent="." unique_id=96288971 instance=ExtResource("4_sx4cf")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.507417, 1.7582631, 0)
-soul_type = 5
-
-[node name="SoulPickup2" parent="." unique_id=1388118601 instance=ExtResource("4_sx4cf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.507417, 1.7582631, -2.8961725)
-soul_type = 1
-
-[node name="SoulPickup3" parent="." unique_id=72798552 instance=ExtResource("4_sx4cf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8107266, 1.7582631, -2.8961725)
-soul_type = 5
-
-[node name="SoulPickup4" parent="." unique_id=1900073874 instance=ExtResource("4_sx4cf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8107266, 1.7582631, -0.20733309)
-soul_type = 4

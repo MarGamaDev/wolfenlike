@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cl8evi2c0lcyx"]
+
+[ext_resource type="Script" uid="uid://dm4ifveeu5knf" path="res://game objects/soul_pickup.gd" id="1_ylh1i"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ylh1i"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y1m02"]
+albedo_color = Color(1, 0.5058824, 0.23137255, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_12tu1"]
+material = SubResource("StandardMaterial3D_y1m02")
+
+[node name="SoulPickup" type="Area3D" unique_id=96288971 groups=["pickup"]]
+collision_layer = 8
+collision_mask = 4
+script = ExtResource("1_ylh1i")
+metadata/_custom_type_script = "uid://dm4ifveeu5knf"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1615138494]
+shape = SubResource("BoxShape3D_ylh1i")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1891379355]
+mesh = SubResource("BoxMesh_12tu1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
