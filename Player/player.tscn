@@ -37,8 +37,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5613073)
 [node name="PlayerForms" type="Node3D" parent="." unique_id=263127909]
 
 [node name="RookForm" parent="PlayerForms" unique_id=109350884 instance=ExtResource("9_x3vf3")]
+starting_soul = 5
 
 [node name="BishopForm" parent="PlayerForms" unique_id=1219089504 instance=ExtResource("3_vtle1")]
+starting_soul = 15
 
 [node name="KingForm" parent="PlayerForms" unique_id=483155694 instance=ExtResource("4_od3ui")]
 

@@ -2,5 +2,19 @@
 
 [ext_resource type="Script" uid="uid://d424w7p0il16" path="res://Player/Forms/queen_form.gd" id="1_0k22j"]
 
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_0k22j"]
+height = 0.3232422
+radius = 2.3432617
+
 [node name="QueenForm" type="Node3D" unique_id=1041798464]
 script = ExtResource("1_0k22j")
+
+[node name="FinalBlast" type="Area3D" parent="." unique_id=1930781217]
+visible = false
+collision_layer = 0
+collision_mask = 2
+monitorable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="FinalBlast" unique_id=992628217]
+shape = SubResource("CylinderShape3D_0k22j")
+debug_color = Color(0, 0.63529414, 0.07450981, 1)
