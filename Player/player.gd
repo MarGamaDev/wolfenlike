@@ -103,6 +103,9 @@ func pick_up_form(new_form : PlayerForm.PLAYER_FORM) -> void:
 		soul_stack.append(current_player_form_type)
 		switch_form(new_form)
 
+func take_damage(damage_amount : float) -> void:
+	consume_soul(damage_amount)
+
 ##TESTING STUFF
 #signal update_soul_text(text : String)
 #func update_soul_label(text : String):
