@@ -13,5 +13,5 @@ func shoot() -> void:
 	for object in objects_collided:
 		aim_ray.remove_exception(object)
 		if object.is_in_group("enemy"):
-			object.on_hit()
+			object.on_hit(damage)
 	

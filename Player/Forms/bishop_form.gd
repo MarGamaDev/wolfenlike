@@ -3,10 +3,16 @@ class_name BishopForm extends PlayerForm
 @export var diagonal_move_boost : float = 2.0
 @export var cardinal_move_penalty : float = 0.5
 
+@export var starting_soul : int = 10
+@export var bishop_sniper_damage : float = 5
+
 func initialize(set_player : Player) -> void:
 	super(set_player)
-	weapon = load("res://Player/weapons/bishop_sniper.tscn").instantiate()
+	weapon = preload("res://Player/weapons/bishop_sniper.tscn").instantiate()
 	player.get_weapon_holder().add_child(weapon)
+	weapon.damage = bishop_sniper_damage
+	player_form = PLAYER_FORM.BISHOP
+	player.set_soul(starting_soul)
 
 
 func handle_directional_input(input_vector : Vector2, delta : float) -> void:
@@ -19,7 +25,7 @@ func handle_directional_input(input_vector : Vector2, delta : float) -> void:
 		else:
 			player.velocity.x = direction.x * player.SPEED * diagonal_move_boost
 			player.velocity.z = direction.z * player.SPEED * diagonal_move_boost
+			player.consume_soul(movement_boost_consumption)
 	else:
 		on_directional_input_stopping()
-
 	player.move_and_slide()

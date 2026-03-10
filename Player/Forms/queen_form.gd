@@ -2,10 +2,20 @@ class_name QueenForm extends PlayerForm
 
 @export var queen_movement_boost : float = 2.0
 
+@export var starting_soul : int = 10
+@export var queen_passive_soul_drain_rate : float = 0.01
+@export var shotgun_pellet_damage : float = 2
+
+@onready var blast_area : Area3D = $FinalBlast
+@export var blast_damage : float = 4
+
 func initialize(set_player : Player) -> void:
 	super(set_player)
 	weapon = load("res://Player/weapons/queen_shotgun.tscn").instantiate()
 	player.get_weapon_holder().add_child(weapon)
+	player_form = PLAYER_FORM.QUEEN
+	weapon.damage = shotgun_pellet_damage
+	player.set_soul(starting_soul)
 
 func handle_directional_input(input_vector : Vector2, delta : float) -> void:
 	super(input_vector, delta)
@@ -20,3 +30,15 @@ func handle_directional_input(input_vector : Vector2, delta : float) -> void:
 		on_directional_input_stopping()
 
 	player.move_and_slide()
+
+func on_process_update(delta : float) -> void:
+	super(delta)
+	player.consume_soul(queen_passive_soul_drain_rate)
+
+func handle_movement_ability() -> void:
+	if blast_area.get_overlapping_bodies().is_empty() == false:
+		for body in blast_area.get_overlapping_bodies():
+			if body.is_in_group("enemy"):
+				body.on_hit(blast_damage)
+	await get_tree().create_timer(0.3).timeout
+	player.consume_soul(player.remaining_soul)

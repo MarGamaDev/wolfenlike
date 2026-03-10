@@ -1,9 +1,16 @@
 class_name KingForm extends PlayerForm
 
+@export var starting_soul : int = 10
+@export var pistol_damage : float = 1
+
 func initialize(set_player : Player) -> void:
 	super(set_player)
 	weapon = load("res://Player/weapons/king_pistol.tscn").instantiate()
 	player.get_weapon_holder().add_child(weapon)
+	attack_soul_consumption = 0
+	weapon.damage = pistol_damage
+	player_form = PLAYER_FORM.KING
+	player.set_soul(starting_soul)
 
 
 func handle_directional_input(input_vector : Vector2, delta : float) -> void:
@@ -15,3 +22,8 @@ func handle_directional_input(input_vector : Vector2, delta : float) -> void:
 		on_directional_input_stopping()
 
 	player.move_and_slide()
+
+##has no cooldown
+func handle_attack_input() -> void:
+	weapon.shoot()
+	player.consume_soul(attack_soul_consumption)

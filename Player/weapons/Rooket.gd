@@ -5,6 +5,7 @@ class_name Rooket extends AnimatableBody3D
 var rocket_speed : float = 6.0
 var rocket_accel : float = 0.1
 var moving_flag : bool = true
+var rocket_damage : float
 
 @onready var explosion : Area3D = $ExplosionArea
 
@@ -26,4 +27,4 @@ func _on_explode_trigger_body_entered(body: Node3D) -> void:
 
 func _on_explosion_hit(body: Node3D) -> void:
 	if body.is_in_group("enemy"):
-		body.on_hit()
+		body.on_hit(rocket_damage)

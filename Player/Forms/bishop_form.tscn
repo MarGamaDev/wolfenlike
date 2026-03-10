@@ -2,6 +2,5 @@
 
 [ext_resource type="Script" uid="uid://2h08rngc34fq" path="res://Player/Forms/bishop_form.gd" id="1_axvo2"]
 
-[node name="BishopForm" type="Node" unique_id=2088184484]
+[node name="BishopForm" type="Node3D" unique_id=1549303780]
 script = ExtResource("1_axvo2")
-metadata/_custom_type_script = "uid://2h08rngc34fq"

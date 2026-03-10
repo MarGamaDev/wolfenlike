@@ -9,7 +9,8 @@ func _ready() -> void:
 	pass
 
 func shoot():
-	var new_rooket = rooket_scene.instantiate()
+	var new_rooket : Rooket = rooket_scene.instantiate()
+	new_rooket.rocket_damage = damage
 	add_child(new_rooket)
 	new_rooket.global_position = launch_point.global_position
 	new_rooket.rotation = launch_point.global_rotation
