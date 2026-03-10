@@ -39,25 +39,31 @@ test_soul_label = NodePath("../temp ui/SoulTestLabel")
 test_stack_label = NodePath("../temp ui/testformlabel2")
 name_label_test = NodePath("../temp ui/testformlabel")
 
-[node name="EnemyManager" parent="." unique_id=647834905 instance=ExtResource("5_kx4w0")]
+[node name="EnemyManager" parent="." unique_id=647834905 node_paths=PackedStringArray("player") instance=ExtResource("5_kx4w0")]
+player = NodePath("../Player")
 
 [node name="Enemy" parent="EnemyManager" unique_id=1983620596 instance=ExtResource("3_1ny3e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.2249293, 1.8210084, -6.747752)
+enemy_type = 5
 
 [node name="Enemy4" parent="EnemyManager" unique_id=765987639 instance=ExtResource("3_1ny3e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.2210793, 1.8210084, 2.2705827)
+enemy_type = 3
 
 [node name="Enemy5" parent="EnemyManager" unique_id=581034698 instance=ExtResource("3_1ny3e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0348644, 1.8210084, 3.2191124)
+enemy_type = 2
 
 [node name="Enemy6" parent="EnemyManager" unique_id=182210630 instance=ExtResource("3_1ny3e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.772861, 1.8210084, 3.0826817)
 
 [node name="Enemy2" parent="EnemyManager" unique_id=504949349 instance=ExtResource("3_1ny3e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.0511642, 1.8210084, -9.144222)
+enemy_type = 5
 
 [node name="Enemy3" parent="EnemyManager" unique_id=22054702 instance=ExtResource("3_1ny3e")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.32567644, 1.8210084, -17.293104)
+enemy_type = 5
 
 [node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=678165903 groups=["world"]]
 use_collision = true

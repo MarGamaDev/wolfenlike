@@ -52,6 +52,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("space"):
 		#current_form = $PlayerForms/BishopForm
 		#current_form.initialize(self)
+		print(global_position)
 		consume_soul(11)
 
 func _physics_process(delta: float) -> void:
