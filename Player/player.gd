@@ -1,6 +1,6 @@
 class_name Player extends CharacterBody3D
 
-const SPEED = 5.0
+const SPEED = 10.0
 const JUMP_VELOCITY = 4.5
 const CAMERA_SENSITIVITY : float = 0.001
 const CAMERA_ROTATION_MAX : float = 60.0
@@ -52,7 +52,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("space"):
 		#current_form = $PlayerForms/BishopForm
 		#current_form.initialize(self)
-		print(global_position)
+		#print(global_position)
 		consume_soul(11)
 
 func _physics_process(delta: float) -> void:
