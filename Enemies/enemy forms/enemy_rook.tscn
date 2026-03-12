@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bqxvnbg2thjuq"]
+
+[ext_resource type="Script" uid="uid://bvre0yjw4jy3m" path="res://Enemies/enemy forms/enemy_rook.gd" id="1_ua7ui"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_ua7ui"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mra8i"]
+albedo_color = Color(0, 0.5411765, 1, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_kajye"]
+material = SubResource("StandardMaterial3D_mra8i")
+
+[node name="EnemyRook" type="CharacterBody3D" unique_id=1760995668]
+script = ExtResource("1_ua7ui")
+enemy_type = 4
+metadata/_custom_type_script = "uid://bvre0yjw4jy3m"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1252110072]
+shape = SubResource("CapsuleShape3D_ua7ui")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1062687174]
+mesh = SubResource("CapsuleMesh_kajye")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=1155020152]
+simplify_path = true
+debug_enabled = true

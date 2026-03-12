@@ -69,7 +69,8 @@ func consume_soul(amount_used : float) -> void:
 	if remaining_soul <= 0:
 		##this is where going down would go
 		if soul_stack.is_empty():
-			print("lose game")
+			pass
+			#print("lose game")
 		else:
 			var new_form : PlayerForm.PLAYER_FORM = soul_stack.pop_back()
 			switch_form(new_form)

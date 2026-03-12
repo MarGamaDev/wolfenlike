@@ -16,6 +16,7 @@ radius = 4.038574
 [node name="EnemyPawn" type="CharacterBody3D" unique_id=1277766704]
 collision_layer = 2
 script = ExtResource("1_f3ies")
+enemy_type = 5
 damage = 2.0
 metadata/_custom_type_script = "uid://7fy4dtxxh15i"
 
@@ -33,7 +34,6 @@ collision_mask = 4
 shape = SubResource("CylinderShape3D_f3ies")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=977152252]
-debug_enabled = true
 debug_path_custom_color = Color(1, 1, 0, 1)
 
 [connection signal="body_entered" from="SwipeAttackBox" to="." method="_on_swipe_attack_box_body_entered"]

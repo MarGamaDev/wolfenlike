@@ -34,8 +34,14 @@ func on_enemy_turn() -> void:
 		occupied_spaces = enemy.decide_next_move(player_position, occupied_spaces)
 	for enemy : Enemy in enemies:
 		enemy.move_enemy()
-	print("occupied spaces: ", occupied_spaces)
+	#print("occupied spaces: ", occupied_spaces)
+	resfresh_spaces_taken()
 	pass
+
+func resfresh_spaces_taken():
+	occupied_spaces = []
+	for enemy :Enemy in enemies:
+		occupied_spaces.append(enemy.grid_position)
 
 func align_enemies() -> void:
 	var spaces_taken : Array[Vector2] = []
