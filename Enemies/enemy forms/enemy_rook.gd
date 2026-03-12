@@ -35,7 +35,7 @@ func decide_next_move(player_position : Vector2, spaces_taken : Array[Vector2]) 
 	#get direction towards player from nav and normalize
 	var path_direction : Vector2 = get_nav_path_direction_to_player(path).normalized()
 	#it will want to move in this direction, and rather than the pawn that will always try and move
-	#if it can, the rook will opt to stay nearer teammates if it can't move, and fire an attack from where it is
+	#if it can, the rook will opt to only move in this direction, and fire an attack from where it is
 	var potential_moves : Array[Vector2] = []
 	for i in range(0,4):
 		potential_moves.append(Vector2.ZERO)
@@ -49,20 +49,26 @@ func decide_next_move(player_position : Vector2, spaces_taken : Array[Vector2]) 
 	#now we'll start moving it forward and checking until it reaches a space it cannot go to
 	var next_space_index : int = 1
 	var stop_flag : bool = false
-	var next_space : Vector2
+	var next_space : Vector2 = grid_position
 	print(initial_direction)
 	while next_space_index <= move_range && stop_flag == false:
-		next_space = (next_space_index * initial_direction) + grid_position
+		var next_space_check = (next_space_index * initial_direction) + grid_position
 		#if we hit an occupied space, stop moving
-		if occupied_spaces.find(next_space) != -1:
+		if occupied_spaces.find(next_space_check) != -1:
 			stop_flag = true
 		#we check the path again now, if it is very different, it means that we are either in front of a wall or just 
 		#off course
 		##KEEP GOING FROM HERE
+		##WHAT I NEED TO DO:
+		##restructure so that it checks the straightness of the path and sets an initial direction of first points in path.
+		##it 'moves' the rook to the next position, before re-checking these points' directions. if this is too
+		##great, it shows us that the path has been distrubed enough that we want to stop moving in this direction.
 		#and once it gets close enough to player
-		if next_space == player_position:
+		if next_space_check == player_position:
 			stop_flag = true
 			print("stopping next to player")
+		#if it doesn't trigger any of these things, we can move to the next space
+		next_space = next_space_check
 		next_space_index += 1
 	print("stops in : ", next_space)
 	grid_position = next_space
