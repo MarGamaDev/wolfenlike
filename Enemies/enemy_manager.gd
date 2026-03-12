@@ -14,25 +14,27 @@ func _ready() -> void:
 		enemies.append(i)
 		i.initialize(player)
 		i.grid_size = grid_size
-	##THIS RE-ORDERING OF ENEMIES WILL LATER BE MOVED TO DECISION MAKING AND NOT ALIGNING
-	enemies.sort_custom(sort_by_enemy_type)
-	align_enemies()
+	update_enemy_array()
 
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("space"):
+		print("player grid position: ", find_player_grid_position())
 		on_enemy_turn()
-		print(occupied_spaces)
+
+func update_enemy_array():
+	enemies = []
+	for enemy : Enemy in get_children():
+		enemies.append(enemy)
+	enemies.sort_custom(sort_by_enemy_type)
+	align_enemies()
 
 func on_enemy_turn() -> void:
-	enemies.sort_custom(sort_by_enemy_type)
 	var player_position : Vector2 = find_player_grid_position()
-	for enemy in enemies:
-		var new_grid_position : Vector2 = enemy.decide_next_move(player_position, occupied_spaces)
-		enemy.global_position.x = (new_grid_position.x * grid_size) +  (grid_size / 2)
-		enemy.global_position.z = (new_grid_position.y * grid_size) +  (grid_size / 2)
-		align_enemies()
-	for enemy in enemies:
-		enemy.on_finishing_movement()
+	for enemy : Enemy in enemies:
+		occupied_spaces = enemy.decide_next_move(player_position, occupied_spaces)
+	for enemy : Enemy in enemies:
+		enemy.move_enemy()
+	print("occupied spaces: ", occupied_spaces)
 	pass
 
 func align_enemies() -> void:

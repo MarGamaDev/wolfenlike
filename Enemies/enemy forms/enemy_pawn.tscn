@@ -32,4 +32,8 @@ collision_mask = 4
 [node name="CollisionShape3D" type="CollisionShape3D" parent="SwipeAttackBox" unique_id=15371509]
 shape = SubResource("CylinderShape3D_f3ies")
 
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="." unique_id=977152252]
+debug_enabled = true
+debug_path_custom_color = Color(1, 1, 0, 1)
+
 [connection signal="body_entered" from="SwipeAttackBox" to="." method="_on_swipe_attack_box_body_entered"]

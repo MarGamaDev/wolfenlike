@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://cl8evi2c0lcyx" path="res://game objects/soul_pickup.tscn" id="4_sx4cf"]
 [ext_resource type="PackedScene" uid="uid://k0cst8r2vlvq" path="res://Enemies/enemy_manager.tscn" id="5_kx4w0"]
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1ny3e"]
+albedo_color = Color(0, 1, 1, 1)
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_r0ush"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r0ush"]
@@ -27,6 +30,10 @@ background_mode = 2
 sky = SubResource("Sky_fipd4")
 tonemap_mode = 2
 
+[sub_resource type="NavigationMesh" id="NavigationMesh_1ny3e"]
+vertices = PackedVector3Array(-15.5817795, 0.5, -8.074297, -8.8317795, 0.5, -8.074297, -8.5817795, 0.5, -9.074297, -6.5817795, 0.5, -17.574297, -15.5817795, 0.5, -17.574297, -6.5817795, 0.5, -9.074297, 6.6682205, 0.5, -9.074297, 6.6682205, 0.5, -17.574297, 8.6682205, 0.5, -9.074297, 8.9182205, 0.5, -8.074297, 15.4182205, 0.5, -8.074297, 15.4182205, 0.5, -17.574297, 8.6682205, 0.5, -7.074297, 15.4182205, 0.5, 17.425703, -8.5817795, 0.5, -7.074297, -15.5817795, 0.5, 17.425703)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 4), PackedInt32Array(2, 4, 3), PackedInt32Array(3, 5, 2), PackedInt32Array(3, 7, 5), PackedInt32Array(5, 7, 6), PackedInt32Array(9, 8, 10), PackedInt32Array(10, 8, 11), PackedInt32Array(11, 8, 7), PackedInt32Array(8, 6, 7), PackedInt32Array(9, 10, 12), PackedInt32Array(12, 10, 13), PackedInt32Array(1, 14, 0), PackedInt32Array(0, 14, 15), PackedInt32Array(12, 13, 14), PackedInt32Array(14, 13, 15)]
+
 [node name="PlayerTest" type="Node3D" unique_id=976342081]
 
 [node name="Player" parent="." unique_id=590664996 node_paths=PackedStringArray("test_soul_label", "test_stack_label", "name_label_test") instance=ExtResource("1_r0ush")]
@@ -40,7 +47,14 @@ name_label_test = NodePath("../temp ui/testformlabel")
 player = NodePath("../Player")
 
 [node name="EnemyPawn" parent="EnemyManager" unique_id=1277766704 instance=ExtResource("3_1ny3e")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.7915897, 2.2452493, -11.992018)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.969096, 3.530364, -11.391853)
+
+[node name="EnemyPawn2" parent="EnemyManager" unique_id=1254916679 instance=ExtResource("3_1ny3e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.969096, 3.530364, -15.138247)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="EnemyManager/EnemyPawn2" unique_id=138726343]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.1862974, -0.23810673)
+material = SubResource("StandardMaterial3D_1ny3e")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1875001289]
 transform = Transform3D(1, 0, 0, 0, -0.064671695, 0.99790657, 0, -0.99790657, -0.064671695, 0, 6.321272, 0)
@@ -141,7 +155,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.711616, 1.7582631, -14.0424
 soul_type = 5
 
 [node name="SoulPickup4" parent="." unique_id=1900073874 instance=ExtResource("4_sx4cf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0225906, 1.7582631, -7.481537)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.0225906, 1.7582631, -9.925018)
 soul_type = 2
 
 [node name="SoulPickup5" parent="." unique_id=1511543021 instance=ExtResource("4_sx4cf")]
@@ -150,53 +164,62 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.057552, 1.7582631, 0.0949
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1603588350]
 environment = SubResource("Environment_ub18d")
 
-[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=678165903 groups=["world"]]
-use_collision = true
-size = Vector3(32.011475, 0.001, 36.09375)
+[node name="test grid markers" type="Node3D" parent="." unique_id=1689057862]
 
-[node name="Node3D" type="Node3D" parent="." unique_id=1689057862]
-
-[node name="CSGBox3D2" type="CSGBox3D" parent="Node3D" unique_id=1149612196]
+[node name="CSGBox3D2" type="CSGBox3D" parent="test grid markers" unique_id=1149612196]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.816, 7)
 
-[node name="CSGBox3D3" type="CSGBox3D" parent="Node3D" unique_id=1644502753]
+[node name="CSGBox3D3" type="CSGBox3D" parent="test grid markers" unique_id=1644502753]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.816, 14)
 
-[node name="CSGBox3D4" type="CSGBox3D" parent="Node3D" unique_id=1890753279]
+[node name="CSGBox3D4" type="CSGBox3D" parent="test grid markers" unique_id=1890753279]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.816, 0)
 
-[node name="CSGBox3D5" type="CSGBox3D" parent="Node3D" unique_id=285724519]
+[node name="CSGBox3D5" type="CSGBox3D" parent="test grid markers" unique_id=285724519]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.816, -7)
 
-[node name="CSGBox3D6" type="CSGBox3D" parent="Node3D" unique_id=713165952]
+[node name="CSGBox3D6" type="CSGBox3D" parent="test grid markers" unique_id=713165952]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.816, -14)
 
-[node name="CSGBox3D7" type="CSGBox3D" parent="Node3D" unique_id=1778451830]
+[node name="CSGBox3D7" type="CSGBox3D" parent="test grid markers" unique_id=1778451830]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 5.816, 7)
 
-[node name="CSGBox3D8" type="CSGBox3D" parent="Node3D" unique_id=764260591]
+[node name="CSGBox3D8" type="CSGBox3D" parent="test grid markers" unique_id=764260591]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 5.816, 14)
 
-[node name="CSGBox3D9" type="CSGBox3D" parent="Node3D" unique_id=466866655]
+[node name="CSGBox3D9" type="CSGBox3D" parent="test grid markers" unique_id=466866655]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 5.816, 0)
 
-[node name="CSGBox3D10" type="CSGBox3D" parent="Node3D" unique_id=1391346336]
+[node name="CSGBox3D10" type="CSGBox3D" parent="test grid markers" unique_id=1391346336]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 5.816, -7)
 
-[node name="CSGBox3D11" type="CSGBox3D" parent="Node3D" unique_id=1507906292]
+[node name="CSGBox3D11" type="CSGBox3D" parent="test grid markers" unique_id=1507906292]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 5.816, -14)
 
-[node name="CSGBox3D12" type="CSGBox3D" parent="Node3D" unique_id=314553286]
+[node name="CSGBox3D12" type="CSGBox3D" parent="test grid markers" unique_id=314553286]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 5.816, 7)
 
-[node name="CSGBox3D13" type="CSGBox3D" parent="Node3D" unique_id=1951474694]
+[node name="CSGBox3D13" type="CSGBox3D" parent="test grid markers" unique_id=1951474694]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 5.816, 14)
 
-[node name="CSGBox3D14" type="CSGBox3D" parent="Node3D" unique_id=253519379]
+[node name="CSGBox3D14" type="CSGBox3D" parent="test grid markers" unique_id=253519379]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 5.816, 0)
 
-[node name="CSGBox3D15" type="CSGBox3D" parent="Node3D" unique_id=60270879]
+[node name="CSGBox3D15" type="CSGBox3D" parent="test grid markers" unique_id=60270879]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 5.816, -7)
 
-[node name="CSGBox3D16" type="CSGBox3D" parent="Node3D" unique_id=92863618]
+[node name="CSGBox3D16" type="CSGBox3D" parent="test grid markers" unique_id=92863618]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 5.816, -14)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=1687479351]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0048041344, -2.3841858e-07, 0.00028514862)
+navigation_mesh = SubResource("NavigationMesh_1ny3e")
+
+[node name="testwall" type="CSGBox3D" parent="NavigationRegion3D" unique_id=1996058079]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0028381348, 0, -8.104248)
+size = Vector3(16.61322, 1, 0.8852539)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D" unique_id=678165903 groups=["world"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.076042175, 1.6212463e-05, -0.027422428)
+use_collision = true
+size = Vector3(32.011475, 0.001, 36.09375)
