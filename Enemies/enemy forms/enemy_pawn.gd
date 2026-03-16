@@ -27,7 +27,7 @@ func decide_next_move(player_position : Vector2, spaces_taken : Array[Vector2]) 
 	#get direction towards player from nav and normalize
 	var path_direction : Vector2 = get_nav_path_direction_to_player(path)
 	#find current distance to player and a distance checker
-	var current_distance : float = find_distance_to_player(grid_position, player_position)
+	#var current_distance : float = find_distance_to_player(grid_position, player_position)
 	#find adjecent spaces without other enemies
 	var possible_moves : Array[Vector2] = find_possible_moves(occupied_spaces)
 	#compare all possible moves (that aren't occupied) to this direction
@@ -43,11 +43,6 @@ func decide_next_move(player_position : Vector2, spaces_taken : Array[Vector2]) 
 		print("no possible moves")
 	#print("move decided.")
 	return occupied_spaces
-
-func find_distance_to_player(test_position : Vector2, player_position : Vector2) -> float:
-	var path_vector : Vector2 = player_position - test_position
-	var distance_possible : float = sqrt((path_vector.x * path_vector.x) + (path_vector.y * path_vector.y)) / grid_size
-	return distance_possible
 
 func find_possible_moves(spaces_taken : Array[Vector2]) -> Array[Vector2]:
 	var possible_moves : Array[Vector2] = []

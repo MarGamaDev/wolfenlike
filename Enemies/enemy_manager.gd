@@ -1,6 +1,6 @@
 class_name EnemyManager extends Node3D
 
-@export var grid_size : int = 7
+@export var grid_size : int = 3
 @export var enemy_y_level : float = 1.8
 
 @export var player : Player
@@ -34,8 +34,8 @@ func on_enemy_turn() -> void:
 		occupied_spaces = enemy.decide_next_move(player_position, occupied_spaces)
 	for enemy : Enemy in enemies:
 		enemy.move_enemy()
-	#print("occupied spaces: ", occupied_spaces)
 	resfresh_spaces_taken()
+	print("occupied spaces: ", occupied_spaces)
 	pass
 
 func resfresh_spaces_taken():
