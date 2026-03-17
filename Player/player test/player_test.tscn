@@ -20,8 +20,8 @@ sky = SubResource("Sky_fipd4")
 tonemap_mode = 2
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_1ny3e"]
-vertices = PackedVector3Array(-62.84101, 0.27808475, 0.08866882, -4.591011, 0.27808475, 0.08866882, -4.341011, 0.27808475, -1.1613312, -2.341011, 0.27808475, -77.16133, -62.84101, 0.27808475, -77.16133, -2.341011, 0.27808475, -1.1613312, 8.158989, 0.27808475, -1.1613312, 8.158989, 0.27808475, -77.16133, 10.158989, 0.27808475, -1.1613312, 10.408989, 0.27808475, 0.08866882, 67.65899, 0.27808475, 0.08866882, 67.65899, 0.27808475, -77.16133, -4.341011, 0.27808475, 1.0886688, -62.84101, 0.27808475, 90.83867, -3.091011, 0.27808475, 90.83867, -2.841011, 0.27808475, 1.0886688, 10.158989, 0.27808475, 1.0886688, 8.908989, 0.27808475, 90.83867, 67.65899, 0.27808475, 90.83867, 8.658989, 0.27808475, 1.0886688)
-polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 4), PackedInt32Array(2, 4, 3), PackedInt32Array(3, 5, 2), PackedInt32Array(3, 7, 5), PackedInt32Array(5, 7, 6), PackedInt32Array(9, 8, 10), PackedInt32Array(10, 8, 11), PackedInt32Array(11, 8, 7), PackedInt32Array(8, 6, 7), PackedInt32Array(1, 12, 0), PackedInt32Array(0, 12, 13), PackedInt32Array(13, 12, 14), PackedInt32Array(12, 15, 14), PackedInt32Array(9, 10, 16), PackedInt32Array(16, 10, 18), PackedInt32Array(16, 18, 17), PackedInt32Array(17, 19, 16), PackedInt32Array(15, 19, 14), PackedInt32Array(14, 19, 17)]
+vertices = PackedVector3Array(-17.03144, 0.27808475, 0.12186813, -4.5314407, 0.27808475, 0.12186813, -4.2814407, 0.27808475, -1.1281319, -2.2814407, 0.27808475, -16.628132, -17.03144, 0.27808475, -16.628132, -2.2814407, 0.27808475, -1.1281319, 8.218559, 0.27808475, -1.1281319, 8.218559, 0.27808475, -16.628132, 10.218559, 0.27808475, -1.1281319, 10.468559, 0.27808475, 0.12186813, 21.71856, 0.27808475, 0.12186813, 21.71856, 0.27808475, -16.628132, 10.218559, 0.27808475, 1.1218681, 21.71856, 0.27808475, 30.121868, -4.2814407, 0.27808475, 1.1218681, -17.03144, 0.27808475, 30.121868)
+polygons = [PackedInt32Array(1, 0, 2), PackedInt32Array(2, 0, 4), PackedInt32Array(2, 4, 3), PackedInt32Array(3, 5, 2), PackedInt32Array(3, 7, 5), PackedInt32Array(5, 7, 6), PackedInt32Array(9, 8, 10), PackedInt32Array(10, 8, 11), PackedInt32Array(11, 8, 7), PackedInt32Array(8, 6, 7), PackedInt32Array(9, 10, 12), PackedInt32Array(12, 10, 13), PackedInt32Array(1, 14, 0), PackedInt32Array(0, 14, 15), PackedInt32Array(12, 13, 14), PackedInt32Array(14, 13, 15)]
 
 [node name="PlayerTest" type="Node3D" unique_id=976342081]
 
@@ -33,13 +33,13 @@ test_stack_label = NodePath("../temp ui/testformlabel2")
 name_label_test = NodePath("../temp ui/testformlabel")
 
 [node name="EnemyManager" parent="." unique_id=647834905 node_paths=PackedStringArray("player") instance=ExtResource("5_kx4w0")]
-grid_size = 5
+grid_size = 7
 player = NodePath("../Player")
 
 [node name="EnemyRook" parent="EnemyManager" unique_id=1760995668 instance=ExtResource("3_kx4w0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3440619, -2.5565987)
-move_range = 5
-dash_range = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3440619, -3.1765351)
+move_range = 1
+dash_range = 0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1875001289]
 transform = Transform3D(1, 0, 0, 0, -0.064671695, 0.99790657, 0, -0.99790657, -0.064671695, 0, 6.321272, 0)
@@ -180,4 +180,4 @@ size = Vector3(13.8573, 1, 0.885)
 [node name="CSGBox3D" type="CSGBox3D" parent="NavigationRegion3D" unique_id=678165903 groups=["world"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.357719, 1.6212463e-05, 6.803998)
 use_collision = true
-size = Vector3(131.39746, 0.001, 168.93066)
+size = Vector3(39.77832, 0.001, 47.864258)

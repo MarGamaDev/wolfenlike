@@ -56,8 +56,8 @@ func align_enemies() -> void:
 				space_taken_flag = true
 		if space_taken_flag == false:
 			spaces_taken.append(enemy.grid_position)
-			enemy.global_position.z = (z_factor * grid_size) + (grid_size / 2)
-			enemy.global_position.x = (x_factor * grid_size) + (grid_size / 2)
+			enemy.global_position.z = (z_factor * grid_size) + (grid_size / 2.0)
+			enemy.global_position.x = (x_factor * grid_size) + (grid_size / 2.0)
 		else:
 			print("space taken!")
 	occupied_spaces = spaces_taken

@@ -1,0 +1,241 @@
+[gd_scene format=3 uid="uid://bkc2f51fsdqtq"]
+
+[node name="MainMenu" type="Control" unique_id=443933014]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="." unique_id=1550181944]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuPage" type="Control" parent="." unique_id=480078099]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartButton" type="Button" parent="MenuPage" unique_id=1293827277]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -122.0
+offset_top = -23.0
+offset_right = 122.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start game"
+
+[node name="Tutorial button" type="Button" parent="MenuPage" unique_id=1813805515]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 145.0
+offset_top = -23.0
+offset_right = 389.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "tutorial/how to play"
+
+[node name="CreditsButton" type="Button" parent="MenuPage" unique_id=404552894]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -122.0
+offset_top = 50.0
+offset_right = 122.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Credits"
+
+[node name="QuitButton" type="Button" parent="MenuPage" unique_id=654462664]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -122.0
+offset_top = 122.0
+offset_right = 122.0
+offset_bottom = 168.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Quit"
+
+[node name="CreditsPage" type="Control" parent="." unique_id=93880790]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="CreditsPage" unique_id=1771032466]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 184.0
+offset_top = 90.0
+offset_right = -184.0
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.23921569)
+
+[node name="ReturnButton" type="Button" parent="CreditsPage" unique_id=918203920]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -122.0
+offset_top = 255.0
+offset_right = 122.0
+offset_bottom = 301.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start game"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CreditsPage" unique_id=306205757]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.165
+anchor_top = 0.14
+anchor_right = 0.83800006
+anchor_bottom = 0.85700005
+offset_left = -0.08000183
+offset_top = 13.279999
+offset_right = -3.3760986
+offset_bottom = -8.33606
+text = "credits can go here"
+
+[node name="Tutorial page" type="Control" parent="." unique_id=1640354281]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Tutorial page" unique_id=1428314271]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 184.0
+offset_top = 90.0
+offset_right = -184.0
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.23921569)
+
+[node name="ReturnButton" type="Button" parent="Tutorial page" unique_id=2143040366]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -392.0
+offset_top = -294.0
+offset_right = -148.0
+offset_bottom = -248.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "return to menu"
+
+[node name="NextPageButton" type="Button" parent="Tutorial page" unique_id=1133921625]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 137.0
+offset_top = 255.0
+offset_right = 381.0
+offset_bottom = 301.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "next page"
+
+[node name="LastPageButton" type="Button" parent="Tutorial page" unique_id=64120210]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -384.0
+offset_top = 255.0
+offset_right = -140.0
+offset_bottom = 301.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "last page"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Tutorial page" unique_id=448335948]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.165
+anchor_top = 0.14
+anchor_right = 0.83800006
+anchor_bottom = 0.85700005
+offset_left = -0.08000183
+offset_top = 13.279999
+offset_right = -3.3760986
+offset_bottom = -8.33606
+text = "credits can go here"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="Tutorial page" unique_id=140485689]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.165
+anchor_top = 0.14
+anchor_right = 0.83800006
+anchor_bottom = 0.85700005
+offset_left = -0.08000183
+offset_top = 13.279999
+offset_right = -3.3760986
+offset_bottom = -8.33606
+text = "credits can go here"
+
+[node name="RichTextLabel3" type="RichTextLabel" parent="Tutorial page" unique_id=1556664155]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.165
+anchor_top = 0.14
+anchor_right = 0.83800006
+anchor_bottom = 0.85700005
+offset_left = -0.08000183
+offset_top = 13.279999
+offset_right = -3.3760986
+offset_bottom = -8.33606
+text = "credits can go here"

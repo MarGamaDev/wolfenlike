@@ -65,9 +65,6 @@ func decide_next_move(player_position : Vector2, spaces_taken : Array[Vector2]) 
 		if straight_path_flag:
 			#if we would move farther away from the player
 			if potential_distance_to_player > last_distance:
-				#print("i want to go to: ", next_space_check)
-				#print("potential distance: ", potential_distance_to_player)
-				#print("last distance: ", last_distance)
 				print("stop test")
 				stop_flag = true
 		#and once it gets close enough to player
