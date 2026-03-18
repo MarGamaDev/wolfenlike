@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bqxvnbg2thjuq" path="res://Enemies/enemy forms/enemy_rook.tscn" id="3_kx4w0"]
 [ext_resource type="PackedScene" uid="uid://cl8evi2c0lcyx" path="res://game objects/soul_pickup.tscn" id="4_sx4cf"]
 [ext_resource type="PackedScene" uid="uid://k0cst8r2vlvq" path="res://Enemies/enemy_manager.tscn" id="5_kx4w0"]
-[ext_resource type="Script" uid="uid://dub64lfeiec57" path="res://testing stuff/grid_testing.gd" id="6_1ny3e"]
+[ext_resource type="Script" uid="uid://dub64lfeiec57" path="res://grid_space.gd" id="6_1ny3e"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fo6mw"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
