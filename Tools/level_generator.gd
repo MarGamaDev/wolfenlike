@@ -60,37 +60,46 @@ func add_floors(cell: Node3D, customdata: int) -> void:
 		_:
 			pass
 	cell.add_child(floor);
+	floor.owner = self
 
 func add_walls(cell: Node3D, customdata: String) -> void:
 	if customdata.contains("n"):
 		var wall: Node3D = load("res://Tools/Levelgen Data/Tile Parts/wall.tscn").instantiate();
 		cell.add_child(wall);
+		wall.owner = self;
 	if customdata.contains("e"):
 		var wall: Node3D = load("res://Tools/Levelgen Data/Tile Parts/wall.tscn").instantiate();
 		wall.rotate_y(deg_to_rad(-90))
 		cell.add_child(wall);
+		wall.owner = self;
 	if customdata.contains("s"):
 		var wall: Node3D = load("res://Tools/Levelgen Data/Tile Parts/wall.tscn").instantiate();
 		wall.rotate_y(deg_to_rad(180))
 		cell.add_child(wall);
+		wall.owner = self;
 	if customdata.contains("w"):
 		var wall: Node3D = load("res://Tools/Levelgen Data/Tile Parts/wall.tscn").instantiate();
 		wall.rotate_y(deg_to_rad(90))
 		cell.add_child(wall);
+		wall.owner = self;
 
 func add_halfwalls(cell: Node3D, customdata: String) -> void:
 	if customdata.contains("n"):
 		var wall: Node3D = load("res://Tools/Levelgen Data/Tile Parts/half_wall.tscn").instantiate();
 		cell.add_child(wall);
+		wall.owner = self;
 	if customdata.contains("e"):
 		var wall: Node3D = load("res://Tools/Levelgen Data/Tile Parts/half_wall.tscn").instantiate();
 		wall.rotate_y(deg_to_rad(-90))
 		cell.add_child(wall);
+		wall.owner = self;
 	if customdata.contains("s"):
 		var wall: Node3D = load("res://Tools/Levelgen Data/Tile Parts/half_wall.tscn").instantiate();
 		wall.rotate_y(deg_to_rad(180))
 		cell.add_child(wall);
+		wall.owner = self;
 	if customdata.contains("w"):
 		var wall: Node3D = load("res://Tools/Levelgen Data/Tile Parts/half_wall.tscn").instantiate();
 		wall.rotate_y(deg_to_rad(90))
 		cell.add_child(wall);
+		wall.owner = self;
