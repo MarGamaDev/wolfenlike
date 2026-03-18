@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bkc2f51fsdqtq"]
 
+[ext_resource type="Script" uid="uid://cum7w7llecoqp" path="res://UI/main_menu.gd" id="1_p8ccj"]
+
 [node name="MainMenu" type="Control" unique_id=443933014]
 layout_mode = 3
 anchors_preset = 15
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_p8ccj")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1550181944]
 layout_mode = 1
@@ -17,7 +20,6 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MenuPage" type="Control" parent="." unique_id=480078099]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -71,6 +73,7 @@ grow_vertical = 2
 text = "Credits"
 
 [node name="QuitButton" type="Button" parent="MenuPage" unique_id=654462664]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -120,7 +123,7 @@ offset_right = 122.0
 offset_bottom = 301.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Start game"
+text = "Return to menu"
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CreditsPage" unique_id=306205757]
 layout_mode = 1
@@ -135,7 +138,8 @@ offset_right = -3.3760986
 offset_bottom = -8.33606
 text = "credits can go here"
 
-[node name="Tutorial page" type="Control" parent="." unique_id=1640354281]
+[node name="TutorialPage" type="Control" parent="." unique_id=1640354281]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -143,7 +147,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="Tutorial page" unique_id=1428314271]
+[node name="ColorRect" type="ColorRect" parent="TutorialPage" unique_id=1428314271]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -156,7 +160,60 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(1, 1, 1, 0.23921569)
 
-[node name="ReturnButton" type="Button" parent="Tutorial page" unique_id=2143040366]
+[node name="TutorialStep1" type="Control" parent="TutorialPage/ColorRect" unique_id=613774350]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TutorialLabel" type="RichTextLabel" parent="TutorialPage/ColorRect/TutorialStep1" unique_id=448335948]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "tutorial page 1"
+
+[node name="TutorialStep2" type="Control" parent="TutorialPage/ColorRect" unique_id=1523090922]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TutorialLabel" type="RichTextLabel" parent="TutorialPage/ColorRect/TutorialStep2" unique_id=41102879]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "tutorial page 2"
+
+[node name="TutorialStep3" type="Control" parent="TutorialPage/ColorRect" unique_id=1357324860]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TutorialLabel" type="RichTextLabel" parent="TutorialPage/ColorRect/TutorialStep3" unique_id=1283625605]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "tutorial page 3"
+
+[node name="ReturnButton" type="Button" parent="TutorialPage" unique_id=2143040366]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -171,7 +228,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "return to menu"
 
-[node name="NextPageButton" type="Button" parent="Tutorial page" unique_id=1133921625]
+[node name="NextPageButton" type="Button" parent="TutorialPage" unique_id=1133921625]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -186,7 +243,22 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "next page"
 
-[node name="LastPageButton" type="Button" parent="Tutorial page" unique_id=64120210]
+[node name="StartGameButton" type="Button" parent="TutorialPage" unique_id=1845721093]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -121.0
+offset_top = 255.0
+offset_right = 123.0
+offset_bottom = 301.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start Game"
+
+[node name="LastPageButton" type="Button" parent="TutorialPage" unique_id=64120210]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -201,41 +273,12 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "last page"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Tutorial page" unique_id=448335948]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.165
-anchor_top = 0.14
-anchor_right = 0.83800006
-anchor_bottom = 0.85700005
-offset_left = -0.08000183
-offset_top = 13.279999
-offset_right = -3.3760986
-offset_bottom = -8.33606
-text = "credits can go here"
-
-[node name="RichTextLabel2" type="RichTextLabel" parent="Tutorial page" unique_id=140485689]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.165
-anchor_top = 0.14
-anchor_right = 0.83800006
-anchor_bottom = 0.85700005
-offset_left = -0.08000183
-offset_top = 13.279999
-offset_right = -3.3760986
-offset_bottom = -8.33606
-text = "credits can go here"
-
-[node name="RichTextLabel3" type="RichTextLabel" parent="Tutorial page" unique_id=1556664155]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.165
-anchor_top = 0.14
-anchor_right = 0.83800006
-anchor_bottom = 0.85700005
-offset_left = -0.08000183
-offset_top = 13.279999
-offset_right = -3.3760986
-offset_bottom = -8.33606
-text = "credits can go here"
+[connection signal="pressed" from="MenuPage/StartButton" to="." method="_on_game_start_button_pressed"]
+[connection signal="pressed" from="MenuPage/Tutorial button" to="." method="_on_tutorial_button_pressed"]
+[connection signal="pressed" from="MenuPage/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="MenuPage/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="CreditsPage/ReturnButton" to="." method="_on_return_to_menu_button_pressed"]
+[connection signal="pressed" from="TutorialPage/ReturnButton" to="." method="_on_return_to_menu_button_pressed"]
+[connection signal="pressed" from="TutorialPage/NextPageButton" to="." method="_on_tutorial_next_page_button_pressed"]
+[connection signal="pressed" from="TutorialPage/StartGameButton" to="." method="_on_game_start_button_pressed"]
+[connection signal="pressed" from="TutorialPage/LastPageButton" to="." method="_on_tutorial_last_page_button_pressed"]
