@@ -24,11 +24,7 @@ var remaining_soul : float  = 0
 var soul_stack : Array[PlayerForm.PLAYER_FORM] = []
 
 func _ready():
-	##TODO create a basic loading system? currently just have the different forms as child of player since there will be limited amounts
 	switch_form(test_form)
-	#soul_stack.append(PlayerForm.PLAYER_FORM.KING)
-	#soul_stack.append(PlayerForm.PLAYER_FORM.BISHOP)
-	#hiding cursor
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -67,9 +63,8 @@ func consume_soul(amount_used : float) -> void:
 	remaining_soul -= amount_used
 	test_soul_label.text = "remaining soul charge: " + str("%.2f" % remaining_soul)
 	if remaining_soul <= 0:
-		##this is where going down would go
 		if soul_stack.is_empty():
-			pass
+			pass ## TODO game loss here
 			#print("lose game")
 		else:
 			var new_form : PlayerForm.PLAYER_FORM = soul_stack.pop_back()
@@ -85,7 +80,6 @@ func set_soul(new_value : int) -> void:
 @export var name_label_test : Label
 
 func switch_form(new_form : PlayerForm.PLAYER_FORM) -> void:
-	##MAKE THIS ACTUALLY LOAD THEM AND NOT JUST BE CHILDREN OF PLAYERFORMS
 	if current_form:
 		current_form.set_inactive()
 	current_form = test_form_list[new_form]
@@ -107,7 +101,3 @@ func pick_up_form(new_form : PlayerForm.PLAYER_FORM) -> void:
 
 func take_damage(damage_amount : float) -> void:
 	consume_soul(damage_amount)
-
-##TESTING STUFF
-#signal update_soul_text(text : String)
-#func update_soul_label(text : String):

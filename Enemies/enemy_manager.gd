@@ -10,17 +10,21 @@ var enemies : Array[Enemy] = []
 var occupied_spaces : Array[Vector2] = []
 
 func _ready() -> void:
+	#this needs to be replaced ? or may be fine if we just have a manager in each level scene
 	for i : Enemy in get_children():
 		enemies.append(i)
 		i.initialize(player)
 		i.grid_size = grid_size
+		#need to connect enemy's signals that are relevant too
 	update_enemy_array()
 
 func _process(delta: float) -> void:
+	##for testimng
 	if Input.is_action_just_pressed("space"):
 		print("player grid position: ", find_player_grid_position())
 		on_enemy_turn()
 
+##could be used when enemies are added/removed?
 func update_enemy_array():
 	enemies = []
 	for enemy : Enemy in get_children():
@@ -35,14 +39,15 @@ func on_enemy_turn() -> void:
 	for enemy : Enemy in enemies:
 		enemy.move_enemy()
 	resfresh_spaces_taken()
-	print("occupied spaces: ", occupied_spaces)
 	pass
 
+##make sure that occupied spaces is correct
 func resfresh_spaces_taken():
 	occupied_spaces = []
 	for enemy :Enemy in enemies:
 		occupied_spaces.append(enemy.grid_position)
 
+##this probably needs to be changed to work with new level system
 func align_enemies() -> void:
 	var spaces_taken : Array[Vector2] = []
 	for enemy : Enemy in enemies:
