@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://cqvktxo3tj7qq"]
 
+[ext_resource type="Material" uid="uid://dm2s8iopa1fwd" path="res://Shaders/checkered.tres" id="1_s1uj7"]
+
 [sub_resource type="QuadMesh" id="QuadMesh_fnc2f"]
 
 [node name="Floor" type="MeshInstance3D" unique_id=1239543628]
 transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
 mesh = SubResource("QuadMesh_fnc2f")
+surface_material_override/0 = ExtResource("1_s1uj7")
