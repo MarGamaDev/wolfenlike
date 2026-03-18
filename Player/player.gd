@@ -1,5 +1,7 @@
 class_name Player extends CharacterBody3D
 
+signal on_pause_pressed
+
 const SPEED = 10.0
 const JUMP_VELOCITY = 4.5
 const CAMERA_SENSITIVITY : float = 0.001
@@ -44,7 +46,9 @@ func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("test_stop_dash"):
 		current_form.end_move_ability()
 	if Input.is_action_just_pressed("pause"):
-		get_tree().quit()
+		on_pause_pressed.emit()
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		get_tree().paused = true
 	if Input.is_action_just_pressed("space"):
 		#current_form = $PlayerForms/BishopForm
 		#current_form.initialize(self)

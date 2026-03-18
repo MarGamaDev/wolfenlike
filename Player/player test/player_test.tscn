@@ -2,10 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://1bildu1y17ot" path="res://Player/player.tscn" id="1_r0ush"]
 [ext_resource type="Texture2D" uid="uid://bvwpteps4vk1w" path="res://testing stuff/temp crosshair.png" id="2_40dfu"]
-[ext_resource type="PackedScene" uid="uid://bqxvnbg2thjuq" path="res://Enemies/enemy forms/enemy_rook.tscn" id="3_kx4w0"]
 [ext_resource type="PackedScene" uid="uid://cl8evi2c0lcyx" path="res://game objects/soul_pickup.tscn" id="4_sx4cf"]
-[ext_resource type="PackedScene" uid="uid://k0cst8r2vlvq" path="res://Enemies/enemy_manager.tscn" id="5_kx4w0"]
 [ext_resource type="Script" uid="uid://dub64lfeiec57" path="res://grid_space.gd" id="6_1ny3e"]
+[ext_resource type="PackedScene" uid="uid://b5tmrj1g7fct8" path="res://UI/pause_menu.tscn" id="7_habt5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fo6mw"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -31,15 +30,6 @@ test_form = 0
 test_soul_label = NodePath("../temp ui/SoulTestLabel")
 test_stack_label = NodePath("../temp ui/testformlabel2")
 name_label_test = NodePath("../temp ui/testformlabel")
-
-[node name="EnemyManager" parent="." unique_id=647834905 node_paths=PackedStringArray("player") instance=ExtResource("5_kx4w0")]
-grid_size = 7
-player = NodePath("../Player")
-
-[node name="EnemyRook" parent="EnemyManager" unique_id=1760995668 instance=ExtResource("3_kx4w0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3440619, -3.1765351)
-move_range = 1
-dash_range = 0
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1875001289]
 transform = Transform3D(1, 0, 0, 0, -0.064671695, 0.99790657, 0, -0.99790657, -0.064671695, 0, 6.321272, 0)
@@ -181,3 +171,7 @@ size = Vector3(13.8573, 1, 0.885)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.357719, 1.6212463e-05, 6.803998)
 use_collision = true
 size = Vector3(39.77832, 0.001, 47.864258)
+
+[node name="PauseMenu" parent="." unique_id=1890858261 instance=ExtResource("7_habt5")]
+
+[connection signal="on_pause_pressed" from="Player" to="PauseMenu" method="on_game_paused"]

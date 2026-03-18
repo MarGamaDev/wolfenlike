@@ -1,4 +1,4 @@
-class_name GridSpace
+class_name GridSpace extends Node3D
 
 var grid_size : int = 5
 

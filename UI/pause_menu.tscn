@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://b5tmrj1g7fct8"]
+
+[ext_resource type="Script" uid="uid://ba30kawgs4doy" path="res://UI/pause_menu.gd" id="1_ltd3m"]
+
+[node name="PauseMenu" type="Control" unique_id=1890858261]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ltd3m")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1591488876]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 195.0
+offset_top = 36.0
+offset_right = -195.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0.32941177)
+
+[node name="ResumeButton" type="Button" parent="." unique_id=753194092]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -122.0
+offset_top = -203.0
+offset_right = 122.0
+offset_bottom = -143.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "resume game"
+
+[node name="ReturnButton" type="Button" parent="." unique_id=451408066]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -122.0
+offset_top = -124.0
+offset_right = 122.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "return to menu"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=909568662]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -210.0
+offset_top = 100.0
+offset_right = 210.0
+offset_bottom = 146.0
+grow_horizontal = 2
+text = "Game paused"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="ReturnButton" to="." method="_on_return_button_pressed"]
