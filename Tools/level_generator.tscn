@@ -1,19 +1,916 @@
 [gd_scene format=4 uid="uid://lnxvlpmnk1f8"]
 
+[ext_resource type="Script" uid="uid://wtkdvffht2bj" path="res://Tools/level_generator.gd" id="1_e8b2t"]
 [ext_resource type="TileSet" uid="uid://c20kbpve0f1xf" path="res://Tools/Levelgen Data/Level_Tileset.tres" id="1_r8uk1"]
 
-[node name="Level Generator" type="Node2D" unique_id=206228500]
+[node name="Level Generator" type="Node" unique_id=905967589]
+script = ExtResource("1_e8b2t")
+level_name = "my_first_level"
+
+[node name="Floors" type="TileMapLayer" parent="." unique_id=216217885]
+tile_map_data = PackedByteArray("AAARAP//AAAFAAIAAAARAAAAAAAFAAIAAAARAAEAAAAFAAIAAAARAAIAAAAFAAIAAAARAAMAAAAFAAIAAAARAAQAAAAFAAIAAAARAAUAAAAFAAIAAAARAAYAAAAFAAIAAAARAAcAAAAFAAIAAAARAAgAAAAFAAIAAAARAAkAAAAFAAIAAAASAP//AAAFAAIAAAASAAAAAAAFAAIAAAASAAEAAAAFAAIAAAASAAIAAAAFAAIAAAASAAMAAAAFAAIAAAASAAQAAAAFAAIAAAASAAUAAAAFAAIAAAASAAYAAAAFAAIAAAASAAcAAAAFAAIAAAASAAgAAAAFAAIAAAASAAkAAAAFAAIAAAATAP//AAAFAAIAAAATAAAAAAAFAAIAAAATAAEAAAAFAAIAAAATAAIAAAAFAAIAAAATAAMAAAAFAAIAAAATAAQAAAAFAAIAAAATAAUAAAAFAAIAAAATAAYAAAAFAAIAAAATAAcAAAAFAAIAAAATAAgAAAAFAAIAAAATAAkAAAAFAAIAAAAUAP//AAAFAAIAAAAUAAAAAAAFAAIAAAAUAAEAAAAFAAIAAAAUAAIAAAAFAAIAAAAUAAMAAAAFAAIAAAAUAAQAAAAFAAIAAAAUAAUAAAAFAAIAAAAUAAYAAAAFAAIAAAAUAAcAAAAFAAIAAAAUAAgAAAAFAAIAAAAUAAkAAAAFAAIAAAAVAP//AAAFAAIAAAAVAAAAAAAFAAIAAAAVAAEAAAAFAAIAAAAVAAIAAAAFAAIAAAAVAAMAAAAFAAIAAAAVAAQAAAAFAAIAAAAVAAUAAAAFAAIAAAAVAAYAAAAFAAIAAAAVAAcAAAAFAAIAAAAVAAgAAAAFAAIAAAAVAAkAAAAFAAIAAAAWAP//AAAFAAIAAAAWAAAAAAAFAAIAAAAWAAEAAAAFAAIAAAAWAAIAAAAFAAIAAAAWAAMAAAAFAAIAAAAWAAQAAAAFAAIAAAAWAAUAAAAFAAIAAAAWAAYAAAAFAAIAAAAWAAcAAAAFAAIAAAAWAAgAAAAFAAIAAAAWAAkAAAAFAAIAAAAXAP//AAAFAAIAAAAXAAAAAAAFAAIAAAAXAAEAAAAFAAIAAAAXAAIAAAAFAAIAAAAXAAMAAAAFAAIAAAAXAAQAAAAFAAIAAAAXAAUAAAAFAAIAAAAXAAYAAAAFAAIAAAAXAAcAAAAFAAIAAAAXAAgAAAAFAAIAAAAXAAkAAAAFAAIAAAABAAAAAAAFAAIAAAABAAEAAAAFAAIAAAABAAIAAAAFAAIAAAABAAMAAAAFAAIAAAABAAQAAAAFAAIAAAABAAUAAAAFAAIAAAABAAYAAAAFAAIAAAABAAcAAAAFAAIAAAACAAAAAAAFAAIAAAACAAEAAAAFAAIAAAACAAIAAAAFAAIAAAACAAMAAAAFAAIAAAACAAQAAAAFAAIAAAACAAUAAAAFAAIAAAACAAYAAAAFAAIAAAACAAcAAAAFAAIAAAADAAAAAAAFAAIAAAADAAEAAAAFAAIAAAADAAIAAAAFAAIAAAADAAMAAAAFAAIAAAADAAQAAAAFAAIAAAADAAUAAAAFAAIAAAADAAYAAAAFAAIAAAADAAcAAAAFAAIAAAAEAAAAAAAFAAIAAAAEAAEAAAAFAAIAAAAEAAIAAAAFAAIAAAAEAAMAAAAFAAIAAAAEAAQAAAAFAAIAAAAEAAUAAAAFAAIAAAAEAAYAAAAFAAIAAAAEAAcAAAAFAAIAAAAFAAAAAAAFAAIAAAAFAAEAAAAFAAIAAAAFAAIAAAAFAAIAAAAFAAMAAAAFAAIAAAAFAAQAAAAFAAIAAAAFAAUAAAAFAAIAAAAFAAYAAAAFAAIAAAAFAAcAAAAFAAIAAAAGAAAAAAAFAAIAAAAGAAEAAAAFAAIAAAAGAAIAAAAFAAIAAAAGAAMAAAAFAAIAAAAGAAQAAAAFAAIAAAAGAAUAAAAFAAIAAAAGAAYAAAAFAAIAAAAGAAcAAAAFAAIAAAAHAAAAAAAFAAIAAAAHAAEAAAAFAAIAAAAHAAIAAAAFAAIAAAAHAAMAAAAFAAIAAAAHAAQAAAAFAAIAAAAHAAUAAAAFAAIAAAAHAAYAAAAFAAIAAAAHAAcAAAAFAAIAAAAIAAAAAAAFAAIAAAAIAAEAAAAFAAIAAAAIAAIAAAAFAAIAAAAIAAMAAAAFAAIAAAAIAAQAAAAFAAIAAAAIAAUAAAAFAAIAAAAIAAYAAAAFAAIAAAAIAAcAAAAFAAIAAAAJAAAAAAAFAAIAAAAJAAEAAAAFAAIAAAAJAAIAAAAFAAIAAAAJAAMAAAAFAAIAAAAJAAQAAAAFAAIAAAAJAAUAAAAFAAIAAAAJAAYAAAAFAAIAAAAJAAcAAAAFAAIAAAAKAAAAAAAFAAAAAAAKAAEAAAAFAAAAAAAKAAIAAAAFAAIAAAAKAAMAAAAFAAIAAAAKAAQAAAAFAAIAAAAKAAUAAAAFAAIAAAAKAAYAAAAFAAIAAAAKAAcAAAAFAAIAAAALAAAAAAAFAAAAAAALAAEAAAAFAAIAAAALAAIAAAAFAAIAAAALAAMAAAAFAAIAAAALAAQAAAAFAAIAAAALAAUAAAAFAAIAAAALAAYAAAAFAAIAAAALAAcAAAAFAAIAAAAMAAIAAAAFAAIAAAAMAAMAAAAFAAIAAAAMAAQAAAAFAAIAAAAMAAUAAAAFAAIAAAANAAIAAAAFAAIAAAANAAMAAAAFAAIAAAANAAQAAAAFAAIAAAANAAUAAAAFAAIAAAAOAAIAAAAFAAIAAAAOAAMAAAAFAAIAAAAOAAQAAAAFAAIAAAAOAAUAAAAFAAIAAAAPAAIAAAAFAAIAAAAPAAMAAAAFAAIAAAAPAAQAAAAFAAIAAAAPAAUAAAAFAAIAAAAQAAIAAAAFAAIAAAAQAAMAAAAFAAIAAAAQAAQAAAAFAAIAAAAQAAUAAAAFAAIAAAAJAP7/AAAFAAIAAAAKAP7/AAAFAAIAAAALAP7/AAAFAAIAAAAMAP7/AAAFAAIAAAANAP7/AAAFAAIAAAANAP3/AAAFAAIAAAAOAPz/AAAFAAIAAAAPAPz/AAAFAAIAAAAQAPz/AAAFAAIAAAARAPz/AAAFAAIAAAARAP3/AAAFAAIAAAASAP3/AAAFAAIAAAATAP3/AAAFAAIAAAAUAP3/AAAFAAIAAAAVAP3/AAAFAAIAAAAHABAAAAAFAAIAAAAHABEAAAAFAAIAAAAHABIAAAAFAAIAAAAIABAAAAAFAAIAAAAIABEAAAAFAAIAAAAIABIAAAAFAAIAAAAJABAAAAAFAAIAAAAJABEAAAAFAAIAAAAJABIAAAAFAAIAAAAKABAAAAAFAAIAAAAKABEAAAAFAAIAAAAKABIAAAAFAAIAAAALABAAAAAFAAIAAAALABEAAAAFAAIAAAALABIAAAAFAAIAAAAQAA0AAAAFAAIAAAAQAA4AAAAFAAIAAAAQAA8AAAAFAAIAAAAQABAAAAAFAAIAAAAQABEAAAAFAAIAAAARAA0AAAAFAAIAAAARAA4AAAAFAAIAAAARAA8AAAAFAAIAAAARABAAAAAFAAIAAAARABEAAAAFAAIAAAALAAwAAAAFAAIAAAALAA0AAAAFAAIAAAAMAAwAAAAFAAIAAAAMAA0AAAAFAAIAAAANAAwAAAAFAAIAAAANAA0AAAAFAAIAAAAOAAwAAAAFAAIAAAAOAA0AAAAFAAIAAAAFAAsAAAAFAAIAAAAFAAwAAAAFAAIAAAAGAAsAAAAFAAIAAAAGAAwAAAAFAAIAAAAHAAsAAAAFAAIAAAAHAAwAAAAFAAIAAAAIAAsAAAAFAAIAAAAIAAwAAAAFAAIAAAAJAAsAAAAFAAIAAAAJAAwAAAAFAAIAAAAKAAsAAAAFAAIAAAAKAAwAAAAFAAIAAAACAAwAAAAFAAIAAAACAA0AAAAFAAIAAAADAAwAAAAFAAIAAAADAA0AAAAFAAIAAAAEAAwAAAAFAAIAAAAEAA0AAAAFAAIAAAADABAAAAAFAAIAAAADABEAAAAFAAIAAAAEABAAAAAFAAIAAAAEABEAAAAFAAIAAAAFABEAAAAFAAAAAAAGABEAAAAFAAAAAAAIAA8AAAAFAAAAAAAJAA8AAAAFAAAAAAAJAA4AAAAFAAAAAAAKAA4AAAAFAAAAAAAHAA0AAAAFAAAAAAAIAA0AAAAFAAAAAAABAAoAAAAFAAAAAAACAAoAAAAFAAAAAAADAAoAAAAFAAAAAAAEAAoAAAAFAAAAAAD//wsAAAAFAAAAAAAAAAsAAAAFAAAAAAABAAsAAAAFAAAAAAD//wwAAAAFAAAAAAD//w0AAAAFAAAAAAAAAA0AAAAFAAAAAAAAAA4AAAAFAAAAAAABAA4AAAAFAAAAAAABAA8AAAAFAAAAAAACAA8AAAAFAAAAAAACABAAAAAFAAAAAAABAAwAAAAFAAAAAAAMABAAAAAFAAAAAAANABAAAAAFAAAAAAAOABAAAAAFAAAAAAAOAA8AAAAFAAAAAAAOABEAAAAFAAAAAAAOABIAAAAFAAAAAAAMABIAAAAFAAAAAAANABIAAAAFAAAAAAAPABEAAAAFAAAAAAAPAA8AAAAFAAAAAAAPAA0AAAAFAAAAAAASAA4AAAAFAAAAAAASAA8AAAAFAAAAAAASABEAAAAFAAAAAAATABAAAAAFAAAAAAAUABAAAAAFAAAAAAAVAPz/AAAFAAAAAAA=")
+tile_set = ExtResource("1_r8uk1")
 
 [node name="Walls" type="TileMapLayer" parent="." unique_id=1955586687]
-tile_map_data = PackedByteArray("AAABAAEAAAAEAAAAAAACAAEAAAAAAAAAAAACAAIAAAAAAAAAAAADAAIAAAAAAAAAAAADAAMAAAAAAAAAAAAEAAMAAAAAAAAAAAAFAAMAAAAAAAAAAAAGAAQAAAAAAAAAAAAHAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAIAAUAAAAAAAAAAAAJAAUAAAAAAAAAAAAJAAQAAAAAAAAAAAAJAAMAAAAAAAAAAAAJAAIAAAAAAAAAAAAIAAIAAAAAAAAAAAAIAAEAAAAAAAAAAAAHAAEAAAAAAAAAAAAGAAEAAAAAAAAAAAAFAAEAAAAAAAAAAAAFAAAAAAABAAAAAAAEAAAAAAABAAAAAAADAAEAAAAAAAAAAAABAAIAAAAEAAAAAAABAAMAAAAEAAAAAAALAAcAAAADAAEAAAALAAYAAAACAAAAAAALAAUAAAACAAAAAAALAAQAAgACAAAAAAALAAMAAgACAAAAAAALAAIAAAACAAAAAAALAAEAAAACAAAAAAALAAAAAAACAAEAAAAKAAcAAAADAAAAAAAKAAYAAAAAAAAAAAAKAAUAAAAAAAAAAAAKAAQAAAAAAAAAAAAKAAMAAAAAAAAAAAAKAAIAAAAAAAAAAAAKAAEAAAAAAAAAAAAKAAAAAAABAAAAAAAJAAcAAAADAAAAAAAJAAYAAAAAAAAAAAAJAAEAAAAAAAAAAAAJAAAAAAABAAAAAAAIAAcAAAADAAAAAAAIAAYAAAAAAAAAAAAIAAMAAAAAAAAAAAAIAAAAAAABAAAAAAAHAAcAAAADAAAAAAAHAAYAAAAAAAAAAAAHAAUAAAAAAAAAAAAHAAMAAAAAAAAAAAAHAAIAAAAAAAAAAAAHAAAAAAABAAAAAAAGAAcAAAADAAAAAAAGAAYAAAAAAAAAAAAGAAUAAAAAAAAAAAAGAAMAAAAAAAAAAAAGAAIAAAAAAAAAAAAGAAAAAAABAAAAAAAFAAcAAAADAAAAAAAFAAYAAAAAAAAAAAAFAAUAAAAAAAAAAAAFAAQAAAAAAAAAAAAFAAIAAAAAAAAAAAAEAAcAAAADAAAAAAAEAAYAAAAAAAAAAAAEAAUAAAAAAAAAAAAEAAQAAAAAAAAAAAAEAAIAAAAAAAAAAAAEAAEAAAAAAAAAAAADAAcAAAADAAAAAAADAAYAAAAAAAAAAAADAAUAAAAAAAAAAAADAAQAAAAAAAAAAAADAAAAAAABAAAAAAACAAcAAAADAAAAAAACAAYAAAAAAAAAAAACAAUAAAAAAAAAAAACAAQAAAAAAAAAAAACAAMAAAAAAAAAAAACAAAAAAABAAAAAAABAAcAAAAAAAEAAAABAAYAAAAEAAAAAAABAAUAAAAEAAAAAAABAAQAAAAEAAAAAAABAAAAAAABAAEAAAAQAAUAAAADAAEAAAAQAAQAAgACAAAAAAAQAAMAAgACAAAAAAAQAAIAAAACAAEAAAAPAAUAAAADAAAAAAAPAAQAAAAAAAAAAAAPAAMAAAAAAAAAAAAPAAIAAAABAAAAAAAOAAUAAAADAAAAAAAOAAQAAAAAAAAAAAAOAAMAAAAAAAAAAAAOAAIAAAABAAAAAAANAAUAAAADAAAAAAANAAQAAAAAAAAAAAANAAMAAAAAAAAAAAANAAIAAAABAAAAAAAMAAUAAAAAAAEAAAAMAAQAAgAEAAAAAAAMAAMAAgAEAAAAAAAMAAIAAAABAAEAAAAXAAkAAAADAAEAAAAXAAgAAAACAAAAAAAXAAcAAAACAAAAAAAXAAYAAAACAAAAAAAXAAUAAAACAAAAAAAXAAQAAAACAAAAAAAXAAMAAAACAAAAAAAXAAIAAAACAAAAAAAXAAEAAAACAAAAAAAXAAAAAAACAAAAAAAXAP//AAACAAEAAAAWAAkAAAADAAAAAAAWAAgAAAAAAAAAAAAWAAcAAAAAAAAAAAAWAAYAAAAAAAAAAAAWAAUAAAAAAAAAAAAWAAQAAAAAAAAAAAAWAAMAAAAAAAAAAAAWAAIAAAAAAAAAAAAWAAEAAAAAAAAAAAAWAAAAAAAAAAAAAAAWAP//AAABAAAAAAAVAAkAAAADAAAAAAAVAAgAAAAAAAAAAAAVAAcAAAAAAAAAAAAVAAYAAAAAAAAAAAAVAAUAAAAAAAAAAAAVAAQAAAAAAAAAAAAVAAMAAAAAAAAAAAAVAAIAAAAAAAAAAAAVAAEAAAAAAAAAAAAVAAAAAAAAAAAAAAAVAP//AAABAAAAAAAUAAkAAAADAAAAAAAUAAgAAAAAAAAAAAAUAAcAAAAAAAAAAAAUAAYAAAAAAAAAAAAUAAUAAAAAAAAAAAAUAAQAAAAAAAAAAAAUAAMAAAAAAAAAAAAUAAIAAAAAAAAAAAAUAAEAAAAAAAAAAAAUAAAAAAAAAAAAAAAUAP//AAABAAAAAAATAAkAAAADAAAAAAATAAgAAAAAAAAAAAATAAcAAAAAAAAAAAATAAYAAAAAAAAAAAATAAUAAAAAAAAAAAATAAQAAAAAAAAAAAATAAMAAAAAAAAAAAATAAIAAAAAAAAAAAATAAEAAAAAAAAAAAATAAAAAAAAAAAAAAATAP//AAABAAAAAAASAAkAAAADAAAAAAASAAgAAAAAAAAAAAASAAcAAAAAAAAAAAASAAYAAAAAAAAAAAASAAUAAAAAAAAAAAASAAQAAAAAAAAAAAASAAMAAAAAAAAAAAASAAIAAAAAAAAAAAASAAEAAAAAAAAAAAASAAAAAAAAAAAAAAASAP//AAABAAAAAAARAAkAAAAAAAEAAAARAAgAAAAEAAAAAAARAAcAAAAEAAAAAAARAAYAAAAEAAAAAAARAAUAAAAEAAAAAAARAAQAAgAEAAAAAAARAAMAAgAEAAAAAAARAAIAAAAEAAAAAAARAAEAAAAEAAAAAAARAAAAAAAEAAAAAAARAP//AAABAAEAAAABAAwAAAAAAAEAAAACAAwAAAABAAAAAAADAAwAAAABAAAAAAAEAAwAAAABAAAAAAAFAAwAAAADAAAAAAAGAAwAAAADAAAAAAAHAAwAAAAAAAAAAAAHAA0AAAAAAAEAAAAIAA0AAAADAAEAAAAIABAAAAAAAAAAAAAJABAAAAAAAAAAAAAKABAAAAABAAAAAAALABAAAAABAAAAAAAMABAAAAAEAAEAAAANABAAAAAEAAEAAAAOAA8AAAABAAEAAAAPAA8AAAAEAAEAAAAQAA8AAAAAAAAAAAAQAA4AAAAEAAAAAAAQAA0AAAABAAAAAAAPAA0AAAAEAAEAAAAOAA0AAAADAAAAAAANAA0AAAADAAAAAAAMAA0AAAADAAAAAAALAA0AAAAAAAEAAAAKAA4AAAADAAIAAAAJAA4AAAABAAEAAAAJAA8AAAACAAAAAAAIAA8AAAABAAEAAAAHABAAAAABAAEAAAAHABEAAAAAAAAAAAAGABEAAAAEAAEAAAAHABIAAAAAAAEAAAAIABIAAAADAAAAAAAJABIAAAADAAAAAAAKABIAAAADAAAAAAALABIAAAADAAAAAAAMABIAAAAEAAEAAAAOABEAAAAEAAAAAAANABIAAAAEAAEAAAAPABEAAAAEAAEAAAAQABAAAAAEAAAAAAARABAAAAACAAAAAAASAA8AAAADAAEAAAASAA4AAAACAAEAAAARAA4AAAAAAAAAAAARAA0AAAACAAEAAAAOAAwAAAACAAEAAAANAAwAAAABAAAAAAALAAwAAAABAAAAAAAMAAwAAAABAAAAAAAJAAwAAAADAAAAAAAKAAwAAAADAAAAAAAIAAwAAAAAAAAAAAAEAA0AAAADAAEAAAADAA0AAAADAAAAAAACAA0AAAAAAAEAAAABAA4AAAACAAEAAAABAA8AAAAAAAEAAAACABAAAAAAAAEAAAADABAAAAABAAAAAAADABEAAAAAAAEAAAAEABEAAAADAAAAAAAFABEAAAAEAAEAAAAIABEAAAAAAAAAAAAJABEAAAAAAAAAAAALABEAAAACAAAAAAAKABEAAAAAAAAAAAAOABAAAAACAAAAAAARAA8AAAAAAAAAAAAKAAsAAAACAAEAAAAIAAsAAAABAAAAAAAJAAsAAAABAAAAAAAGAAsAAAABAAAAAAAHAAsAAAABAAAAAAAEAAoAAAADAAIAAAAFAAsAAAABAAEAAAADAAoAAAAEAAEAAAABAAoAAAABAAEAAAACAAoAAAAEAAEAAAABAAsAAAACAAAAAAAAAAsAAAAEAAEAAAD//wsAAAABAAEAAAD//wwAAAAFAAEAAAD//w0AAAAAAAEAAAAAAA0AAAACAAEAAAAAAA4AAAAAAAEAAAACAA8AAAACAAEAAAAEABAAAAACAAEAAAAOABIAAAADAAEAAAARABEAAAADAAAAAAAQABEAAAADAAAAAAASABEAAAADAAIAAAATABAAAAABAAIAAAAUABAAAAADAAIAAAAJAP7/AAABAAIAAAAKAP7/AAAEAAEAAAALAP7/AAAEAAEAAAAMAP7/AAAEAAEAAAANAP7/AAADAAEAAAANAP3/AAACAAIAAAAOAPz/AAABAAIAAAAPAPz/AAAEAAEAAAAQAPz/AAAEAAEAAAARAPz/AAACAAEAAAARAP3/AAAAAAEAAAASAP3/AAAEAAEAAAATAP3/AAAEAAEAAAAUAP3/AAAEAAEAAAAVAP3/AAADAAEAAAAVAPz/AAACAAIAAAA=")
+tile_map_data = PackedByteArray("AAABAAEAAAAEAAAAAAACAAEAAAAAAAAAAAACAAIAAAAAAAAAAAADAAIAAAAAAAAAAAADAAMAAAAAAAAAAAAEAAMAAAAAAAAAAAAFAAMAAAAAAAAAAAAGAAQAAAAAAAAAAAAHAAQAAAAAAAAAAAAIAAQAAAAAAAAAAAAIAAUAAAAAAAAAAAAJAAUAAAAAAAAAAAAJAAQAAAAAAAAAAAAJAAMAAAAAAAAAAAAJAAIAAAAAAAAAAAAIAAIAAAAAAAAAAAAIAAEAAAAAAAAAAAAHAAEAAAAAAAAAAAAGAAEAAAAAAAAAAAAFAAEAAAAAAAAAAAAFAAAAAAABAAAAAAAEAAAAAAABAAAAAAADAAEAAAAAAAAAAAABAAIAAAAEAAAAAAABAAMAAAAEAAAAAAALAAcAAAADAAEAAAALAAYAAAACAAAAAAALAAUAAAACAAAAAAALAAQAAAACAAAAAAALAAMAAAACAAAAAAALAAIAAAACAAAAAAALAAEAAAACAAAAAAALAAAAAAACAAEAAAAKAAcAAAADAAAAAAAKAAYAAAAAAAAAAAAKAAUAAAAAAAAAAAAKAAQAAAAAAAAAAAAKAAMAAAAAAAAAAAAKAAIAAAAAAAAAAAAKAAEAAAAAAAAAAAAKAAAAAAABAAAAAAAJAAcAAAADAAAAAAAJAAYAAAAAAAAAAAAJAAEAAAAAAAAAAAAJAAAAAAABAAAAAAAIAAcAAAADAAAAAAAIAAYAAAAAAAAAAAAIAAMAAAAAAAAAAAAIAAAAAAABAAAAAAAHAAcAAAADAAAAAAAHAAYAAAAAAAAAAAAHAAUAAAAAAAAAAAAHAAMAAAAAAAAAAAAHAAIAAAAAAAAAAAAHAAAAAAABAAAAAAAGAAcAAAADAAAAAAAGAAYAAAAAAAAAAAAGAAUAAAAAAAAAAAAGAAMAAAAAAAAAAAAGAAIAAAAAAAAAAAAGAAAAAAABAAAAAAAFAAcAAAADAAAAAAAFAAYAAAAAAAAAAAAFAAUAAAAAAAAAAAAFAAQAAAAAAAAAAAAFAAIAAAAAAAAAAAAEAAcAAAADAAAAAAAEAAYAAAAAAAAAAAAEAAUAAAAAAAAAAAAEAAQAAAAAAAAAAAAEAAIAAAAAAAAAAAAEAAEAAAAAAAAAAAADAAcAAAADAAAAAAADAAYAAAAAAAAAAAADAAUAAAAAAAAAAAADAAQAAAAAAAAAAAADAAAAAAABAAAAAAACAAcAAAADAAAAAAACAAYAAAAAAAAAAAACAAUAAAAAAAAAAAACAAQAAAAAAAAAAAACAAMAAAAAAAAAAAACAAAAAAABAAAAAAABAAcAAAAAAAEAAAABAAYAAAAEAAAAAAABAAUAAAAEAAAAAAABAAQAAAAEAAAAAAABAAAAAAABAAEAAAAQAAUAAAADAAEAAAAQAAQAAAACAAAAAAAQAAMAAAACAAAAAAAQAAIAAAACAAEAAAAPAAUAAAADAAAAAAAPAAQAAAAAAAAAAAAPAAMAAAAAAAAAAAAPAAIAAAABAAAAAAAOAAUAAAADAAAAAAAOAAQAAAAAAAAAAAAOAAMAAAAAAAAAAAAOAAIAAAABAAAAAAANAAUAAAADAAAAAAANAAQAAAAAAAAAAAANAAMAAAAAAAAAAAANAAIAAAABAAAAAAAMAAUAAAAAAAEAAAAMAAQAAAAEAAAAAAAMAAMAAAAEAAAAAAAMAAIAAAABAAEAAAAXAAkAAAADAAEAAAAXAAgAAAACAAAAAAAXAAcAAAACAAAAAAAXAAYAAAACAAAAAAAXAAUAAAACAAAAAAAXAAQAAAACAAAAAAAXAAMAAAACAAAAAAAXAAIAAAACAAAAAAAXAAEAAAACAAAAAAAXAAAAAAACAAAAAAAXAP//AAACAAEAAAAWAAkAAAADAAAAAAAWAAgAAAAAAAAAAAAWAAcAAAAAAAAAAAAWAAYAAAAAAAAAAAAWAAUAAAAAAAAAAAAWAAQAAAAAAAAAAAAWAAMAAAAAAAAAAAAWAAIAAAAAAAAAAAAWAAEAAAAAAAAAAAAWAAAAAAAAAAAAAAAWAP//AAABAAAAAAAVAAkAAAADAAAAAAAVAAgAAAAAAAAAAAAVAAcAAAAAAAAAAAAVAAYAAAAAAAAAAAAVAAUAAAAAAAAAAAAVAAQAAAAAAAAAAAAVAAMAAAAAAAAAAAAVAAIAAAAAAAAAAAAVAAEAAAAAAAAAAAAVAAAAAAAAAAAAAAAVAP//AAABAAAAAAAUAAkAAAADAAAAAAAUAAgAAAAAAAAAAAAUAAcAAAAAAAAAAAAUAAYAAAAAAAAAAAAUAAUAAAAAAAAAAAAUAAQAAAAAAAAAAAAUAAMAAAAAAAAAAAAUAAIAAAAAAAAAAAAUAAEAAAAAAAAAAAAUAAAAAAAAAAAAAAAUAP//AAABAAAAAAATAAkAAAADAAAAAAATAAgAAAAAAAAAAAATAAcAAAAAAAAAAAATAAYAAAAAAAAAAAATAAUAAAAAAAAAAAATAAQAAAAAAAAAAAATAAMAAAAAAAAAAAATAAIAAAAAAAAAAAATAAEAAAAAAAAAAAATAAAAAAAAAAAAAAATAP//AAABAAAAAAASAAkAAAADAAAAAAASAAgAAAAAAAAAAAASAAcAAAAAAAAAAAASAAYAAAAAAAAAAAASAAUAAAAAAAAAAAASAAQAAAAAAAAAAAASAAMAAAAAAAAAAAASAAIAAAAAAAAAAAASAAEAAAAAAAAAAAASAAAAAAAAAAAAAAASAP//AAABAAAAAAARAAkAAAAAAAEAAAARAAgAAAAEAAAAAAARAAcAAAAEAAAAAAARAAYAAAAEAAAAAAARAAUAAAAEAAAAAAARAAQAAAAEAAAAAAARAAMAAAAEAAAAAAARAAIAAAAEAAAAAAARAAEAAAAEAAAAAAARAAAAAAAEAAAAAAARAP//AAABAAEAAAABAAwAAAAAAAEAAAACAAwAAAABAAAAAAADAAwAAAABAAAAAAAEAAwAAAABAAAAAAAFAAwAAAADAAAAAAAGAAwAAAADAAAAAAAHAAwAAAAAAAAAAAAHAA0AAAAAAAEAAAAIAA0AAAADAAEAAAAIABAAAAAAAAAAAAAJABAAAAAAAAAAAAAKABAAAAABAAAAAAALABAAAAABAAAAAAAMABAAAAAEAAEAAAANABAAAAAEAAEAAAAOAA8AAAABAAEAAAAPAA8AAAAEAAEAAAAQAA8AAAAAAAAAAAAQAA4AAAAEAAAAAAAQAA0AAAABAAAAAAAPAA0AAAAEAAEAAAAOAA0AAAADAAAAAAANAA0AAAADAAAAAAAMAA0AAAADAAAAAAALAA0AAAAAAAEAAAAKAA4AAAADAAIAAAAJAA4AAAABAAEAAAAJAA8AAAACAAAAAAAIAA8AAAABAAEAAAAHABAAAAABAAEAAAAHABEAAAAAAAAAAAAGABEAAAAEAAEAAAAHABIAAAAAAAEAAAAIABIAAAADAAAAAAAJABIAAAADAAAAAAAKABIAAAADAAAAAAALABIAAAADAAAAAAAMABIAAAAEAAEAAAAOABEAAAAEAAAAAAANABIAAAAEAAEAAAAPABEAAAAEAAEAAAAQABAAAAAEAAAAAAARABAAAAACAAAAAAASAA8AAAADAAEAAAASAA4AAAACAAEAAAARAA4AAAAAAAAAAAARAA0AAAACAAEAAAAOAAwAAAACAAEAAAANAAwAAAABAAAAAAALAAwAAAABAAAAAAAMAAwAAAABAAAAAAAJAAwAAAADAAAAAAAKAAwAAAADAAAAAAAIAAwAAAAAAAAAAAAEAA0AAAADAAEAAAADAA0AAAADAAAAAAACAA0AAAAAAAEAAAABAA4AAAACAAEAAAABAA8AAAAAAAEAAAACABAAAAAAAAEAAAADABAAAAABAAAAAAADABEAAAAAAAEAAAAEABEAAAADAAAAAAAFABEAAAAEAAEAAAAIABEAAAAAAAAAAAAJABEAAAAAAAAAAAALABEAAAACAAAAAAAKABEAAAAAAAAAAAAOABAAAAACAAAAAAARAA8AAAAAAAAAAAAKAAsAAAACAAEAAAAIAAsAAAABAAAAAAAJAAsAAAABAAAAAAAGAAsAAAABAAAAAAAHAAsAAAABAAAAAAAEAAoAAAADAAIAAAAFAAsAAAABAAEAAAADAAoAAAAEAAEAAAABAAoAAAABAAEAAAACAAoAAAAEAAEAAAABAAsAAAACAAAAAAAAAAsAAAAEAAEAAAD//wsAAAABAAEAAAD//wwAAAAFAAEAAAD//w0AAAAAAAEAAAAAAA0AAAACAAEAAAAAAA4AAAAAAAEAAAACAA8AAAACAAEAAAAEABAAAAACAAEAAAAOABIAAAADAAEAAAARABEAAAADAAAAAAAQABEAAAADAAAAAAASABEAAAADAAIAAAATABAAAAABAAIAAAAUABAAAAADAAIAAAAJAP7/AAABAAIAAAAKAP7/AAAEAAEAAAALAP7/AAAEAAEAAAAMAP7/AAAEAAEAAAANAP7/AAADAAEAAAANAP3/AAACAAIAAAAOAPz/AAABAAIAAAAPAPz/AAAEAAEAAAAQAPz/AAAEAAEAAAARAPz/AAACAAEAAAARAP3/AAAAAAEAAAASAP3/AAAEAAEAAAATAP3/AAAEAAEAAAAUAP3/AAAEAAEAAAAVAP3/AAADAAEAAAAVAPz/AAACAAIAAAA=")
 tile_set = ExtResource("1_r8uk1")
 
-[node name="Half-Walls" type="TileMapLayer" parent="." unique_id=986112316]
+[node name="Half_Walls" type="TileMapLayer" parent="." unique_id=986112316]
 texture_filter = 1
-tile_map_data = PackedByteArray("AAAFAAMAAQACAAAAAAAGAAMAAQABAAEAAAAFAAUAAQACAAAAAAAGAAUAAQAEAAAAAAAFAAQAAQACAAAAAAAGAAQAAQAEAAAAAAAGAAIAAQADAAAAAAAHAAIAAQADAAAAAAAIAAIAAQADAAAAAAAHAAMAAQABAAAAAAAIAAMAAQABAAAAAAADAAIAAQAEAAAAAAADAAMAAQAEAAAAAAADAAQAAQAEAAAAAAACAAIAAQACAAAAAAACAAMAAQACAAAAAAACAAQAAQACAAAAAAA=")
+tile_map_data = PackedByteArray("AAAGAAMAAQABAAEAAAAGAAIAAQADAAAAAAAHAAIAAQADAAAAAAAIAAIAAQADAAAAAAACAAIAAQADAAAAAAAGAAQAAQAEAAAAAAAGAAUAAQAEAAAAAAACAAMAAQACAAIAAAADAAMAAQAEAAAAAAABAAMAAQACAAAAAAAFAAMAAQACAAAAAAAFAAQAAQACAAAAAAAFAAUAAQACAAAAAAAHAAMAAQABAAAAAAAIAAMAAQABAAAAAAA=")
 tile_set = ExtResource("1_r8uk1")
 
-[node name="Items" type="TileMapLayer" parent="." unique_id=220484894]
+[node name="Entities" type="TileMapLayer" parent="." unique_id=220484894]
 texture_filter = 1
 tile_map_data = PackedByteArray("AAACAAMAAwAEAAAAAAAGAAMAAwAFAAAAAAAHAAMAAwAAAAIAAAAHAAQAAwAAAAIAAAAHAAUAAwAAAAIAAAAGAAQAAwAAAAIAAAAGAAUAAwAAAAIAAAAIAAMAAwAAAAIAAAAIAAQAAwAAAAIAAAATAAEAAwADAAIAAAAWAAEAAwADAAIAAAATAAcAAwACAAIAAAAWAAcAAwACAAIAAAAOAAMAAwABAAIAAAAWAAQAAwAFAAIAAAAGAAEAAwAAAAAAAAAUAAMAAwAAAAAAAAAJAAcAAwAAAAEAAAANAP3/AwAAAAEAAAASAAMAAwACAAIAAAATAAYAAwACAAIAAAA=")
 tile_set = ExtResource("1_r8uk1")
+
+[node name="my_first_level" type="Node3D" parent="." unique_id=1558008348]
+
+[node name="1, 1" type="Node3D" parent="my_first_level" unique_id=1037332976]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+
+[node name="2, 1" type="Node3D" parent="my_first_level" unique_id=1763716338]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
+
+[node name="2, 2" type="Node3D" parent="my_first_level" unique_id=128430761]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+
+[node name="3, 2" type="Node3D" parent="my_first_level" unique_id=2096754345]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 2)
+
+[node name="3, 3" type="Node3D" parent="my_first_level" unique_id=521514326]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3)
+
+[node name="4, 3" type="Node3D" parent="my_first_level" unique_id=640124939]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3)
+
+[node name="5, 3" type="Node3D" parent="my_first_level" unique_id=1519953569]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 3)
+
+[node name="6, 4" type="Node3D" parent="my_first_level" unique_id=1323545542]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 4)
+
+[node name="7, 4" type="Node3D" parent="my_first_level" unique_id=20335507]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 4)
+
+[node name="8, 4" type="Node3D" parent="my_first_level" unique_id=1303544139]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 4)
+
+[node name="8, 5" type="Node3D" parent="my_first_level" unique_id=890207708]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 5)
+
+[node name="9, 5" type="Node3D" parent="my_first_level" unique_id=1820994554]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 5)
+
+[node name="9, 4" type="Node3D" parent="my_first_level" unique_id=1438645823]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 4)
+
+[node name="9, 3" type="Node3D" parent="my_first_level" unique_id=193653774]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 3)
+
+[node name="9, 2" type="Node3D" parent="my_first_level" unique_id=1736182049]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 2)
+
+[node name="8, 2" type="Node3D" parent="my_first_level" unique_id=879410358]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 2)
+
+[node name="8, 1" type="Node3D" parent="my_first_level" unique_id=994212857]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 1)
+
+[node name="7, 1" type="Node3D" parent="my_first_level" unique_id=987161159]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 1)
+
+[node name="6, 1" type="Node3D" parent="my_first_level" unique_id=171358877]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 1)
+
+[node name="5, 1" type="Node3D" parent="my_first_level" unique_id=417544519]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 1)
+
+[node name="5, 0" type="Node3D" parent="my_first_level" unique_id=1932386919]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+
+[node name="4, 0" type="Node3D" parent="my_first_level" unique_id=1609358526]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+
+[node name="3, 1" type="Node3D" parent="my_first_level" unique_id=510895908]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1)
+
+[node name="1, 3" type="Node3D" parent="my_first_level" unique_id=1121411436]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 2)
+
+[node name="1, 4" type="Node3D" parent="my_first_level" unique_id=1454023157]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 3)
+
+[node name="11, 7" type="Node3D" parent="my_first_level" unique_id=1039173155]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 7)
+
+[node name="11, 6" type="Node3D" parent="my_first_level" unique_id=14668689]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 6)
+
+[node name="11, 5" type="Node3D" parent="my_first_level" unique_id=896685755]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 5)
+
+[node name="11, 4" type="Node3D" parent="my_first_level" unique_id=78334952]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 4)
+
+[node name="11, 3" type="Node3D" parent="my_first_level" unique_id=1283567527]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 3)
+
+[node name="11, 2" type="Node3D" parent="my_first_level" unique_id=411138968]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 2)
+
+[node name="11, 1" type="Node3D" parent="my_first_level" unique_id=231176214]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 1)
+
+[node name="11, 0" type="Node3D" parent="my_first_level" unique_id=808499169]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 0)
+
+[node name="10, 7" type="Node3D" parent="my_first_level" unique_id=87136407]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 7)
+
+[node name="10, 6" type="Node3D" parent="my_first_level" unique_id=23328300]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 6)
+
+[node name="10, 5" type="Node3D" parent="my_first_level" unique_id=424353862]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 5)
+
+[node name="10, 4" type="Node3D" parent="my_first_level" unique_id=1739359020]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 4)
+
+[node name="10, 3" type="Node3D" parent="my_first_level" unique_id=1074653089]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 3)
+
+[node name="10, 2" type="Node3D" parent="my_first_level" unique_id=139247908]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 2)
+
+[node name="10, 1" type="Node3D" parent="my_first_level" unique_id=1466101397]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 1)
+
+[node name="10, 0" type="Node3D" parent="my_first_level" unique_id=1453557770]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+
+[node name="9, 7" type="Node3D" parent="my_first_level" unique_id=1527731981]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 7)
+
+[node name="9, 6" type="Node3D" parent="my_first_level" unique_id=436043921]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 6)
+
+[node name="9, 1" type="Node3D" parent="my_first_level" unique_id=813922400]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 1)
+
+[node name="9, 0" type="Node3D" parent="my_first_level" unique_id=624668141]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 0)
+
+[node name="8, 7" type="Node3D" parent="my_first_level" unique_id=722705901]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 7)
+
+[node name="8, 6" type="Node3D" parent="my_first_level" unique_id=100535143]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 6)
+
+[node name="8, 3" type="Node3D" parent="my_first_level" unique_id=1816334624]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 3)
+
+[node name="8, 0" type="Node3D" parent="my_first_level" unique_id=797836011]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
+
+[node name="7, 7" type="Node3D" parent="my_first_level" unique_id=1157957751]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 7)
+
+[node name="7, 6" type="Node3D" parent="my_first_level" unique_id=1810987970]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 6)
+
+[node name="7, 5" type="Node3D" parent="my_first_level" unique_id=1731416293]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 5)
+
+[node name="7, 3" type="Node3D" parent="my_first_level" unique_id=1943954111]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 3)
+
+[node name="7, 2" type="Node3D" parent="my_first_level" unique_id=1922855840]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 2)
+
+[node name="7, 0" type="Node3D" parent="my_first_level" unique_id=764177421]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
+
+[node name="6, 7" type="Node3D" parent="my_first_level" unique_id=1134172623]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 7)
+
+[node name="6, 6" type="Node3D" parent="my_first_level" unique_id=457658082]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 6)
+
+[node name="6, 5" type="Node3D" parent="my_first_level" unique_id=967573722]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 5)
+
+[node name="6, 3" type="Node3D" parent="my_first_level" unique_id=651928718]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 3)
+
+[node name="6, 2" type="Node3D" parent="my_first_level" unique_id=1726818939]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 2)
+
+[node name="6, 0" type="Node3D" parent="my_first_level" unique_id=2116086175]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="5, 7" type="Node3D" parent="my_first_level" unique_id=1574948100]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 7)
+
+[node name="5, 6" type="Node3D" parent="my_first_level" unique_id=284382929]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 6)
+
+[node name="5, 5" type="Node3D" parent="my_first_level" unique_id=1453756120]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 5)
+
+[node name="5, 4" type="Node3D" parent="my_first_level" unique_id=1560147689]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 4)
+
+[node name="5, 2" type="Node3D" parent="my_first_level" unique_id=1161953420]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 2)
+
+[node name="4, 7" type="Node3D" parent="my_first_level" unique_id=2076059801]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 7)
+
+[node name="4, 6" type="Node3D" parent="my_first_level" unique_id=2096582297]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 6)
+
+[node name="4, 5" type="Node3D" parent="my_first_level" unique_id=420547548]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 5)
+
+[node name="4, 4" type="Node3D" parent="my_first_level" unique_id=342662985]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+
+[node name="4, 2" type="Node3D" parent="my_first_level" unique_id=1871576415]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2)
+
+[node name="4, 1" type="Node3D" parent="my_first_level" unique_id=254305981]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 1)
+
+[node name="3, 7" type="Node3D" parent="my_first_level" unique_id=38057012]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 7)
+
+[node name="3, 6" type="Node3D" parent="my_first_level" unique_id=768763530]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 6)
+
+[node name="3, 5" type="Node3D" parent="my_first_level" unique_id=515705134]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 5)
+
+[node name="3, 4" type="Node3D" parent="my_first_level" unique_id=478236079]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 4)
+
+[node name="3, 0" type="Node3D" parent="my_first_level" unique_id=583774041]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+
+[node name="2, 7" type="Node3D" parent="my_first_level" unique_id=1591709442]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 7)
+
+[node name="2, 6" type="Node3D" parent="my_first_level" unique_id=94637331]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 6)
+
+[node name="2, 5" type="Node3D" parent="my_first_level" unique_id=251974924]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 5)
+
+[node name="2, 4" type="Node3D" parent="my_first_level" unique_id=1093340937]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
+
+[node name="2, 3" type="Node3D" parent="my_first_level" unique_id=1278416908]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 3)
+
+[node name="2, 0" type="Node3D" parent="my_first_level" unique_id=1335370204]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+
+[node name="1, 7" type="Node3D" parent="my_first_level" unique_id=737189546]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 7)
+
+[node name="1, 6" type="Node3D" parent="my_first_level" unique_id=2099102802]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 6)
+
+[node name="1, 5" type="Node3D" parent="my_first_level" unique_id=1368748646]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 5)
+
+[node name="1, 8" type="Node3D" parent="my_first_level" unique_id=2120753165]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 4)
+
+[node name="1, 0" type="Node3D" parent="my_first_level" unique_id=572205074]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+
+[node name="16, 5" type="Node3D" parent="my_first_level" unique_id=871933969]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 5)
+
+[node name="16, 4" type="Node3D" parent="my_first_level" unique_id=873370545]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 4)
+
+[node name="16, 3" type="Node3D" parent="my_first_level" unique_id=1523518256]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 3)
+
+[node name="16, 2" type="Node3D" parent="my_first_level" unique_id=1396691720]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 2)
+
+[node name="15, 5" type="Node3D" parent="my_first_level" unique_id=1233347668]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 5)
+
+[node name="15, 4" type="Node3D" parent="my_first_level" unique_id=1810273461]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 4)
+
+[node name="15, 3" type="Node3D" parent="my_first_level" unique_id=1233067306]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 3)
+
+[node name="15, 2" type="Node3D" parent="my_first_level" unique_id=2097943236]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 2)
+
+[node name="14, 5" type="Node3D" parent="my_first_level" unique_id=1726869563]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 5)
+
+[node name="14, 4" type="Node3D" parent="my_first_level" unique_id=1245350399]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 4)
+
+[node name="14, 3" type="Node3D" parent="my_first_level" unique_id=898665098]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 3)
+
+[node name="14, 2" type="Node3D" parent="my_first_level" unique_id=2074748054]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 2)
+
+[node name="13, 5" type="Node3D" parent="my_first_level" unique_id=1480685618]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 5)
+
+[node name="13, 4" type="Node3D" parent="my_first_level" unique_id=599745194]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 4)
+
+[node name="13, 3" type="Node3D" parent="my_first_level" unique_id=1120276511]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 3)
+
+[node name="13, 2" type="Node3D" parent="my_first_level" unique_id=1943808717]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 2)
+
+[node name="12, 5" type="Node3D" parent="my_first_level" unique_id=1894800816]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 5)
+
+[node name="12, 4" type="Node3D" parent="my_first_level" unique_id=1041334844]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 4)
+
+[node name="12, 3" type="Node3D" parent="my_first_level" unique_id=1177842111]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 3)
+
+[node name="12, 2" type="Node3D" parent="my_first_level" unique_id=1216725384]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 2)
+
+[node name="23, 9" type="Node3D" parent="my_first_level" unique_id=163401839]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, 9)
+
+[node name="23, 8" type="Node3D" parent="my_first_level" unique_id=1232221062]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, 8)
+
+[node name="23, 7" type="Node3D" parent="my_first_level" unique_id=1994555946]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, 7)
+
+[node name="23, 6" type="Node3D" parent="my_first_level" unique_id=1253049066]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, 6)
+
+[node name="23, 5" type="Node3D" parent="my_first_level" unique_id=698622800]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, 5)
+
+[node name="23, 4" type="Node3D" parent="my_first_level" unique_id=444387694]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, 4)
+
+[node name="23, 3" type="Node3D" parent="my_first_level" unique_id=107556533]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, 3)
+
+[node name="23, 2" type="Node3D" parent="my_first_level" unique_id=156452383]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, 2)
+
+[node name="23, 1" type="Node3D" parent="my_first_level" unique_id=1096276420]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, 1)
+
+[node name="23, 0" type="Node3D" parent="my_first_level" unique_id=1774161490]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, 0)
+
+[node name="23, -1" type="Node3D" parent="my_first_level" unique_id=1897349640]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 23, 0, -1)
+
+[node name="22, 9" type="Node3D" parent="my_first_level" unique_id=763381037]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 9)
+
+[node name="22, 8" type="Node3D" parent="my_first_level" unique_id=906349351]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 8)
+
+[node name="22, 7" type="Node3D" parent="my_first_level" unique_id=208779869]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 7)
+
+[node name="22, 6" type="Node3D" parent="my_first_level" unique_id=789159876]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 6)
+
+[node name="22, 5" type="Node3D" parent="my_first_level" unique_id=183575081]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 5)
+
+[node name="22, 4" type="Node3D" parent="my_first_level" unique_id=1189678176]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 4)
+
+[node name="22, 3" type="Node3D" parent="my_first_level" unique_id=1046859438]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 3)
+
+[node name="22, 2" type="Node3D" parent="my_first_level" unique_id=1040680460]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 2)
+
+[node name="22, 1" type="Node3D" parent="my_first_level" unique_id=992180377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 1)
+
+[node name="22, 0" type="Node3D" parent="my_first_level" unique_id=13639927]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, 0)
+
+[node name="22, -1" type="Node3D" parent="my_first_level" unique_id=1994432273]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22, 0, -1)
+
+[node name="21, 9" type="Node3D" parent="my_first_level" unique_id=1317239696]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 9)
+
+[node name="21, 8" type="Node3D" parent="my_first_level" unique_id=1346513608]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 8)
+
+[node name="21, 7" type="Node3D" parent="my_first_level" unique_id=26781724]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 7)
+
+[node name="21, 6" type="Node3D" parent="my_first_level" unique_id=1357854611]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 6)
+
+[node name="21, 5" type="Node3D" parent="my_first_level" unique_id=2087559211]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 5)
+
+[node name="21, 4" type="Node3D" parent="my_first_level" unique_id=1885326312]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 4)
+
+[node name="21, 3" type="Node3D" parent="my_first_level" unique_id=1115962698]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 3)
+
+[node name="21, 2" type="Node3D" parent="my_first_level" unique_id=541947728]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 2)
+
+[node name="21, 1" type="Node3D" parent="my_first_level" unique_id=1393087447]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 1)
+
+[node name="21, 0" type="Node3D" parent="my_first_level" unique_id=647259731]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, 0)
+
+[node name="21, -1" type="Node3D" parent="my_first_level" unique_id=1492934477]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -1)
+
+[node name="20, 9" type="Node3D" parent="my_first_level" unique_id=1298356320]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 9)
+
+[node name="20, 8" type="Node3D" parent="my_first_level" unique_id=1516550630]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 8)
+
+[node name="20, 7" type="Node3D" parent="my_first_level" unique_id=1778885751]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 7)
+
+[node name="20, 6" type="Node3D" parent="my_first_level" unique_id=1644127420]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 6)
+
+[node name="20, 5" type="Node3D" parent="my_first_level" unique_id=383374301]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 5)
+
+[node name="20, 4" type="Node3D" parent="my_first_level" unique_id=180684157]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 4)
+
+[node name="20, 3" type="Node3D" parent="my_first_level" unique_id=51834791]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 3)
+
+[node name="20, 2" type="Node3D" parent="my_first_level" unique_id=842637610]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 2)
+
+[node name="20, 1" type="Node3D" parent="my_first_level" unique_id=2080689328]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 1)
+
+[node name="20, 0" type="Node3D" parent="my_first_level" unique_id=302034634]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0)
+
+[node name="20, -1" type="Node3D" parent="my_first_level" unique_id=1626556570]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -1)
+
+[node name="19, 9" type="Node3D" parent="my_first_level" unique_id=1361532669]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, 9)
+
+[node name="19, 8" type="Node3D" parent="my_first_level" unique_id=220417923]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, 8)
+
+[node name="19, 7" type="Node3D" parent="my_first_level" unique_id=1533880486]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, 7)
+
+[node name="19, 6" type="Node3D" parent="my_first_level" unique_id=529039956]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, 6)
+
+[node name="19, 5" type="Node3D" parent="my_first_level" unique_id=1347686590]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, 5)
+
+[node name="19, 4" type="Node3D" parent="my_first_level" unique_id=719226548]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, 4)
+
+[node name="19, 3" type="Node3D" parent="my_first_level" unique_id=1931178785]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, 3)
+
+[node name="19, 2" type="Node3D" parent="my_first_level" unique_id=991184659]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, 2)
+
+[node name="19, 1" type="Node3D" parent="my_first_level" unique_id=1894838475]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, 1)
+
+[node name="19, 0" type="Node3D" parent="my_first_level" unique_id=18578482]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, 0)
+
+[node name="19, -1" type="Node3D" parent="my_first_level" unique_id=935282184]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, -1)
+
+[node name="18, 9" type="Node3D" parent="my_first_level" unique_id=1699074279]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 9)
+
+[node name="18, 8" type="Node3D" parent="my_first_level" unique_id=2014170497]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 8)
+
+[node name="18, 7" type="Node3D" parent="my_first_level" unique_id=1929565130]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 7)
+
+[node name="18, 6" type="Node3D" parent="my_first_level" unique_id=173034081]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 6)
+
+[node name="18, 5" type="Node3D" parent="my_first_level" unique_id=1065235449]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 5)
+
+[node name="18, 4" type="Node3D" parent="my_first_level" unique_id=953490388]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 4)
+
+[node name="18, 3" type="Node3D" parent="my_first_level" unique_id=733429912]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 3)
+
+[node name="18, 2" type="Node3D" parent="my_first_level" unique_id=546934875]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 2)
+
+[node name="18, 1" type="Node3D" parent="my_first_level" unique_id=420127278]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 1)
+
+[node name="18, 0" type="Node3D" parent="my_first_level" unique_id=87788363]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 0)
+
+[node name="18, -1" type="Node3D" parent="my_first_level" unique_id=163697989]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -1)
+
+[node name="17, 9" type="Node3D" parent="my_first_level" unique_id=1394504392]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 9)
+
+[node name="17, 8" type="Node3D" parent="my_first_level" unique_id=437394707]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 8)
+
+[node name="17, 7" type="Node3D" parent="my_first_level" unique_id=335594025]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 7)
+
+[node name="17, 6" type="Node3D" parent="my_first_level" unique_id=44379183]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 6)
+
+[node name="17, 5" type="Node3D" parent="my_first_level" unique_id=1403266620]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 5)
+
+[node name="17, 4" type="Node3D" parent="my_first_level" unique_id=112352135]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 4)
+
+[node name="17, 3" type="Node3D" parent="my_first_level" unique_id=613669373]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 3)
+
+[node name="17, 2" type="Node3D" parent="my_first_level" unique_id=48595825]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 2)
+
+[node name="17, 1" type="Node3D" parent="my_first_level" unique_id=1415309109]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 1)
+
+[node name="17, 0" type="Node3D" parent="my_first_level" unique_id=677222335]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 0)
+
+[node name="17, -1" type="Node3D" parent="my_first_level" unique_id=497996535]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -1)
+
+[node name="1, 12" type="Node3D" parent="my_first_level" unique_id=262502664]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 12)
+
+[node name="2, 12" type="Node3D" parent="my_first_level" unique_id=1616343967]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 12)
+
+[node name="3, 12" type="Node3D" parent="my_first_level" unique_id=1379905357]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 12)
+
+[node name="4, 12" type="Node3D" parent="my_first_level" unique_id=1063708037]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 12)
+
+[node name="5, 12" type="Node3D" parent="my_first_level" unique_id=525570414]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 12)
+
+[node name="6, 12" type="Node3D" parent="my_first_level" unique_id=490781249]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 12)
+
+[node name="7, 12" type="Node3D" parent="my_first_level" unique_id=127867028]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 12)
+
+[node name="7, 13" type="Node3D" parent="my_first_level" unique_id=629203663]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 13)
+
+[node name="8, 13" type="Node3D" parent="my_first_level" unique_id=2057395288]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 13)
+
+[node name="8, 16" type="Node3D" parent="my_first_level" unique_id=1833250089]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 16)
+
+[node name="9, 16" type="Node3D" parent="my_first_level" unique_id=1479708406]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 16)
+
+[node name="10, 16" type="Node3D" parent="my_first_level" unique_id=1709724665]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 16)
+
+[node name="11, 16" type="Node3D" parent="my_first_level" unique_id=1367466106]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 16)
+
+[node name="12, 16" type="Node3D" parent="my_first_level" unique_id=965911442]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 16)
+
+[node name="13, 16" type="Node3D" parent="my_first_level" unique_id=1985558351]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 16)
+
+[node name="14, 15" type="Node3D" parent="my_first_level" unique_id=8879047]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 15)
+
+[node name="15, 15" type="Node3D" parent="my_first_level" unique_id=174488564]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 15)
+
+[node name="16, 15" type="Node3D" parent="my_first_level" unique_id=318920046]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 15)
+
+[node name="16, 14" type="Node3D" parent="my_first_level" unique_id=534460377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 14)
+
+[node name="16, 13" type="Node3D" parent="my_first_level" unique_id=1608221868]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 13)
+
+[node name="15, 13" type="Node3D" parent="my_first_level" unique_id=1610714900]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 13)
+
+[node name="14, 13" type="Node3D" parent="my_first_level" unique_id=1648825326]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 13)
+
+[node name="13, 13" type="Node3D" parent="my_first_level" unique_id=250782734]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 13)
+
+[node name="12, 13" type="Node3D" parent="my_first_level" unique_id=265864227]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 13)
+
+[node name="11, 13" type="Node3D" parent="my_first_level" unique_id=371955332]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 13)
+
+[node name="10, 14" type="Node3D" parent="my_first_level" unique_id=652765190]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 14)
+
+[node name="9, 14" type="Node3D" parent="my_first_level" unique_id=974698625]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 14)
+
+[node name="9, 15" type="Node3D" parent="my_first_level" unique_id=255080180]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 15)
+
+[node name="8, 15" type="Node3D" parent="my_first_level" unique_id=1169019996]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 15)
+
+[node name="7, 16" type="Node3D" parent="my_first_level" unique_id=2000813491]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 16)
+
+[node name="7, 17" type="Node3D" parent="my_first_level" unique_id=81807715]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 17)
+
+[node name="6, 17" type="Node3D" parent="my_first_level" unique_id=806013798]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 17)
+
+[node name="7, 18" type="Node3D" parent="my_first_level" unique_id=2051263200]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 18)
+
+[node name="8, 18" type="Node3D" parent="my_first_level" unique_id=2072681265]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 18)
+
+[node name="9, 18" type="Node3D" parent="my_first_level" unique_id=2007852579]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 18)
+
+[node name="10, 18" type="Node3D" parent="my_first_level" unique_id=2068296415]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 18)
+
+[node name="11, 18" type="Node3D" parent="my_first_level" unique_id=460766658]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 18)
+
+[node name="12, 18" type="Node3D" parent="my_first_level" unique_id=106694749]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 18)
+
+[node name="14, 17" type="Node3D" parent="my_first_level" unique_id=1258469730]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 17)
+
+[node name="13, 18" type="Node3D" parent="my_first_level" unique_id=514027951]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 18)
+
+[node name="15, 17" type="Node3D" parent="my_first_level" unique_id=1265915658]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, 17)
+
+[node name="16, 16" type="Node3D" parent="my_first_level" unique_id=1661579827]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 16)
+
+[node name="17, 16" type="Node3D" parent="my_first_level" unique_id=236031830]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 16)
+
+[node name="18, 15" type="Node3D" parent="my_first_level" unique_id=1182195990]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 15)
+
+[node name="18, 14" type="Node3D" parent="my_first_level" unique_id=1266298229]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 14)
+
+[node name="17, 14" type="Node3D" parent="my_first_level" unique_id=971815252]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 14)
+
+[node name="17, 13" type="Node3D" parent="my_first_level" unique_id=1162263627]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 13)
+
+[node name="14, 12" type="Node3D" parent="my_first_level" unique_id=1375523104]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 12)
+
+[node name="13, 12" type="Node3D" parent="my_first_level" unique_id=1066591279]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 12)
+
+[node name="11, 12" type="Node3D" parent="my_first_level" unique_id=801697159]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 12)
+
+[node name="12, 12" type="Node3D" parent="my_first_level" unique_id=121851603]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 12)
+
+[node name="9, 12" type="Node3D" parent="my_first_level" unique_id=1324283557]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 12)
+
+[node name="10, 12" type="Node3D" parent="my_first_level" unique_id=637182902]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 12)
+
+[node name="8, 12" type="Node3D" parent="my_first_level" unique_id=779666788]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 12)
+
+[node name="4, 13" type="Node3D" parent="my_first_level" unique_id=116334359]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 13)
+
+[node name="3, 13" type="Node3D" parent="my_first_level" unique_id=212372322]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 13)
+
+[node name="2, 13" type="Node3D" parent="my_first_level" unique_id=529638556]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 13)
+
+[node name="1, 14" type="Node3D" parent="my_first_level" unique_id=117279161]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 14)
+
+[node name="1, 15" type="Node3D" parent="my_first_level" unique_id=853367729]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 15)
+
+[node name="2, 16" type="Node3D" parent="my_first_level" unique_id=624930680]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 16)
+
+[node name="3, 16" type="Node3D" parent="my_first_level" unique_id=1835467531]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 16)
+
+[node name="3, 17" type="Node3D" parent="my_first_level" unique_id=871036354]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 17)
+
+[node name="4, 17" type="Node3D" parent="my_first_level" unique_id=2016140679]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 17)
+
+[node name="5, 17" type="Node3D" parent="my_first_level" unique_id=205528412]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 17)
+
+[node name="8, 17" type="Node3D" parent="my_first_level" unique_id=35567437]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 17)
+
+[node name="9, 17" type="Node3D" parent="my_first_level" unique_id=921492158]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 17)
+
+[node name="11, 17" type="Node3D" parent="my_first_level" unique_id=2061366807]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 17)
+
+[node name="10, 17" type="Node3D" parent="my_first_level" unique_id=1457051431]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 17)
+
+[node name="14, 16" type="Node3D" parent="my_first_level" unique_id=1650273648]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 16)
+
+[node name="17, 15" type="Node3D" parent="my_first_level" unique_id=730380842]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 15)
+
+[node name="10, 11" type="Node3D" parent="my_first_level" unique_id=542419551]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 11)
+
+[node name="8, 11" type="Node3D" parent="my_first_level" unique_id=1292694500]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 11)
+
+[node name="9, 11" type="Node3D" parent="my_first_level" unique_id=655979225]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 11)
+
+[node name="6, 11" type="Node3D" parent="my_first_level" unique_id=1232654759]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 11)
+
+[node name="7, 11" type="Node3D" parent="my_first_level" unique_id=2135860256]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 11)
+
+[node name="4, 10" type="Node3D" parent="my_first_level" unique_id=2070739852]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 10)
+
+[node name="5, 11" type="Node3D" parent="my_first_level" unique_id=1626495072]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 11)
+
+[node name="3, 10" type="Node3D" parent="my_first_level" unique_id=423004166]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 10)
+
+[node name="1, 10" type="Node3D" parent="my_first_level" unique_id=388532801]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 10)
+
+[node name="2, 10" type="Node3D" parent="my_first_level" unique_id=1308513209]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 10)
+
+[node name="1, 11" type="Node3D" parent="my_first_level" unique_id=1514769582]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 11)
+
+[node name="0, 11" type="Node3D" parent="my_first_level" unique_id=657319051]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11)
+
+[node name="-1, 11" type="Node3D" parent="my_first_level" unique_id=1314309712]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 11)
+
+[node name="-1, 12" type="Node3D" parent="my_first_level" unique_id=422428773]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 12)
+
+[node name="-1, 13" type="Node3D" parent="my_first_level" unique_id=606521184]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, 13)
+
+[node name="0, 13" type="Node3D" parent="my_first_level" unique_id=1559094881]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13)
+
+[node name="0, 14" type="Node3D" parent="my_first_level" unique_id=537289391]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 14)
+
+[node name="2, 15" type="Node3D" parent="my_first_level" unique_id=1582732326]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 15)
+
+[node name="4, 16" type="Node3D" parent="my_first_level" unique_id=766939370]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 16)
+
+[node name="14, 18" type="Node3D" parent="my_first_level" unique_id=1153946214]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, 18)
+
+[node name="17, 17" type="Node3D" parent="my_first_level" unique_id=1630409644]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, 17)
+
+[node name="16, 17" type="Node3D" parent="my_first_level" unique_id=464979308]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, 17)
+
+[node name="18, 17" type="Node3D" parent="my_first_level" unique_id=1389796222]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, 17)
+
+[node name="19, 16" type="Node3D" parent="my_first_level" unique_id=1420639712]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, 16)
+
+[node name="20, 16" type="Node3D" parent="my_first_level" unique_id=497363792]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 16)
+
+[node name="9, -2" type="Node3D" parent="my_first_level" unique_id=1907569391]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -2)
+
+[node name="10, -2" type="Node3D" parent="my_first_level" unique_id=642093036]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -2)
+
+[node name="11, -2" type="Node3D" parent="my_first_level" unique_id=485017611]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, -2)
+
+[node name="12, -2" type="Node3D" parent="my_first_level" unique_id=433244032]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -2)
+
+[node name="13, -2" type="Node3D" parent="my_first_level" unique_id=838721265]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -2)
+
+[node name="13, -3" type="Node3D" parent="my_first_level" unique_id=1817671684]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -3)
+
+[node name="14, -4" type="Node3D" parent="my_first_level" unique_id=1848892692]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14, 0, -4)
+
+[node name="15, -4" type="Node3D" parent="my_first_level" unique_id=549577580]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15, 0, -4)
+
+[node name="16, -4" type="Node3D" parent="my_first_level" unique_id=188474344]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -4)
+
+[node name="17, -4" type="Node3D" parent="my_first_level" unique_id=222988968]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -4)
+
+[node name="17, -3" type="Node3D" parent="my_first_level" unique_id=981366156]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -3)
+
+[node name="18, -3" type="Node3D" parent="my_first_level" unique_id=1491014426]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18, 0, -3)
+
+[node name="19, -3" type="Node3D" parent="my_first_level" unique_id=1776507181]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19, 0, -3)
+
+[node name="20, -3" type="Node3D" parent="my_first_level" unique_id=11816362]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, -3)
+
+[node name="21, -3" type="Node3D" parent="my_first_level" unique_id=2101942]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -3)
+
+[node name="21, -4" type="Node3D" parent="my_first_level" unique_id=439151831]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -4)

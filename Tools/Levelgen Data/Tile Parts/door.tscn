@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dsps7ycf0mqnl"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_36loo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vysm7"]
+albedo_color = Color(1, 0.32941177, 1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wi43g"]
+size = Vector3(1, 1, 0.0039550774)
+
+[node name="Wall" type="RigidBody3D" unique_id=1808121691]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1972704155]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.5)
+mesh = SubResource("QuadMesh_36loo")
+surface_material_override/0 = SubResource("StandardMaterial3D_vysm7")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1459925379]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -0.50124514)
+shape = SubResource("BoxShape3D_wi43g")

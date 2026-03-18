@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bm5v6rm8u5mdh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vguao"]
+albedo_color = Color(0.79580724, 0.23484, 0.18261191, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_fnc2f"]
+material = SubResource("StandardMaterial3D_vguao")
+
+[node name="damaging_floor" type="MeshInstance3D" unique_id=1239543628]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0)
+mesh = SubResource("QuadMesh_fnc2f")
