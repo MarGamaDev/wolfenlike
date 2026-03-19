@@ -85,4 +85,4 @@ func set_costs(grid_node : GridNode) -> void:
 				neighbour.cost_to_move_here = 3000
 			else:
 				#there is nothing in the way
-				neighbour.cost_to_move_here = 0
+				neighbour.cost_to_move_here = 1

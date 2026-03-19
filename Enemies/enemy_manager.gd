@@ -25,8 +25,8 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	##for testing
 	if Input.is_action_just_pressed("space"):
-		align_enemies()
-		print(find_player_grid_position())
+		on_enemy_turn()
+		#print(find_player_grid_position())
 
 ##could be used when enemies are added/removed?
 func update_enemy_array():

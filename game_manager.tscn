@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://1bildu1y17ot" path="res://Player/player.tscn" id="3_vk86k"]
 [ext_resource type="PackedScene" uid="uid://k0cst8r2vlvq" path="res://Enemies/enemy_manager.tscn" id="4_shwjl"]
 [ext_resource type="PackedScene" uid="uid://b5tmrj1g7fct8" path="res://UI/pause_menu.tscn" id="5_vk86k"]
+[ext_resource type="PackedScene" uid="uid://dpigp2be1owrg" path="res://UI/death_screen.tscn" id="7_eakoi"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_shwjl"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -42,4 +43,7 @@ level = NodePath("../new_level")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9626224, 0.60943246, 2.4112248)
 grid_position = Vector2(1, 1)
 
+[node name="DeathScreen" parent="." unique_id=187959104 instance=ExtResource("7_eakoi")]
+
 [connection signal="on_pause_pressed" from="Player" to="." method="_on_pause_pressed"]
+[connection signal="on_player_death" from="Player" to="DeathScreen" method="_on_player_death"]

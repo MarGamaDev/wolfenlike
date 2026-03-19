@@ -2,6 +2,7 @@ class_name PauseScreen extends Control
 
 
 func on_game_paused() -> void:
+	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	show()
 
 

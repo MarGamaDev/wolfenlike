@@ -1,6 +1,7 @@
 class_name Player extends CharacterBody3D
 
 signal on_pause_pressed
+signal on_player_death
 
 const SPEED = 3.0
 const JUMP_VELOCITY = 4.5
@@ -47,10 +48,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		current_form.end_move_ability()
 	if Input.is_action_just_pressed("pause"):
 		on_pause_pressed.emit()
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		get_tree().paused = true
 	if Input.is_action_just_pressed("space"):
-		consume_soul(11)
+		pass
+		#on_player_death.emit()
 
 func _physics_process(delta: float) -> void:
 	var input_dir := Input.get_vector("player_left","player_right","player_forward","player_backward")
