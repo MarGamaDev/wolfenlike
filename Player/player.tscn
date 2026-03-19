@@ -22,13 +22,15 @@ test_form = 3
 test_form_list = [NodePath("PlayerForms/KingForm"), NodePath("PlayerForms/PawnForm"), NodePath("PlayerForms/RookForm"), NodePath("PlayerForms/KnightForm"), NodePath("PlayerForms/BishopForm"), NodePath("PlayerForms/QueenForm")]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1917658369]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 mesh = SubResource("CapsuleMesh_ya0m6")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1793341007]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
 shape = SubResource("ConvexPolygonShape3D_n8tg8")
 
 [node name="Head" type="Node3D" parent="." unique_id=1790364120]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.78176945, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.42276782, 0.013091803)
 
 [node name="Camera3D" type="Camera3D" parent="Head" unique_id=1697535480]
 

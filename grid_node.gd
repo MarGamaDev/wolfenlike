@@ -11,6 +11,34 @@ var half_wall_directions : Array[Vector2] = []
 var blocked_directions : Array[Vector2] = []
 var has_floor : bool
 
+func _ready() -> void:
+	if has_node("Floor"):
+		has_floor = true
+	
+	var node_position : PackedStringArray = name .split(", ")
+	grid_position = Vector2(node_position[0].to_float(), node_position[1].to_float())
+	
+	#grabbing wall data
+	var nodes : Array[Node] = get_children()
+	var walls : Array[RigidBody3D] = []
+	for node in nodes:
+		##NEED TO MAKE THIS SOMEHOW TELL BETWEEN WALLS AND HALF WALLS
+		if node is RigidBody3D:
+			walls.append(node)
+	for wall : RigidBody3D in walls:
+		var wall_rotation : float  = wall.rotation.y
+		match wall_rotation:
+			deg_to_rad(0.0):
+				wall_directions.append(Vector2.UP)
+			deg_to_rad(-90.0):
+				wall_directions.append(Vector2.RIGHT)
+			deg_to_rad(180.0):
+				wall_directions.append(Vector2.DOWN)
+			deg_to_rad(90.0):
+				wall_directions.append(Vector2.LEFT)
+	
+	setup_blocked_cardinal_directions()
+
 func setup_blocked_cardinal_directions() -> void:
 	#setting cardinal blocked passages ONLY LOOKING AT THE WALLS CURRENTLY, UPDATED LATER
 	if wall_directions.has(Vector2.UP) || half_wall_directions.has(Vector2.UP):

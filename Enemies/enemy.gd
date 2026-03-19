@@ -4,7 +4,7 @@ signal on_death
 
 enum ENEMY_TYPE {KING, QUEEN, BISHOP, KNIGHT, ROOK, PAWN}
 
-var grid_position : Vector2
+@export var grid_position : Vector2
 var grid_size : float
 @export var enemy_type : ENEMY_TYPE
 @export var damage : float
@@ -13,6 +13,7 @@ var nav_agent : NavigationAgent3D
 var last_position : Vector2 = Vector2.ZERO
 var post_move_action_flag : bool = false
 var health : int
+var current_node : GridNode
 
 func initialize(set_player : Player):
 	player = set_player

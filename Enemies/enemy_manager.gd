@@ -1,28 +1,32 @@
 class_name EnemyManager extends Node3D
 
-@export var grid_size : int = 3
+var grid_size : float
 @export var enemy_y_level : float = 1.8
 
 @export var player : Player
+@export var level : Level
 
-##currently an export just for testing
 var enemies : Array[Enemy] = []
 var occupied_spaces : Array[Vector2] = []
 
 func _ready() -> void:
+	print(level.get_grid_nodes().size())
 	#this needs to be replaced ? or may be fine if we just have a manager in each level scene
 	for i : Enemy in get_children():
 		enemies.append(i)
 		i.initialize(player)
 		i.grid_size = grid_size
+		i.current_node = level.get_space_in_grid(i.grid_position)
+		#print("test: ", level.get_space_in_grid(i.grid_position))
+		#print(i.current_node)
 		#need to connect enemy's signals that are relevant too
 	update_enemy_array()
 
 func _process(delta: float) -> void:
-	##for testimng
+	##for testing
 	if Input.is_action_just_pressed("space"):
-		print("player grid position: ", find_player_grid_position())
-		on_enemy_turn()
+		align_enemies()
+		print(find_player_grid_position())
 
 ##could be used when enemies are added/removed?
 func update_enemy_array():
@@ -49,30 +53,22 @@ func resfresh_spaces_taken():
 
 ##this probably needs to be changed to work with new level system
 func align_enemies() -> void:
+	#print(level.grid_nodes.size())
 	var spaces_taken : Array[Vector2] = []
 	for enemy : Enemy in enemies:
 		enemy.position.y = enemy_y_level
-		var z_factor : float = floor(enemy.global_position.z / grid_size)
-		var x_factor : float = floor(enemy.global_position.x / grid_size)
-		enemy.grid_position = Vector2(x_factor,z_factor)
-		var space_taken_flag : bool = false
-		for coords in spaces_taken:
-			if enemy.grid_position == coords:
-				space_taken_flag = true
-		if space_taken_flag == false:
-			spaces_taken.append(enemy.grid_position)
-			enemy.global_position.z = (z_factor * grid_size) + (grid_size / 2.0)
-			enemy.global_position.x = (x_factor * grid_size) + (grid_size / 2.0)
-		else:
-			print("space taken!")
+		enemy.position.x = enemy.current_node.position.x
+		enemy.position.z = enemy.current_node.position.z
+		spaces_taken.append(enemy.current_node.grid_position)
 	occupied_spaces = spaces_taken
 
 func find_player_grid_position() -> Vector2:
-	return Vector2.ZERO
-	#var z_factor : float = floor(player.global_position.z / grid_size)
-	#var x_factor : float = floor(player.global_position.x / grid_size)
-	#var grid_position : Vector2 = Vector2(x_factor, z_factor)
-	#return grid_position
+	var z_factor : float = floor((player.global_position.z + (grid_size / 2)) / grid_size)
+	clamp(z_factor, floor(z_factor), ceil(z_factor))
+	var x_factor : float = floor((player.global_position.x + (grid_size / 2)) / grid_size)
+	clamp(x_factor, floor(x_factor), ceil(x_factor))
+	var grid_position : Vector2 = Vector2(x_factor, z_factor)
+	return grid_position
 
 func sort_by_enemy_type(a : Enemy, b : Enemy) -> bool:
 	##return true if a should go before b

@@ -2,7 +2,7 @@ class_name Player extends CharacterBody3D
 
 signal on_pause_pressed
 
-const SPEED = 10.0
+const SPEED = 3.0
 const JUMP_VELOCITY = 4.5
 const CAMERA_SENSITIVITY : float = 0.001
 const CAMERA_ROTATION_MAX : float = 60.0
@@ -54,7 +54,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _physics_process(delta: float) -> void:
 	var input_dir := Input.get_vector("player_left","player_right","player_forward","player_backward")
-	print("test")
+	#print("test")
 	current_form.handle_directional_input(input_dir, delta)
 	current_form.on_process_update(delta)
 
@@ -77,9 +77,6 @@ func consume_soul(amount_used : float) -> void:
 func set_soul(new_value : int) -> void:
 	remaining_soul = new_value
 	#test_soul_label.text = "remaining soul charge: " + str(remaining_soul)
-
-##testing stuff
-#@export var name_label_test : Label
 
 func switch_form(new_form : PlayerForm.PLAYER_FORM) -> void:
 	if current_form:

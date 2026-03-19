@@ -2,21 +2,44 @@
 
 [ext_resource type="Script" uid="uid://c4e337u1xrbt6" path="res://game_manager.gd" id="1_70yv6"]
 [ext_resource type="PackedScene" uid="uid://bo8f31xtinltt" path="res://testing stuff/new_level.tscn" id="2_d5upp"]
+[ext_resource type="PackedScene" uid="uid://js4ifxtp55va" path="res://Enemies/enemy forms/enemy_pawn.tscn" id="3_shwjl"]
 [ext_resource type="PackedScene" uid="uid://1bildu1y17ot" path="res://Player/player.tscn" id="3_vk86k"]
 [ext_resource type="PackedScene" uid="uid://k0cst8r2vlvq" path="res://Enemies/enemy_manager.tscn" id="4_shwjl"]
 [ext_resource type="PackedScene" uid="uid://b5tmrj1g7fct8" path="res://UI/pause_menu.tscn" id="5_vk86k"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_shwjl"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_eakoi"]
+sky_material = SubResource("ProceduralSkyMaterial_shwjl")
+
+[sub_resource type="Environment" id="Environment_8jrwq"]
+background_mode = 2
+sky = SubResource("Sky_eakoi")
+tonemap_mode = 2
+
 [node name="GameManager" type="Node3D" unique_id=2083107531]
 script = ExtResource("1_70yv6")
 
-[node name="EnemyManager" parent="." unique_id=647834905 instance=ExtResource("4_shwjl")]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=105487021]
+environment = SubResource("Environment_8jrwq")
 
 [node name="Player" parent="." unique_id=590664996 instance=ExtResource("3_vk86k")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 3.358598, 0.53926504, 2.7609773)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.0088651, 0.53926504, 1.086494)
 test_form = 0
 
-[node name="new_level" parent="." unique_id=462964307 instance=ExtResource("2_d5upp")]
-
 [node name="PauseMenu" parent="." unique_id=1890858261 instance=ExtResource("5_vk86k")]
+
+[node name="new_level" parent="." unique_id=1005341217 instance=ExtResource("2_d5upp")]
+
+[node name="EnemyManager" parent="." unique_id=647834905 node_paths=PackedStringArray("player", "level") instance=ExtResource("4_shwjl")]
+enemy_y_level = 0.6
+player = NodePath("../Player")
+level = NodePath("../new_level")
+
+[node name="EnemyPawn" parent="EnemyManager" unique_id=1277766704 instance=ExtResource("3_shwjl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9626224, 0.60943246, 2.4112248)
+grid_position = Vector2(1, 1)
 
 [connection signal="on_pause_pressed" from="Player" to="." method="_on_pause_pressed"]
