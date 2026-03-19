@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://1bildu1y17ot" path="res://Player/player.tscn" id="1_r0ush"]
 [ext_resource type="Texture2D" uid="uid://bvwpteps4vk1w" path="res://testing stuff/temp crosshair.png" id="2_40dfu"]
 [ext_resource type="PackedScene" uid="uid://cl8evi2c0lcyx" path="res://game objects/soul_pickup.tscn" id="4_sx4cf"]
-[ext_resource type="Script" uid="uid://dub64lfeiec57" path="res://grid_space.gd" id="6_1ny3e"]
+[ext_resource type="Script" uid="uid://dub64lfeiec57" path="res://grid_node.gd" id="6_1ny3e"]
 [ext_resource type="PackedScene" uid="uid://b5tmrj1g7fct8" path="res://UI/pause_menu.tscn" id="7_habt5"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fo6mw"]

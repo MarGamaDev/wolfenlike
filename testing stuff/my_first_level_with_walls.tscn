@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dlg3dleaefbro"]
 
 [ext_resource type="PackedScene" uid="uid://cqvktxo3tj7qq" path="res://Tools/Levelgen Data/Tile Parts/Floor.tscn" id="1_3pu7s"]
-[ext_resource type="Script" uid="uid://b1bdgkodd7v4i" path="res://testing stuff/my_first_level.gd" id="1_im1se"]
+[ext_resource type="Script" uid="uid://b1bdgkodd7v4i" path="res://testing stuff/level.gd" id="1_im1se"]
 [ext_resource type="PackedScene" uid="uid://c7y3igius3blg" path="res://Tools/Levelgen Data/Tile Parts/wall.tscn" id="2_im1se"]
 [ext_resource type="PackedScene" uid="uid://bvosp4jwqy6eu" path="res://Tools/Levelgen Data/Tile Parts/half_wall.tscn" id="3_o6ggs"]
 
