@@ -90,24 +90,28 @@ func add_walls(cell: GridNode, customdata: String) -> void:
 		cell.add_child(wall);
 		wall.owner = self;
 		cell.wall_directions.append(Vector2.UP)
+		wall.freeze = true
 	if customdata.contains("e"):
 		var wall: Node3D = load("res://Tools/Levelgen Data/Tile Parts/wall.tscn").instantiate();
 		wall.rotate_y(deg_to_rad(-90))
 		cell.add_child(wall);
 		wall.owner = self;
 		cell.wall_directions.append(Vector2.RIGHT)
+		wall.freeze = true
 	if customdata.contains("s"):
 		var wall: Node3D = load("res://Tools/Levelgen Data/Tile Parts/wall.tscn").instantiate();
 		wall.rotate_y(deg_to_rad(180))
 		cell.add_child(wall);
 		wall.owner = self;
 		cell.wall_directions.append(Vector2.DOWN)
+		wall.freeze = true
 	if customdata.contains("w"):
 		var wall: Node3D = load("res://Tools/Levelgen Data/Tile Parts/wall.tscn").instantiate();
 		wall.rotate_y(deg_to_rad(90))
 		cell.add_child(wall);
 		wall.owner = self;
 		cell.wall_directions.append(Vector2.LEFT)
+		wall.freeze = true
 
 ##added same for this
 func add_halfwalls(cell: GridNode, customdata: String) -> void:
@@ -116,21 +120,25 @@ func add_halfwalls(cell: GridNode, customdata: String) -> void:
 		cell.add_child(wall);
 		wall.owner = self;
 		cell.half_wall_directions.append(Vector2.UP)
+		wall.freeze = true
 	if customdata.contains("e"):
 		var wall: Node3D = load("res://Tools/Levelgen Data/Tile Parts/half_wall.tscn").instantiate();
 		wall.rotate_y(deg_to_rad(-90))
 		cell.add_child(wall);
 		wall.owner = self;
 		cell.half_wall_directions.append(Vector2.RIGHT)
+		wall.freeze = true
 	if customdata.contains("s"):
 		var wall: Node3D = load("res://Tools/Levelgen Data/Tile Parts/half_wall.tscn").instantiate();
 		wall.rotate_y(deg_to_rad(180))
 		cell.add_child(wall);
 		wall.owner = self;
 		cell.half_wall_directions.append(Vector2.DOWN)
+		wall.freeze = true
 	if customdata.contains("w"):
 		var wall: Node3D = load("res://Tools/Levelgen Data/Tile Parts/half_wall.tscn").instantiate();
 		wall.rotate_y(deg_to_rad(90))
 		cell.add_child(wall);
 		wall.owner = self;
 		cell.half_wall_directions.append(Vector2.LEFT)
+		wall.freeze = true

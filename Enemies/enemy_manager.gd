@@ -68,10 +68,11 @@ func align_enemies() -> void:
 	occupied_spaces = spaces_taken
 
 func find_player_grid_position() -> Vector2:
-	var z_factor : float = floor(player.global_position.z / grid_size)
-	var x_factor : float = floor(player.global_position.x / grid_size)
-	var grid_position : Vector2 = Vector2(x_factor, z_factor)
-	return grid_position
+	return Vector2.ZERO
+	#var z_factor : float = floor(player.global_position.z / grid_size)
+	#var x_factor : float = floor(player.global_position.x / grid_size)
+	#var grid_position : Vector2 = Vector2(x_factor, z_factor)
+	#return grid_position
 
 func sort_by_enemy_type(a : Enemy, b : Enemy) -> bool:
 	##return true if a should go before b

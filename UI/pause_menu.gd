@@ -1,4 +1,4 @@
-extends Control
+class_name PauseScreen extends Control
 
 
 func on_game_paused() -> void:

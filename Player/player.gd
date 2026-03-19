@@ -17,8 +17,8 @@ var current_player_form_type : PlayerForm.PLAYER_FORM = PlayerForm.PLAYER_FORM.K
 
 @export var test_form : PlayerForm.PLAYER_FORM
 @export var test_form_list : Array[PlayerForm]
-@export var test_soul_label : Label
-@export var test_stack_label : Label
+#@export var test_soul_label : Label
+#@export var test_stack_label : Label
 
 var remaining_soul : float  = 0
 @onready var attack_timer : Timer = $PlayerForms/Timer
@@ -50,13 +50,11 @@ func _unhandled_input(event: InputEvent) -> void:
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		get_tree().paused = true
 	if Input.is_action_just_pressed("space"):
-		#current_form = $PlayerForms/BishopForm
-		#current_form.initialize(self)
-		#print(global_position)
 		consume_soul(11)
 
 func _physics_process(delta: float) -> void:
 	var input_dir := Input.get_vector("player_left","player_right","player_forward","player_backward")
+	print("test")
 	current_form.handle_directional_input(input_dir, delta)
 	current_form.on_process_update(delta)
 
@@ -65,7 +63,7 @@ func get_weapon_holder() -> Node3D:
 
 func consume_soul(amount_used : float) -> void:
 	remaining_soul -= amount_used
-	test_soul_label.text = "remaining soul charge: " + str("%.2f" % remaining_soul)
+	#test_soul_label.text = "remaining soul charge: " + str("%.2f" % remaining_soul)
 	if remaining_soul <= 0:
 		if soul_stack.is_empty():
 			pass ## TODO game loss here
@@ -78,10 +76,10 @@ func consume_soul(amount_used : float) -> void:
 
 func set_soul(new_value : int) -> void:
 	remaining_soul = new_value
-	test_soul_label.text = "remaining soul charge: " + str(remaining_soul)
+	#test_soul_label.text = "remaining soul charge: " + str(remaining_soul)
 
 ##testing stuff
-@export var name_label_test : Label
+#@export var name_label_test : Label
 
 func switch_form(new_form : PlayerForm.PLAYER_FORM) -> void:
 	if current_form:
@@ -90,11 +88,11 @@ func switch_form(new_form : PlayerForm.PLAYER_FORM) -> void:
 	current_form.initialize(self)
 	current_player_form_type = current_form.player_form
 	##testing stuff
-	name_label_test.text = "current form: " + str(PlayerForm.PLAYER_FORM.find_key(new_form))
+	#name_label_test.text = "current form: " + str(PlayerForm.PLAYER_FORM.find_key(new_form))
 	var new_stack = ""
 	for i in range(0, soul_stack.size()):
 		new_stack = new_stack + str(PlayerForm.PLAYER_FORM.find_key(soul_stack[i])) + " "
-	test_stack_label.text = "current stack: " + new_stack
+	#test_stack_label.text = "current stack: " + new_stack
 
 func pick_up_form(new_form : PlayerForm.PLAYER_FORM) -> void:
 	if new_form == PlayerForm.PLAYER_FORM.PAWN:

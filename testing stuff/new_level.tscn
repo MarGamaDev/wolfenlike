@@ -1,0 +1,1878 @@
+[gd_scene format=3 uid="uid://bo8f31xtinltt"]
+
+[ext_resource type="Script" uid="uid://b1bdgkodd7v4i" path="res://testing stuff/level.gd" id="1_0gcrj"]
+[ext_resource type="Script" uid="uid://dub64lfeiec57" path="res://grid_node.gd" id="2_kbdrs"]
+[ext_resource type="PackedScene" uid="uid://cqvktxo3tj7qq" path="res://Tools/Levelgen Data/Tile Parts/Floor.tscn" id="3_yijpg"]
+[ext_resource type="PackedScene" uid="uid://c7y3igius3blg" path="res://Tools/Levelgen Data/Tile Parts/wall.tscn" id="4_uki0n"]
+[ext_resource type="PackedScene" uid="uid://bvosp4jwqy6eu" path="res://Tools/Levelgen Data/Tile Parts/half_wall.tscn" id="5_smtad"]
+
+[node name="new_level" type="Node3D" unique_id=462964307]
+script = ExtResource("1_0gcrj")
+
+[node name="0, 0" type="Node3D" parent="." unique_id=455446292]
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="0, 0" unique_id=1239543628 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="0, 0" unique_id=1808121691 instance=ExtResource("4_uki0n")]
+freeze = true
+
+[node name="_RigidBody3D_103924" parent="0, 0" unique_id=1265285179 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="1, 0" type="Node3D" parent="." unique_id=981403230]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 0)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="1, 0" unique_id=1660549239 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="1, 0" unique_id=137913685 instance=ExtResource("4_uki0n")]
+freeze = true
+
+[node name="2, 0" type="Node3D" parent="." unique_id=979060648]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="2, 0" unique_id=2092124890 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="2, 0" unique_id=272073871 instance=ExtResource("4_uki0n")]
+freeze = true
+
+[node name="3, 0" type="Node3D" parent="." unique_id=1021945946]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="3, 0" unique_id=104604450 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="3, 0" unique_id=990067445 instance=ExtResource("4_uki0n")]
+freeze = true
+
+[node name="4, 0" type="Node3D" parent="." unique_id=1981020577]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="4, 0" unique_id=1239443934 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="4, 0" unique_id=684021709 instance=ExtResource("4_uki0n")]
+freeze = true
+
+[node name="5, 0" type="Node3D" parent="." unique_id=1639871482]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="5, 0" unique_id=204395084 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="5, 0" unique_id=1876929168 instance=ExtResource("4_uki0n")]
+freeze = true
+
+[node name="6, 0" type="Node3D" parent="." unique_id=1717202609]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="6, 0" unique_id=566252241 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="6, 0" unique_id=2030915182 instance=ExtResource("4_uki0n")]
+freeze = true
+
+[node name="7, 0" type="Node3D" parent="." unique_id=1794524535]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 0)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="7, 0" unique_id=105990989 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="7, 0" unique_id=126570940 instance=ExtResource("4_uki0n")]
+freeze = true
+
+[node name="8, 0" type="Node3D" parent="." unique_id=1134138114]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 0)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="8, 0" unique_id=14281273 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="8, 0" unique_id=590514757 instance=ExtResource("4_uki0n")]
+freeze = true
+
+[node name="9, 0" type="Node3D" parent="." unique_id=443056594]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 0)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="9, 0" unique_id=25023223 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="9, 0" unique_id=805339822 instance=ExtResource("4_uki0n")]
+freeze = true
+
+[node name="10, 0" type="Node3D" parent="." unique_id=1398217312]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="10, 0" unique_id=244661845 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="10, 0" unique_id=11693967 instance=ExtResource("4_uki0n")]
+freeze = true
+
+[node name="11, 0" type="Node3D" parent="." unique_id=555390125]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 0)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="11, 0" unique_id=399531402 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="11, 0" unique_id=1995502610 instance=ExtResource("4_uki0n")]
+freeze = true
+
+[node name="12, 0" type="Node3D" parent="." unique_id=1330742024]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 0)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="12, 0" unique_id=601563007 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="12, 0" unique_id=726949315 instance=ExtResource("4_uki0n")]
+freeze = true
+
+[node name="_RigidBody3D_103937" parent="12, 0" unique_id=202366418 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="12, 1" type="Node3D" parent="." unique_id=501256469]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 1)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="12, 1" unique_id=1894491019 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="12, 1" unique_id=99920175 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="12, 2" type="Node3D" parent="." unique_id=505082614]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 2)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="12, 2" unique_id=1187871108 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="12, 2" unique_id=675847261 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="12, 3" type="Node3D" parent="." unique_id=1713476500]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 3)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="12, 3" unique_id=464921857 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="12, 3" unique_id=1963202831 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="12, 4" type="Node3D" parent="." unique_id=1262442980]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 4)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="12, 4" unique_id=1437263755 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="12, 4" unique_id=81328017 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="12, 5" type="Node3D" parent="." unique_id=871240943]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 5)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="12, 5" unique_id=1279027686 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="12, 5" unique_id=877770715 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="12, 6" type="Node3D" parent="." unique_id=2044289522]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 6)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="12, 6" unique_id=1355902947 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="12, 6" unique_id=1590346620 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="12, 7" type="Node3D" parent="." unique_id=1830825199]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 7)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="12, 7" unique_id=839460920 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="12, 7" unique_id=746425556 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="_RigidBody3D_103945" parent="12, 7" unique_id=1357515519 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+freeze = true
+
+[node name="11, 7" type="Node3D" parent="." unique_id=460917839]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 7)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="11, 7" unique_id=169581054 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="11, 7" unique_id=1073319514 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+freeze = true
+
+[node name="10, 7" type="Node3D" parent="." unique_id=601224100]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 7)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="10, 7" unique_id=1096868993 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="10, 7" unique_id=2103710655 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+freeze = true
+
+[node name="9, 7" type="Node3D" parent="." unique_id=1416911434]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 7)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="9, 7" unique_id=1147602865 instance=ExtResource("3_yijpg")]
+
+[node name="8, 7" type="Node3D" parent="." unique_id=1730573596]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 7)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="8, 7" unique_id=202559541 instance=ExtResource("3_yijpg")]
+
+[node name="7, 7" type="Node3D" parent="." unique_id=374482337]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 7)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="7, 7" unique_id=639414922 instance=ExtResource("3_yijpg")]
+
+[node name="6, 7" type="Node3D" parent="." unique_id=1332395410]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 7)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="6, 7" unique_id=1082244879 instance=ExtResource("3_yijpg")]
+
+[node name="5, 7" type="Node3D" parent="." unique_id=1330318846]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 7)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="5, 7" unique_id=1527919996 instance=ExtResource("3_yijpg")]
+
+[node name="4, 7" type="Node3D" parent="." unique_id=767454444]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 7)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="4, 7" unique_id=1164858124 instance=ExtResource("3_yijpg")]
+
+[node name="3, 7" type="Node3D" parent="." unique_id=1813268225]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 7)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="3, 7" unique_id=60303153 instance=ExtResource("3_yijpg")]
+
+[node name="2, 7" type="Node3D" parent="." unique_id=533350881]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 7)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="2, 7" unique_id=527563742 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="2, 7" unique_id=2001893026 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+freeze = true
+
+[node name="1, 7" type="Node3D" parent="." unique_id=241694811]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 7)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="1, 7" unique_id=606959594 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="1, 7" unique_id=922435933 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+freeze = true
+
+[node name="0, 7" type="Node3D" parent="." unique_id=1452633067]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="0, 7" unique_id=2079858232 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="0, 7" unique_id=656150781 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+freeze = true
+
+[node name="_RigidBody3D_103958" parent="0, 7" unique_id=495400197 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="0, 1" type="Node3D" parent="." unique_id=2011788607]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="0, 1" unique_id=1229573456 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="0, 1" unique_id=552491183 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="0, 2" type="Node3D" parent="." unique_id=344429692]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="0, 2" unique_id=546408638 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="0, 2" unique_id=57106211 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="0, 3" type="Node3D" parent="." unique_id=1512625184]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="0, 3" unique_id=563059416 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="0, 3" unique_id=608849487 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="0, 4" type="Node3D" parent="." unique_id=1511795617]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="0, 4" unique_id=1084470571 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="0, 4" unique_id=6640723 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="0, 5" type="Node3D" parent="." unique_id=1857195597]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="0, 5" unique_id=449996491 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="0, 5" unique_id=1493809949 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="0, 6" type="Node3D" parent="." unique_id=296779678]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="0, 6" unique_id=870573916 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="0, 6" unique_id=1028679038 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="1, 6" type="Node3D" parent="." unique_id=2018012003]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 6)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="1, 6" unique_id=884974265 instance=ExtResource("3_yijpg")]
+
+[node name="2, 6" type="Node3D" parent="." unique_id=1105219738]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 6)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="2, 6" unique_id=843569419 instance=ExtResource("3_yijpg")]
+
+[node name="3, 6" type="Node3D" parent="." unique_id=1468115371]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 6)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="3, 6" unique_id=852424803 instance=ExtResource("3_yijpg")]
+
+[node name="4, 6" type="Node3D" parent="." unique_id=452969380]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 6)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="4, 6" unique_id=500701032 instance=ExtResource("3_yijpg")]
+
+[node name="5, 6" type="Node3D" parent="." unique_id=1084805538]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 6)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="5, 6" unique_id=42022514 instance=ExtResource("3_yijpg")]
+
+[node name="6, 6" type="Node3D" parent="." unique_id=1061210800]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 6)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="6, 6" unique_id=156756331 instance=ExtResource("3_yijpg")]
+
+[node name="7, 6" type="Node3D" parent="." unique_id=278286134]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 6)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="7, 6" unique_id=1424631199 instance=ExtResource("3_yijpg")]
+
+[node name="8, 6" type="Node3D" parent="." unique_id=1405877325]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 6)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="8, 6" unique_id=761833394 instance=ExtResource("3_yijpg")]
+
+[node name="9, 6" type="Node3D" parent="." unique_id=2085166165]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 6)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="9, 6" unique_id=254691171 instance=ExtResource("3_yijpg")]
+
+[node name="11, 6" type="Node3D" parent="." unique_id=307794215]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 6)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="11, 6" unique_id=133602248 instance=ExtResource("3_yijpg")]
+
+[node name="11, 5" type="Node3D" parent="." unique_id=1251746017]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 5)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="11, 5" unique_id=811611977 instance=ExtResource("3_yijpg")]
+
+[node name="11, 4" type="Node3D" parent="." unique_id=153205133]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 4)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="11, 4" unique_id=1792823432 instance=ExtResource("3_yijpg")]
+
+[node name="11, 3" type="Node3D" parent="." unique_id=1073496695]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 3)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="11, 3" unique_id=1351387435 instance=ExtResource("3_yijpg")]
+
+[node name="11, 2" type="Node3D" parent="." unique_id=1695305712]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 2)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="11, 2" unique_id=375095589 instance=ExtResource("3_yijpg")]
+
+[node name="11, 1" type="Node3D" parent="." unique_id=712875550]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 1)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="11, 1" unique_id=1611388317 instance=ExtResource("3_yijpg")]
+
+[node name="10, 6" type="Node3D" parent="." unique_id=764486357]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 6)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="10, 6" unique_id=287084340 instance=ExtResource("3_yijpg")]
+
+[node name="10, 5" type="Node3D" parent="." unique_id=1782418424]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 5)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="10, 5" unique_id=798878890 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="10, 5" unique_id=2080060012 instance=ExtResource("5_smtad")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="10, 4" type="Node3D" parent="." unique_id=1690792827]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 4)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="10, 4" unique_id=219658343 instance=ExtResource("3_yijpg")]
+
+[node name="10, 3" type="Node3D" parent="." unique_id=2142375483]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 3)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="10, 3" unique_id=998664927 instance=ExtResource("3_yijpg")]
+
+[node name="10, 2" type="Node3D" parent="." unique_id=1111981751]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 2)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="10, 2" unique_id=1560376940 instance=ExtResource("3_yijpg")]
+
+[node name="10, 1" type="Node3D" parent="." unique_id=1803375914]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 1)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="10, 1" unique_id=1532158729 instance=ExtResource("3_yijpg")]
+
+[node name="9, 5" type="Node3D" parent="." unique_id=515961294]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 5)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="9, 5" unique_id=970363314 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="9, 5" unique_id=485514466 instance=ExtResource("5_smtad")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="9, 4" type="Node3D" parent="." unique_id=892108420]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 4)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="9, 4" unique_id=1356838165 instance=ExtResource("3_yijpg")]
+
+[node name="9, 3" type="Node3D" parent="." unique_id=1066409122]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 3)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="9, 3" unique_id=257643282 instance=ExtResource("3_yijpg")]
+
+[node name="9, 2" type="Node3D" parent="." unique_id=1818585196]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 2)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="9, 2" unique_id=1198503545 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="9, 2" unique_id=1509925927 instance=ExtResource("5_smtad")]
+freeze = true
+
+[node name="9, 1" type="Node3D" parent="." unique_id=787308010]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 1)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="9, 1" unique_id=411819087 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="9, 1" unique_id=904730388 instance=ExtResource("5_smtad")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+freeze = true
+
+[node name="8, 5" type="Node3D" parent="." unique_id=362478382]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 5)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="8, 5" unique_id=1437542913 instance=ExtResource("3_yijpg")]
+
+[node name="8, 4" type="Node3D" parent="." unique_id=1232298056]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 4)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="8, 4" unique_id=1820003775 instance=ExtResource("3_yijpg")]
+
+[node name="8, 3" type="Node3D" parent="." unique_id=506533344]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 3)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="8, 3" unique_id=369163786 instance=ExtResource("3_yijpg")]
+
+[node name="8, 2" type="Node3D" parent="." unique_id=451598260]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 2)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="8, 2" unique_id=85980207 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="8, 2" unique_id=1880832573 instance=ExtResource("5_smtad")]
+freeze = true
+
+[node name="8, 1" type="Node3D" parent="." unique_id=982336809]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 1)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="8, 1" unique_id=1927142339 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="8, 1" unique_id=2097537692 instance=ExtResource("5_smtad")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+freeze = true
+
+[node name="7, 5" type="Node3D" parent="." unique_id=1732806015]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 5)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="7, 5" unique_id=182156820 instance=ExtResource("3_yijpg")]
+
+[node name="7, 4" type="Node3D" parent="." unique_id=323137343]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 4)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="7, 4" unique_id=352379055 instance=ExtResource("3_yijpg")]
+
+[node name="7, 3" type="Node3D" parent="." unique_id=1071461871]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 3)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="7, 3" unique_id=259718129 instance=ExtResource("3_yijpg")]
+
+[node name="7, 2" type="Node3D" parent="." unique_id=1855744428]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 2)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="7, 2" unique_id=759190894 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="7, 2" unique_id=101151969 instance=ExtResource("5_smtad")]
+freeze = true
+
+[node name="7, 1" type="Node3D" parent="." unique_id=1020269829]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 1)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="7, 1" unique_id=2100252766 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="7, 1" unique_id=472069646 instance=ExtResource("5_smtad")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+freeze = true
+
+[node name="6, 5" type="Node3D" parent="." unique_id=1890639401]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 5)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="6, 5" unique_id=5803874 instance=ExtResource("3_yijpg")]
+
+[node name="6, 4" type="Node3D" parent="." unique_id=1898420090]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 4)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="6, 4" unique_id=1666248407 instance=ExtResource("3_yijpg")]
+
+[node name="6, 3" type="Node3D" parent="." unique_id=991123897]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 3)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="6, 3" unique_id=208341745 instance=ExtResource("3_yijpg")]
+
+[node name="6, 2" type="Node3D" parent="." unique_id=1538367471]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 2)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="6, 2" unique_id=991760299 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="6, 2" unique_id=1525749201 instance=ExtResource("5_smtad")]
+freeze = true
+
+[node name="6, 1" type="Node3D" parent="." unique_id=1491915060]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 1)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="6, 1" unique_id=198027949 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="6, 1" unique_id=831605472 instance=ExtResource("5_smtad")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+freeze = true
+
+[node name="5, 5" type="Node3D" parent="." unique_id=460232920]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 5)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="5, 5" unique_id=1614351085 instance=ExtResource("3_yijpg")]
+
+[node name="5, 4" type="Node3D" parent="." unique_id=440281792]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 4)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="5, 4" unique_id=1071855998 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="5, 4" unique_id=1160355995 instance=ExtResource("5_smtad")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="5, 3" type="Node3D" parent="." unique_id=1850219571]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 3)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="5, 3" unique_id=477036629 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="5, 3" unique_id=896119926 instance=ExtResource("5_smtad")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="5, 2" type="Node3D" parent="." unique_id=42292240]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 2)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="5, 2" unique_id=849107685 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="5, 2" unique_id=1032755823 instance=ExtResource("5_smtad")]
+freeze = true
+
+[node name="_RigidBody3D_104010" parent="5, 2" unique_id=1404984649 instance=ExtResource("5_smtad")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="5, 1" type="Node3D" parent="." unique_id=1227026798]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 1)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="5, 1" unique_id=982848602 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="5, 1" unique_id=1711943188 instance=ExtResource("5_smtad")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+freeze = true
+
+[node name="4, 5" type="Node3D" parent="." unique_id=2016364487]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 5)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="4, 5" unique_id=843447241 instance=ExtResource("3_yijpg")]
+
+[node name="4, 4" type="Node3D" parent="." unique_id=1055904605]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="4, 4" unique_id=1149438761 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="4, 4" unique_id=212934939 instance=ExtResource("5_smtad")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="4, 3" type="Node3D" parent="." unique_id=406106053]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 3)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="4, 3" unique_id=1054174653 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="4, 3" unique_id=692663271 instance=ExtResource("5_smtad")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="4, 2" type="Node3D" parent="." unique_id=1935968903]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 2)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="4, 2" unique_id=1098828859 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="4, 2" unique_id=399084059 instance=ExtResource("5_smtad")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="4, 1" type="Node3D" parent="." unique_id=247789612]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 1)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="4, 1" unique_id=124690837 instance=ExtResource("3_yijpg")]
+
+[node name="3, 5" type="Node3D" parent="." unique_id=1122473842]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 5)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="3, 5" unique_id=1186766407 instance=ExtResource("3_yijpg")]
+
+[node name="3, 4" type="Node3D" parent="." unique_id=1465137581]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 4)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="3, 4" unique_id=689880330 instance=ExtResource("3_yijpg")]
+
+[node name="3, 3" type="Node3D" parent="." unique_id=403435379]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 3)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="3, 3" unique_id=739513351 instance=ExtResource("3_yijpg")]
+
+[node name="3, 2" type="Node3D" parent="." unique_id=2138642031]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 2)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="3, 2" unique_id=1565643694 instance=ExtResource("3_yijpg")]
+
+[node name="3, 1" type="Node3D" parent="." unique_id=1918991985]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 1)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="3, 1" unique_id=1307967463 instance=ExtResource("3_yijpg")]
+
+[node name="2, 5" type="Node3D" parent="." unique_id=918535082]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 5)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="2, 5" unique_id=1762307653 instance=ExtResource("3_yijpg")]
+
+[node name="2, 4" type="Node3D" parent="." unique_id=1462265406]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 4)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="2, 4" unique_id=1514101306 instance=ExtResource("3_yijpg")]
+
+[node name="2, 3" type="Node3D" parent="." unique_id=737715413]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 3)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="2, 3" unique_id=735362107 instance=ExtResource("3_yijpg")]
+
+[node name="2, 2" type="Node3D" parent="." unique_id=412508576]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 2)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="2, 2" unique_id=1449050185 instance=ExtResource("3_yijpg")]
+
+[node name="2, 1" type="Node3D" parent="." unique_id=2142007799]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 1)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="2, 1" unique_id=1257507651 instance=ExtResource("3_yijpg")]
+
+[node name="1, 5" type="Node3D" parent="." unique_id=1046131200]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 5)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="1, 5" unique_id=719687415 instance=ExtResource("3_yijpg")]
+
+[node name="1, 4" type="Node3D" parent="." unique_id=803307920]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 4)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="1, 4" unique_id=363808663 instance=ExtResource("3_yijpg")]
+
+[node name="1, 3" type="Node3D" parent="." unique_id=1259359650]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 3)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="1, 3" unique_id=688437236 instance=ExtResource("3_yijpg")]
+
+[node name="1, 2" type="Node3D" parent="." unique_id=139886501]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 2)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="1, 2" unique_id=2134349806 instance=ExtResource("3_yijpg")]
+
+[node name="1, 1" type="Node3D" parent="." unique_id=648822917]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 1)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="1, 1" unique_id=1309217296 instance=ExtResource("3_yijpg")]
+
+[node name="3, 8" type="Node3D" parent="." unique_id=325222738]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 8)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="3, 8" unique_id=1698187723 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="3, 8" unique_id=397952166 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="4, 8" type="Node3D" parent="." unique_id=1183241252]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 8)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="4, 8" unique_id=1176441386 instance=ExtResource("3_yijpg")]
+
+[node name="5, 8" type="Node3D" parent="." unique_id=853751072]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 8)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="5, 8" unique_id=1454466712 instance=ExtResource("3_yijpg")]
+
+[node name="6, 8" type="Node3D" parent="." unique_id=1049160426]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 8)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="6, 8" unique_id=903254355 instance=ExtResource("3_yijpg")]
+
+[node name="7, 8" type="Node3D" parent="." unique_id=1425818730]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 8)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="7, 8" unique_id=1761176300 instance=ExtResource("3_yijpg")]
+
+[node name="8, 8" type="Node3D" parent="." unique_id=465814600]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 8)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="8, 8" unique_id=1810151251 instance=ExtResource("3_yijpg")]
+
+[node name="9, 8" type="Node3D" parent="." unique_id=666697794]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 8)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="9, 8" unique_id=1804642452 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="9, 8" unique_id=616830609 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="3, 9" type="Node3D" parent="." unique_id=1578453925]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 9)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="3, 9" unique_id=1567157777 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="3, 9" unique_id=74074665 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="4, 9" type="Node3D" parent="." unique_id=2121591308]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 9)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="4, 9" unique_id=1293783621 instance=ExtResource("3_yijpg")]
+
+[node name="5, 9" type="Node3D" parent="." unique_id=1379675085]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 9)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="5, 9" unique_id=1641473855 instance=ExtResource("3_yijpg")]
+
+[node name="6, 9" type="Node3D" parent="." unique_id=902602181]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 9)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="6, 9" unique_id=201962874 instance=ExtResource("3_yijpg")]
+
+[node name="7, 9" type="Node3D" parent="." unique_id=988484790]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 9)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="7, 9" unique_id=1147320736 instance=ExtResource("3_yijpg")]
+
+[node name="8, 9" type="Node3D" parent="." unique_id=1231090168]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 9)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="8, 9" unique_id=1574891741 instance=ExtResource("3_yijpg")]
+
+[node name="9, 9" type="Node3D" parent="." unique_id=1809316269]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 9)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="9, 9" unique_id=1097125653 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="9, 9" unique_id=1704500308 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="3, 10" type="Node3D" parent="." unique_id=1949355765]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 10)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="3, 10" unique_id=1231187882 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="3, 10" unique_id=2023941690 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="4, 10" type="Node3D" parent="." unique_id=1137006438]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 10)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="4, 10" unique_id=2024086075 instance=ExtResource("3_yijpg")]
+
+[node name="5, 10" type="Node3D" parent="." unique_id=1059717961]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 10)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="5, 10" unique_id=628519757 instance=ExtResource("3_yijpg")]
+
+[node name="6, 10" type="Node3D" parent="." unique_id=776624308]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 10)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="6, 10" unique_id=903850188 instance=ExtResource("3_yijpg")]
+
+[node name="7, 10" type="Node3D" parent="." unique_id=46918299]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 10)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="7, 10" unique_id=101689831 instance=ExtResource("3_yijpg")]
+
+[node name="8, 10" type="Node3D" parent="." unique_id=146938929]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 10)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="8, 10" unique_id=233697388 instance=ExtResource("3_yijpg")]
+
+[node name="9, 10" type="Node3D" parent="." unique_id=394797363]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 10)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="9, 10" unique_id=788132834 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="9, 10" unique_id=446264798 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="4, 11" type="Node3D" parent="." unique_id=789654123]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 11)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="4, 11" unique_id=362884060 instance=ExtResource("3_yijpg")]
+
+[node name="3, 11" type="Node3D" parent="." unique_id=2117957950]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 11)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="3, 11" unique_id=485490056 instance=ExtResource("3_yijpg")]
+
+[node name="2, 11" type="Node3D" parent="." unique_id=1896721357]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 11)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="2, 11" unique_id=1209036898 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="2, 11" unique_id=1749225149 instance=ExtResource("4_uki0n")]
+freeze = true
+
+[node name="1, 11" type="Node3D" parent="." unique_id=464052980]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 11)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="1, 11" unique_id=692329915 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="1, 11" unique_id=1224960281 instance=ExtResource("4_uki0n")]
+freeze = true
+
+[node name="0, 11" type="Node3D" parent="." unique_id=1542166141]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 11)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="0, 11" unique_id=1192348596 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="0, 11" unique_id=1240239454 instance=ExtResource("4_uki0n")]
+freeze = true
+
+[node name="_RigidBody3D_104058" parent="0, 11" unique_id=1472248923 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="0, 12" type="Node3D" parent="." unique_id=1791936418]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 12)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="0, 12" unique_id=1753012778 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="0, 12" unique_id=2744285 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="0, 13" type="Node3D" parent="." unique_id=1853861367]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 13)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="0, 13" unique_id=688403209 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="0, 13" unique_id=71909390 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="0, 14" type="Node3D" parent="." unique_id=549710112]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 14)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="0, 14" unique_id=2054982505 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="0, 14" unique_id=1216208340 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="0, 15" type="Node3D" parent="." unique_id=210584291]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 15)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="0, 15" unique_id=1997608971 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="0, 15" unique_id=1360776689 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="1, 15" type="Node3D" parent="." unique_id=1189207939]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 15)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="1, 15" unique_id=993849801 instance=ExtResource("3_yijpg")]
+
+[node name="2, 15" type="Node3D" parent="." unique_id=28494253]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 15)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="2, 15" unique_id=1551518644 instance=ExtResource("3_yijpg")]
+
+[node name="3, 15" type="Node3D" parent="." unique_id=801125829]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 15)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="3, 15" unique_id=502699667 instance=ExtResource("3_yijpg")]
+
+[node name="4, 15" type="Node3D" parent="." unique_id=273503891]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 15)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="4, 15" unique_id=1333698779 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="4, 15" unique_id=535166148 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="9, 15" type="Node3D" parent="." unique_id=253035462]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 15)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="9, 15" unique_id=1435449744 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="9, 15" unique_id=1680987461 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="10, 15" type="Node3D" parent="." unique_id=1202554817]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 15)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="10, 15" unique_id=87137687 instance=ExtResource("3_yijpg")]
+
+[node name="11, 15" type="Node3D" parent="." unique_id=1026543974]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 15)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="11, 15" unique_id=882171482 instance=ExtResource("3_yijpg")]
+
+[node name="12, 15" type="Node3D" parent="." unique_id=762213568]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 15)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="12, 15" unique_id=1415762821 instance=ExtResource("3_yijpg")]
+
+[node name="13, 15" type="Node3D" parent="." unique_id=757691039]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 15)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="13, 15" unique_id=280976645 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="13, 15" unique_id=410511328 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="13, 14" type="Node3D" parent="." unique_id=695494989]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 14)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="13, 14" unique_id=92765623 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="13, 14" unique_id=1732345134 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="13, 13" type="Node3D" parent="." unique_id=350698279]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 13)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="13, 13" unique_id=260904141 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="13, 13" unique_id=2002782947 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="13, 12" type="Node3D" parent="." unique_id=1483866487]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 12)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="13, 12" unique_id=1545211882 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="13, 12" unique_id=67965192 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="13, 11" type="Node3D" parent="." unique_id=814866564]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 11)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="13, 11" unique_id=1593853609 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="13, 11" unique_id=394110247 instance=ExtResource("4_uki0n")]
+freeze = true
+
+[node name="_RigidBody3D_104076" parent="13, 11" unique_id=1932768452 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="12, 11" type="Node3D" parent="." unique_id=480122979]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 11)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="12, 11" unique_id=2019998541 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="12, 11" unique_id=689316812 instance=ExtResource("4_uki0n")]
+freeze = true
+
+[node name="11, 11" type="Node3D" parent="." unique_id=639319547]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 11)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="11, 11" unique_id=260091672 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="11, 11" unique_id=1904859009 instance=ExtResource("4_uki0n")]
+freeze = true
+
+[node name="10, 11" type="Node3D" parent="." unique_id=1038992952]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 11)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="10, 11" unique_id=1727899261 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="10, 11" unique_id=1105132735 instance=ExtResource("4_uki0n")]
+freeze = true
+
+[node name="9, 11" type="Node3D" parent="." unique_id=755698410]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 11)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="9, 11" unique_id=707393573 instance=ExtResource("3_yijpg")]
+
+[node name="8, 11" type="Node3D" parent="." unique_id=1707830451]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 11)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="8, 11" unique_id=1968318040 instance=ExtResource("3_yijpg")]
+
+[node name="7, 11" type="Node3D" parent="." unique_id=1105886423]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 11)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="7, 11" unique_id=532710054 instance=ExtResource("3_yijpg")]
+
+[node name="6, 11" type="Node3D" parent="." unique_id=802150856]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 11)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="6, 11" unique_id=1360402149 instance=ExtResource("3_yijpg")]
+
+[node name="5, 11" type="Node3D" parent="." unique_id=381021623]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 11)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="5, 11" unique_id=264836787 instance=ExtResource("3_yijpg")]
+
+[node name="3, 12" type="Node3D" parent="." unique_id=891969270]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 12)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="3, 12" unique_id=1095495584 instance=ExtResource("3_yijpg")]
+
+[node name="2, 12" type="Node3D" parent="." unique_id=126943155]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 12)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="2, 12" unique_id=588550318 instance=ExtResource("3_yijpg")]
+
+[node name="4, 12" type="Node3D" parent="." unique_id=899184358]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 12)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="4, 12" unique_id=1955371769 instance=ExtResource("3_yijpg")]
+
+[node name="5, 12" type="Node3D" parent="." unique_id=1907175444]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 12)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="5, 12" unique_id=353840441 instance=ExtResource("3_yijpg")]
+
+[node name="6, 12" type="Node3D" parent="." unique_id=897989700]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 12)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="6, 12" unique_id=119025139 instance=ExtResource("3_yijpg")]
+
+[node name="7, 12" type="Node3D" parent="." unique_id=1082793966]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 12)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="7, 12" unique_id=1363587856 instance=ExtResource("3_yijpg")]
+
+[node name="8, 12" type="Node3D" parent="." unique_id=1247084131]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 12)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="8, 12" unique_id=1724160014 instance=ExtResource("3_yijpg")]
+
+[node name="9, 12" type="Node3D" parent="." unique_id=198097548]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 12)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="9, 12" unique_id=1190884878 instance=ExtResource("3_yijpg")]
+
+[node name="10, 12" type="Node3D" parent="." unique_id=21551692]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 12)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="10, 12" unique_id=1010588807 instance=ExtResource("3_yijpg")]
+
+[node name="11, 12" type="Node3D" parent="." unique_id=1304541385]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 12)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="11, 12" unique_id=1738878499 instance=ExtResource("3_yijpg")]
+
+[node name="12, 12" type="Node3D" parent="." unique_id=240607209]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 12)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="12, 12" unique_id=942656862 instance=ExtResource("3_yijpg")]
+
+[node name="12, 13" type="Node3D" parent="." unique_id=1595651277]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 13)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="12, 13" unique_id=90337018 instance=ExtResource("3_yijpg")]
+
+[node name="11, 13" type="Node3D" parent="." unique_id=1087233732]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 13)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="11, 13" unique_id=1782510683 instance=ExtResource("3_yijpg")]
+
+[node name="10, 13" type="Node3D" parent="." unique_id=1254119287]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 13)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="10, 13" unique_id=2144442920 instance=ExtResource("3_yijpg")]
+
+[node name="9, 13" type="Node3D" parent="." unique_id=1273286550]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 13)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="9, 13" unique_id=1304420998 instance=ExtResource("3_yijpg")]
+
+[node name="8, 13" type="Node3D" parent="." unique_id=2055427675]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 13)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="8, 13" unique_id=759622434 instance=ExtResource("3_yijpg")]
+
+[node name="7, 13" type="Node3D" parent="." unique_id=928999943]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 13)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="7, 13" unique_id=1297307825 instance=ExtResource("3_yijpg")]
+
+[node name="6, 13" type="Node3D" parent="." unique_id=1153124284]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 13)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="6, 13" unique_id=1594528598 instance=ExtResource("3_yijpg")]
+
+[node name="5, 13" type="Node3D" parent="." unique_id=340845164]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 13)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="5, 13" unique_id=1506945286 instance=ExtResource("3_yijpg")]
+
+[node name="4, 13" type="Node3D" parent="." unique_id=408961586]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 13)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="4, 13" unique_id=347409530 instance=ExtResource("3_yijpg")]
+
+[node name="3, 13" type="Node3D" parent="." unique_id=947234071]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 13)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="3, 13" unique_id=268733513 instance=ExtResource("3_yijpg")]
+
+[node name="2, 13" type="Node3D" parent="." unique_id=1340865055]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 13)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="2, 13" unique_id=414112445 instance=ExtResource("3_yijpg")]
+
+[node name="1, 12" type="Node3D" parent="." unique_id=616116517]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 12)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="1, 12" unique_id=624914242 instance=ExtResource("3_yijpg")]
+
+[node name="1, 13" type="Node3D" parent="." unique_id=147002272]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 13)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="1, 13" unique_id=1465499257 instance=ExtResource("3_yijpg")]
+
+[node name="1, 14" type="Node3D" parent="." unique_id=1177160600]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 14)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="1, 14" unique_id=1792391832 instance=ExtResource("3_yijpg")]
+
+[node name="2, 14" type="Node3D" parent="." unique_id=1015928363]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 14)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="2, 14" unique_id=376191033 instance=ExtResource("3_yijpg")]
+
+[node name="3, 14" type="Node3D" parent="." unique_id=925448477]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 14)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="3, 14" unique_id=1053980077 instance=ExtResource("3_yijpg")]
+
+[node name="4, 14" type="Node3D" parent="." unique_id=585957701]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 14)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="4, 14" unique_id=931823130 instance=ExtResource("3_yijpg")]
+
+[node name="5, 14" type="Node3D" parent="." unique_id=819661925]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 14)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="5, 14" unique_id=277136893 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="5, 14" unique_id=841532850 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+freeze = true
+
+[node name="6, 14" type="Node3D" parent="." unique_id=1235435256]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 14)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="6, 14" unique_id=1704355996 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="6, 14" unique_id=1210005607 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+freeze = true
+
+[node name="7, 14" type="Node3D" parent="." unique_id=1161132284]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 14)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="7, 14" unique_id=702212347 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="7, 14" unique_id=229991542 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+freeze = true
+
+[node name="8, 14" type="Node3D" parent="." unique_id=1582686138]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 14)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="8, 14" unique_id=950674295 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="8, 14" unique_id=1537858997 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+freeze = true
+
+[node name="9, 14" type="Node3D" parent="." unique_id=1122179015]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 14)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="9, 14" unique_id=1223439478 instance=ExtResource("3_yijpg")]
+
+[node name="10, 14" type="Node3D" parent="." unique_id=1637123976]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 14)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="10, 14" unique_id=964553365 instance=ExtResource("3_yijpg")]
+
+[node name="11, 14" type="Node3D" parent="." unique_id=1600905634]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 14)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="11, 14" unique_id=1864811783 instance=ExtResource("3_yijpg")]
+
+[node name="12, 14" type="Node3D" parent="." unique_id=1922876818]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 14)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="12, 14" unique_id=1198436456 instance=ExtResource("3_yijpg")]
+
+[node name="1, 16" type="Node3D" parent="." unique_id=1052257706]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 16)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="1, 16" unique_id=2089331299 instance=ExtResource("3_yijpg")]
+
+[node name="2, 16" type="Node3D" parent="." unique_id=654072343]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 16)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="2, 16" unique_id=696715226 instance=ExtResource("3_yijpg")]
+
+[node name="3, 16" type="Node3D" parent="." unique_id=648185911]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 16)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="3, 16" unique_id=1024105644 instance=ExtResource("3_yijpg")]
+
+[node name="4, 16" type="Node3D" parent="." unique_id=1630013089]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 16)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="4, 16" unique_id=1401265993 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="4, 16" unique_id=795594024 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="9, 16" type="Node3D" parent="." unique_id=732052]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 16)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="9, 16" unique_id=276395592 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="9, 16" unique_id=737162315 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="10, 16" type="Node3D" parent="." unique_id=1430962689]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 16)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="10, 16" unique_id=1375311669 instance=ExtResource("3_yijpg")]
+
+[node name="11, 16" type="Node3D" parent="." unique_id=1540363377]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 16)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="11, 16" unique_id=44035670 instance=ExtResource("3_yijpg")]
+
+[node name="12, 16" type="Node3D" parent="." unique_id=1796250866]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 16)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="12, 16" unique_id=560018584 instance=ExtResource("3_yijpg")]
+
+[node name="12, 17" type="Node3D" parent="." unique_id=996501940]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 17)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="12, 17" unique_id=1376091914 instance=ExtResource("3_yijpg")]
+
+[node name="12, 18" type="Node3D" parent="." unique_id=368461366]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 18)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="12, 18" unique_id=1053958153 instance=ExtResource("3_yijpg")]
+
+[node name="11, 18" type="Node3D" parent="." unique_id=1521817325]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 18)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="11, 18" unique_id=1263491787 instance=ExtResource("3_yijpg")]
+
+[node name="10, 18" type="Node3D" parent="." unique_id=453773930]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 18)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="10, 18" unique_id=155212725 instance=ExtResource("3_yijpg")]
+
+[node name="9, 18" type="Node3D" parent="." unique_id=1484422814]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 18)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="9, 18" unique_id=1060628582 instance=ExtResource("3_yijpg")]
+
+[node name="9, 17" type="Node3D" parent="." unique_id=1938175665]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 17)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="9, 17" unique_id=337341209 instance=ExtResource("3_yijpg")]
+
+[node name="8, 17" type="Node3D" parent="." unique_id=124386388]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 17)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="8, 17" unique_id=256143837 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="8, 17" unique_id=219690668 instance=ExtResource("4_uki0n")]
+freeze = true
+
+[node name="7, 17" type="Node3D" parent="." unique_id=719098343]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 17)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="7, 17" unique_id=1041415728 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="7, 17" unique_id=87159908 instance=ExtResource("4_uki0n")]
+freeze = true
+
+[node name="6, 17" type="Node3D" parent="." unique_id=2134332239]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 17)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="6, 17" unique_id=454850260 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="6, 17" unique_id=1041307010 instance=ExtResource("4_uki0n")]
+freeze = true
+
+[node name="5, 17" type="Node3D" parent="." unique_id=1857978600]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 17)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="5, 17" unique_id=252970837 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="5, 17" unique_id=1239270161 instance=ExtResource("4_uki0n")]
+freeze = true
+
+[node name="4, 17" type="Node3D" parent="." unique_id=541116127]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 17)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="4, 17" unique_id=158045027 instance=ExtResource("3_yijpg")]
+
+[node name="3, 17" type="Node3D" parent="." unique_id=1208909009]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 17)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="3, 17" unique_id=190359002 instance=ExtResource("3_yijpg")]
+
+[node name="2, 17" type="Node3D" parent="." unique_id=1571856437]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 17)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="2, 17" unique_id=989797524 instance=ExtResource("3_yijpg")]
+
+[node name="1, 17" type="Node3D" parent="." unique_id=368293306]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 17)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="1, 17" unique_id=2060053096 instance=ExtResource("3_yijpg")]
+
+[node name="0, 17" type="Node3D" parent="." unique_id=1801260000]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 17)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="0, 17" unique_id=351690099 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="0, 17" unique_id=1924876816 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="0, 16" type="Node3D" parent="." unique_id=493219672]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 16)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="0, 16" unique_id=1939970342 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="0, 16" unique_id=664214487 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="0, 18" type="Node3D" parent="." unique_id=1227643582]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 18)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="0, 18" unique_id=156965708 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="0, 18" unique_id=1466817837 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="1, 18" type="Node3D" parent="." unique_id=1687942449]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 18)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="1, 18" unique_id=1478917687 instance=ExtResource("3_yijpg")]
+
+[node name="2, 18" type="Node3D" parent="." unique_id=517961591]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 18)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="2, 18" unique_id=966211809 instance=ExtResource("3_yijpg")]
+
+[node name="3, 18" type="Node3D" parent="." unique_id=1648125358]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 18)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="3, 18" unique_id=938611780 instance=ExtResource("3_yijpg")]
+
+[node name="4, 18" type="Node3D" parent="." unique_id=213415339]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 18)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="4, 18" unique_id=2049924637 instance=ExtResource("3_yijpg")]
+
+[node name="5, 18" type="Node3D" parent="." unique_id=1194285410]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 18)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="5, 18" unique_id=2024040136 instance=ExtResource("3_yijpg")]
+
+[node name="6, 18" type="Node3D" parent="." unique_id=2146304105]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 18)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="6, 18" unique_id=552452916 instance=ExtResource("3_yijpg")]
+
+[node name="7, 18" type="Node3D" parent="." unique_id=1277975186]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 18)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="7, 18" unique_id=1746553611 instance=ExtResource("3_yijpg")]
+
+[node name="8, 18" type="Node3D" parent="." unique_id=2118118781]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 18)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="8, 18" unique_id=798156022 instance=ExtResource("3_yijpg")]
+
+[node name="13, 18" type="Node3D" parent="." unique_id=736983170]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 18)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="13, 18" unique_id=1446777524 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="13, 18" unique_id=562216955 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="13, 17" type="Node3D" parent="." unique_id=634846567]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 17)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="13, 17" unique_id=634074205 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="13, 17" unique_id=831221828 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="13, 16" type="Node3D" parent="." unique_id=1118397916]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 16)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="13, 16" unique_id=126983697 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="13, 16" unique_id=2014133163 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="11, 17" type="Node3D" parent="." unique_id=229275575]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 17)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="11, 17" unique_id=574038301 instance=ExtResource("3_yijpg")]
+
+[node name="10, 17" type="Node3D" parent="." unique_id=1411734335]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 17)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="10, 17" unique_id=2060351019 instance=ExtResource("3_yijpg")]
+
+[node name="0, 19" type="Node3D" parent="." unique_id=1283401630]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 19)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="0, 19" unique_id=1718270320 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="0, 19" unique_id=1198236019 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+freeze = true
+
+[node name="_RigidBody3D_104160" parent="0, 19" unique_id=703018621 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="1, 19" type="Node3D" parent="." unique_id=154972336]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, 19)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="1, 19" unique_id=21861954 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="1, 19" unique_id=2067875734 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+freeze = true
+
+[node name="2, 19" type="Node3D" parent="." unique_id=1218392729]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 19)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="2, 19" unique_id=742023760 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="2, 19" unique_id=1591883719 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+freeze = true
+
+[node name="3, 19" type="Node3D" parent="." unique_id=949928244]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 19)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="3, 19" unique_id=131197456 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="3, 19" unique_id=1328402075 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+freeze = true
+
+[node name="4, 19" type="Node3D" parent="." unique_id=63275339]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 19)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="4, 19" unique_id=1322196423 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="4, 19" unique_id=1689087926 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+freeze = true
+
+[node name="5, 19" type="Node3D" parent="." unique_id=839072678]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 19)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="5, 19" unique_id=496269830 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="5, 19" unique_id=167485743 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+freeze = true
+
+[node name="6, 19" type="Node3D" parent="." unique_id=41355885]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 19)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="6, 19" unique_id=606524348 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="6, 19" unique_id=705199625 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+freeze = true
+
+[node name="7, 19" type="Node3D" parent="." unique_id=876640872]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 0, 19)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="7, 19" unique_id=1451826608 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="7, 19" unique_id=178546288 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+freeze = true
+
+[node name="8, 19" type="Node3D" parent="." unique_id=595608695]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 19)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="8, 19" unique_id=344843380 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="8, 19" unique_id=78083733 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+freeze = true
+
+[node name="9, 19" type="Node3D" parent="." unique_id=766384974]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, 19)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="9, 19" unique_id=957114287 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="9, 19" unique_id=1774485983 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+freeze = true
+
+[node name="10, 19" type="Node3D" parent="." unique_id=836073029]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 19)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="10, 19" unique_id=536548914 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="10, 19" unique_id=595704149 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+freeze = true
+
+[node name="11, 19" type="Node3D" parent="." unique_id=2018102590]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11, 0, 19)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="11, 19" unique_id=125737412 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="11, 19" unique_id=1058748095 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+freeze = true
+
+[node name="12, 19" type="Node3D" parent="." unique_id=677406944]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, 19)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="12, 19" unique_id=1221755189 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="12, 19" unique_id=155554609 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+freeze = true
+
+[node name="13, 19" type="Node3D" parent="." unique_id=267506736]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, 19)
+script = ExtResource("2_kbdrs")
+
+[node name="Floor" parent="13, 19" unique_id=1426989734 instance=ExtResource("3_yijpg")]
+
+[node name="Wall" parent="13, 19" unique_id=87911332 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
+freeze = true
+
+[node name="_RigidBody3D_104174" parent="13, 19" unique_id=56828494 instance=ExtResource("4_uki0n")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+freeze = true
