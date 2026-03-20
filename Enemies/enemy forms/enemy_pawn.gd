@@ -8,7 +8,7 @@ func _ready() -> void:
 
 #returns the now occupied spaces
 func decide_next_move(player_position : Vector2, spaces_taken : Array[Vector2]) -> Array[Vector2]:
-	print("pawn turn")
+	#print("pawn turn")
 	#print("current pawn position: ", grid_position)
 	last_position = grid_position
 	var occupied_spaces : Array[Vector2] = spaces_taken

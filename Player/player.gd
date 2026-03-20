@@ -6,8 +6,12 @@ signal on_player_death
 const SPEED = 3.0
 const JUMP_VELOCITY = 4.5
 const CAMERA_SENSITIVITY : float = 0.001
+const TANK_CAMERA_SENSITIVITY_HORIZONTAL : float = 0.075
+const TANK_CAMERA_SENSITIVITY_VERTICAL : float = 0.05
 const CAMERA_ROTATION_MAX : float = 60.0
 const CAMERA_ROTATION_MIN : float = -40.0
+
+@export var tank_control_toggle : bool
 
 @onready var head : Node3D = $Head
 @onready var camera : Camera3D = $Head/Camera3D
@@ -32,10 +36,11 @@ func _ready():
 
 func _unhandled_input(event: InputEvent) -> void:
 	#when mouse is moved, rotate camera and head seperately
-	if event is InputEventMouseMotion:
-		head.rotate_y(-event.relative.x * CAMERA_SENSITIVITY)
-		camera.rotate_x(-event.relative.y * CAMERA_SENSITIVITY)
-		camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(CAMERA_ROTATION_MIN), deg_to_rad(CAMERA_ROTATION_MAX))
+	if tank_control_toggle == false:
+		if event is InputEventMouseMotion:
+			head.rotate_y(-event.relative.x * CAMERA_SENSITIVITY)
+			camera.rotate_x(-event.relative.y * CAMERA_SENSITIVITY)
+			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(CAMERA_ROTATION_MIN), deg_to_rad(CAMERA_ROTATION_MAX))
 	
 	if Input.is_action_just_pressed("player_attack"):
 		current_form.handle_attack_input()
@@ -54,6 +59,18 @@ func _unhandled_input(event: InputEvent) -> void:
 		#on_player_death.emit()
 
 func _physics_process(delta: float) -> void:
+	if tank_control_toggle:
+		if Input.is_action_pressed("look_left"):
+			head.rotate_y(TANK_CAMERA_SENSITIVITY_HORIZONTAL)
+		if Input.is_action_pressed("look_right"):
+			head.rotate_y(-1.0 * TANK_CAMERA_SENSITIVITY_HORIZONTAL)
+		if Input.is_action_pressed("look_down"):
+			camera.rotate_x(-1 * TANK_CAMERA_SENSITIVITY_VERTICAL)
+			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(CAMERA_ROTATION_MIN), deg_to_rad(CAMERA_ROTATION_MAX))
+		if Input.is_action_pressed("look_up"):
+			camera.rotate_x(TANK_CAMERA_SENSITIVITY_VERTICAL)
+			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(CAMERA_ROTATION_MIN), deg_to_rad(CAMERA_ROTATION_MAX))
+	
 	var input_dir := Input.get_vector("player_left","player_right","player_forward","player_backward")
 	#print("test")
 	current_form.handle_directional_input(input_dir, delta)
