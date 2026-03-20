@@ -4,12 +4,15 @@ var grid_size : float
 @export var enemy_y_level : float = 1.8
 
 @export var player : Player
-@export var level : Level
+var level : Level
 
 var enemies : Array[Enemy] = []
 var occupied_spaces : Array[Vector2] = []
 
-func _ready() -> void:
+func setup_enemy_manager(new_level : Level, new_player : Player) -> void:
+	level = new_level
+	player = new_player
+	grid_size = level.grid_size
 	print(level.get_grid_nodes().size())
 	#this needs to be replaced ? or may be fine if we just have a manager in each level scene
 	for i : Enemy in get_children():

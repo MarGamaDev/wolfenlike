@@ -37,8 +37,8 @@ func update_occupied_spaces(spaces : Array[Vector2], old_pos : Vector2, new_pos 
 	return spaces
 
 func move_enemy() -> void:
-	global_position.z = (grid_position.y * grid_size) + (grid_size / 2)
-	global_position.x = (grid_position.x * grid_size) + (grid_size / 2)
+	#global_position.z = (grid_position.y * grid_size) + (grid_size / 2)
+	#global_position.x = (grid_position.x * grid_size) + (grid_size / 2)
 	if post_move_action_flag:
 		on_finishing_movement()
 		post_move_action_flag = false

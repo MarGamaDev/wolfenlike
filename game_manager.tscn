@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://k0cst8r2vlvq" path="res://Enemies/enemy_manager.tscn" id="4_shwjl"]
 [ext_resource type="PackedScene" uid="uid://b5tmrj1g7fct8" path="res://UI/pause_menu.tscn" id="5_vk86k"]
 [ext_resource type="PackedScene" uid="uid://dpigp2be1owrg" path="res://UI/death_screen.tscn" id="7_eakoi"]
+[ext_resource type="PackedScene" uid="uid://dtfws8j04gg02" path="res://rhythm sync test/rhythm_sync_manager.tscn" id="8_8jrwq"]
+[ext_resource type="AudioStream" uid="uid://bqdw6gg5win3l" path="res://rhythm sync test/tamborine_155bpm_4-4time_21beats_VGq2VF.mp3" id="9_gth8u"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_shwjl"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -22,6 +24,7 @@ tonemap_mode = 2
 
 [node name="GameManager" type="Node3D" unique_id=2083107531]
 script = ExtResource("1_70yv6")
+TEST_game_muted = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=105487021]
 environment = SubResource("Environment_8jrwq")
@@ -34,10 +37,9 @@ test_form = 0
 
 [node name="new_level" parent="." unique_id=1005341217 instance=ExtResource("2_d5upp")]
 
-[node name="EnemyManager" parent="." unique_id=647834905 node_paths=PackedStringArray("player", "level") instance=ExtResource("4_shwjl")]
+[node name="EnemyManager" parent="." unique_id=647834905 node_paths=PackedStringArray("player") instance=ExtResource("4_shwjl")]
 enemy_y_level = 0.6
 player = NodePath("../Player")
-level = NodePath("../new_level")
 
 [node name="EnemyPawn" parent="EnemyManager" unique_id=1277766704 instance=ExtResource("3_shwjl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.9626224, 0.60943246, 2.4112248)
@@ -45,5 +47,11 @@ grid_position = Vector2(1, 1)
 
 [node name="DeathScreen" parent="." unique_id=187959104 instance=ExtResource("7_eakoi")]
 
+[node name="RhythmSyncManager" parent="." unique_id=1346349995 instance=ExtResource("8_8jrwq")]
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=224863982]
+stream = ExtResource("9_gth8u")
+
 [connection signal="on_pause_pressed" from="Player" to="." method="_on_pause_pressed"]
 [connection signal="on_player_death" from="Player" to="DeathScreen" method="_on_player_death"]
+[connection signal="on_beat" from="RhythmSyncManager" to="." method="_on_beat"]

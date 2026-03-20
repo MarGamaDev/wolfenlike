@@ -1,8 +1,8 @@
-extends Node
+class_name RhythmManager extends Node
 
 @export var bpm : float
 
-@export var player : AudioStreamPlayer
+var player : AudioStreamPlayer
 
 signal on_beat
 
@@ -17,10 +17,11 @@ var time_since_last_beat: float = 0.0;
 
 var beat_start_flag = false
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	player.play()
 	get_window().grab_focus()
+
+func start_music() -> void:
+	player.play()
 	await get_tree().create_timer(0.1).timeout
 	beat_start_flag = true
 	pass
